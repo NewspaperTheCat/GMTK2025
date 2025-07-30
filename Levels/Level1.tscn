@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://btdsdpbb5wvlb"]
+
+[ext_resource type="PackedScene" uid="uid://oqpsd56sxbch" path="res://Grimblo/grimblo.tscn" id="1_3anf8"]
+[ext_resource type="Script" uid="uid://dgw18dh6btfxp" path="res://Levels/level.gd" id="1_fhqol"]
+[ext_resource type="PackedScene" uid="uid://bwlm62q1aprja" path="res://Grimblo/player.tscn" id="2_fhqol"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ma5b5"]
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mc20k"]
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cove1"]
+size = Vector3(10, 2, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kyxg0"]
+size = Vector3(10, 2, 0.5)
+
+[node name="Level1" type="Node3D"]
+script = ExtResource("1_fhqol")
+crowd_speed = 10.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.516068, 0.641181, -0.567944, -0.405022, 0.766919, 0.497787, 0.754739, -0.0268626, 0.655475, 0, 8, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_fhqol")]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_ma5b5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("BoxMesh_mc20k")
+
+[node name="Wall" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, -5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall"]
+shape = SubResource("BoxShape3D_cove1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall"]
+mesh = SubResource("BoxMesh_kyxg0")
+
+[node name="Wall2" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0.75, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall2"]
+shape = SubResource("BoxShape3D_cove1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall2"]
+mesh = SubResource("BoxMesh_kyxg0")
+
+[node name="Wall3" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.000309944, 0.742333, 5.0096)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall3"]
+shape = SubResource("BoxShape3D_cove1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall3"]
+mesh = SubResource("BoxMesh_kyxg0")
+
+[node name="Wall4" type="StaticBody3D" parent="."]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -5.00031, 0.742333, 0.00959682)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall4"]
+shape = SubResource("BoxShape3D_cove1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall4"]
+mesh = SubResource("BoxMesh_kyxg0")
+
+[node name="Grimblo" parent="." instance=ExtResource("1_3anf8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+direction = Vector3(2, 0, -5)
+
+[node name="Grimblo2" parent="." instance=ExtResource("1_3anf8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.825112, 0.25, 2.30308)
+direction = Vector3(-3, 0, 1)
