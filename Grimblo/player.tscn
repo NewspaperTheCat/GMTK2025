@@ -10,4 +10,4 @@ script = ExtResource("1_gdu4x")
 [node name="LineMesh" type="MeshInstance3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 10, 0)
+transform = Transform3D(1, 0, 0, 0, 0.604599, 0.79653, 0, -0.79653, 0.604599, 0, 6.94802, 6.38123)
