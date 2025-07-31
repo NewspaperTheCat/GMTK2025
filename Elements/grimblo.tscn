@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=4 uid="uid://oqpsd56sxbch"]
+[gd_scene load_steps=18 format=4 uid="uid://oqpsd56sxbch"]
 
 [ext_resource type="Script" uid="uid://bbpn22lvaguf4" path="res://Elements/grimblo.gd" id="1_frpx3"]
 [ext_resource type="Animation" uid="uid://c0hunubavdg4p" path="res://Elements/Walking.res" id="2_frpx3"]
+[ext_resource type="Material" uid="uid://boqpwrsmdfvay" path="res://Materials/Grimblo.tres" id="2_hv2v0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dwyiq"]
 
@@ -151,6 +152,7 @@ _data = {
 [node name="Grimblo" type="CharacterBody3D"]
 collision_layer = 4
 script = ExtResource("1_frpx3")
+activeAlignment = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
@@ -162,19 +164,23 @@ transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 
 [node name="Player" type="Node3D" parent="Character"]
 
 [node name="Cube" type="MeshInstance3D" parent="Character/Player"]
+material_override = ExtResource("2_hv2v0")
 mesh = SubResource("ArrayMesh_y2wu8")
 skeleton = NodePath("")
 
 [node name="Cube_001" type="MeshInstance3D" parent="Character/Player"]
+material_override = ExtResource("2_hv2v0")
 mesh = SubResource("ArrayMesh_3fsfv")
 skeleton = NodePath("")
 
 [node name="Cube_002" type="MeshInstance3D" parent="Character/Player"]
+material_override = ExtResource("2_hv2v0")
 mesh = SubResource("ArrayMesh_unftq")
 skeleton = NodePath("")
 
 [node name="Cylinder" type="MeshInstance3D" parent="Character/Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.118683, 0)
+material_override = ExtResource("2_hv2v0")
 mesh = SubResource("ArrayMesh_wt1qo")
 skeleton = NodePath("")
 

@@ -76,6 +76,7 @@ mesh = SubResource("BoxMesh_kyxg0")
 [node name="Grimblo" parent="." instance=ExtResource("1_3anf8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 direction = Vector3(2, 0, -5)
+activeAlignment = 0
 
 [node name="Grimblo3" parent="." instance=ExtResource("1_3anf8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25813, 0.25, -2.26838)
