@@ -2,6 +2,8 @@ class_name Player extends Node3D
 
 #@onready var loop_indicator: LoopIndicator = $LoopIndicator
 @onready var scene_redirect: SceneRedirect = $SceneRedirect
+@onready var shape_cast: ShapeCast3D = $ShapeCast
+
 @export var drawDetail:= 0.5
 var drawing = false
 var points := []
@@ -28,12 +30,13 @@ func end_line():
 	for visual in pointVisuals:
 		visual.queue_free()
 	pointVisuals = []
+	pass_sequence()
+
 func create_point_visual(newPoint: Vector3):
 	var newPointer = pointVisual.instantiate()
 	add_child(newPointer)
 	newPointer.global_position = newPoint
 	pointVisuals.append(newPointer)
-	print(newPoint)
 #func _process(delta: float) -> void:
 	#loop_indicator.position = get_mouse_coord()
 	#if Input.is_mouse_button_pressed(1):
@@ -77,59 +80,80 @@ func start_line(point: Vector3):
 func add_to_line(point: Vector3):
 	points.append(point)
 
-#func pass_sequence():
-	#var captured = loop_indicator.get_captured()
-	#if captured.size() < 2:
-		#return
-	#
-	#print("captured a relevant: " + str(captured.size()) + " peeps")
-	#
-	#var recipients = []
-	#var secret_holder = null
-	#var holds_opp = false
-	#var chosen_recipient = null
-	#for i in range(captured.size()):
-		#if captured[i].activeAlignment == Grimblo.alignment.ENEMY:
-			#holds_opp = true
-			#chosen_recipient = captured[i]
-		#elif captured[i].activeAlignment == Grimblo.alignment.ACTIVE:
-			#secret_holder = captured[i]
-		#else:
-			#recipients.append(captured[i])
-	#if secret_holder == null:
-		#return
-	#
-	#var to_win = false
-	#for i in range(recipients.size()):
-		#if recipients[i].activeAlignment == Grimblo.alignment.TARGET:
-			#chosen_recipient = recipients[i]
-			#to_win = true
-			#break
-		#elif chosen_recipient == null or chosen_recipient.position.distance_squared_to(secret_holder.position) > recipients[i].position.distance_squared_to(secret_holder.position):
-			#chosen_recipient = recipients[i]
-	#
-	## Move camera to view the interaction
-	#Global.level.sim_timescale = 0
-	#Global.camera_rig.view_interaction(secret_holder.position, chosen_recipient.position)
-	#await Global.camera_rig.finished_moving
-	#
-	#if holds_opp:
-		#print("Whoopsies, GAME OVER")
-		#scene_redirect._to_select()
-		#return
-	#
-	#if to_win:
-		#print("HUZZAH, you did it!!")
-		#Global.level_progress = Global.level.level_num
-		#scene_redirect._to_select()
-	#else:
-		#chosen_recipient.activeAlignment = Grimblo.alignment.ACTIVE
-		#chosen_recipient.set_color()
-	#secret_holder.activeAlignment = Grimblo.alignment.PASSIVE
-	#secret_holder.set_color()
-	#
-	##Temp placeholder for cutscene
-	#await get_tree().create_timer(.8).timeout
-	#
-	#Global.camera_rig.return_to_resting()
-	#Global.level.sim_timescale = 1
+func pass_sequence():
+	var captured = get_captured()
+	if captured.size() < 2:
+		return
+	
+	print("captured a relevant: " + str(captured.size()) + " peeps")
+	
+	var recipients = []
+	var secret_holder = null
+	var holds_opp = false
+	var chosen_recipient = null
+	for i in range(captured.size()):
+		if captured[i].activeAlignment == Grimblo.alignment.ENEMY:
+			holds_opp = true
+			chosen_recipient = captured[i]
+		elif captured[i].activeAlignment == Grimblo.alignment.ACTIVE:
+			secret_holder = captured[i]
+		else:
+			recipients.append(captured[i])
+	if secret_holder == null:
+		return
+	
+	var to_win = false
+	for i in range(recipients.size()):
+		if recipients[i].activeAlignment == Grimblo.alignment.TARGET:
+			chosen_recipient = recipients[i]
+			to_win = true
+			break
+		elif chosen_recipient == null or chosen_recipient.position.distance_squared_to(secret_holder.position) > recipients[i].position.distance_squared_to(secret_holder.position):
+			chosen_recipient = recipients[i]
+	
+	# Move camera to view the interaction
+	Global.level.sim_timescale = 0
+	Global.camera_rig.view_interaction(secret_holder.position, chosen_recipient.position)
+	await Global.camera_rig.finished_moving
+	
+	if holds_opp:
+		print("Whoopsies, GAME OVER")
+		scene_redirect._to_select()
+		return
+	
+	if to_win:
+		print("HUZZAH, you did it!!")
+		Global.level_progress = Global.level.level_num
+		scene_redirect._to_select()
+	else:
+		chosen_recipient.activeAlignment = Grimblo.alignment.ACTIVE
+		chosen_recipient.set_color()
+	secret_holder.activeAlignment = Grimblo.alignment.PASSIVE
+	secret_holder.set_color()
+	
+	#Temp placeholder for cutscene
+	await get_tree().create_timer(.8).timeout
+	
+	Global.camera_rig.return_to_resting()
+	Global.level.sim_timescale = 1
+
+
+func loop_is_closed() -> bool:
+	return points.size() > 2 and points[points.size() - 1].distance_to(points[0]) < drawDetail * 10
+
+func get_captured():
+	var upa = []
+	for k in range(2):
+		for i in range(points.size()):
+			upa.append(Vector3(points[i].x, k * 6 - 3, points[i].z))
+	shape_cast.shape.points = upa
+	
+	shape_cast.enabled = true
+	shape_cast.force_shapecast_update()
+	var collided_bodies = []
+	for i in shape_cast.get_collision_count():
+			collided_bodies.append(shape_cast.get_collider(i))
+	shape_cast.enabled = false
+	
+	print(str(collided_bodies.size()) + " <-- the result")
+	return collided_bodies

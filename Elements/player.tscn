@@ -1,25 +1,21 @@
-[gd_scene load_steps=9 format=3 uid="uid://bwlm62q1aprja"]
+[gd_scene load_steps=7 format=3 uid="uid://bwlm62q1aprja"]
 
 [ext_resource type="Script" uid="uid://saielibv2plm" path="res://Elements/player.gd" id="1_gdu4x"]
 [ext_resource type="PackedScene" uid="uid://c6r1b0gioe5p5" path="res://Elements/loopIndicator.tscn" id="2_2ft67"]
 [ext_resource type="Script" uid="uid://c3ca7ynedm1wt" path="res://Navigation/scene_redirector.gd" id="3_1pq33"]
 [ext_resource type="PackedScene" uid="uid://0iwa30yn20po" path="res://LineRenderer/Line.tscn" id="4_twyhr"]
-[ext_resource type="Texture2D" uid="uid://biwp8lq6rsdph" path="res://Materials/DrawViewport.tres" id="5_8a7a3"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8a7a3"]
-resource_local_to_scene = true
-transparency = 1
-albedo_texture = ExtResource("5_8a7a3")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_esno4"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_ii066"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_twyhr"]
+points = PackedVector3Array(0.866731, 1, 0.638974, 0.93353, 1, 0.86563, 1.0864, 1, 1.01199, 1.25173, 1, 1.15471, 1.42907, 1, 1.29393, 1.6086, 1, 1.38486, 1.80104, 1, 1.47433, 2.02222, 1, 1.47433, 2.22074, 1, 1.42978, 2.42459, 1, 1.29393, 2.67155, 1, 1.13117, 2.90926, 1, 0.963612, 3.12052, 1, 0.791047, 3.29423, 1, 0.587402, 3.45463, 1, 0.322672, 3.54289, 1, 0.0741553, 3.52763, 1, -0.126256, 3.43833, 1, -0.333233, 3.32736, 1, -0.547106, 2.8723, 1, -0.865298, 3.08365, 1, -0.704286, 2.7072, 1, -0.99696, 2.49357, 1, -1.09742, 2.27928, 1, -1.09742, 2.04551, 1, -1.09742, 1.75329, 1, -1.09742, 1.43448, 1, -1.03028, 1.23152, 1, -0.930806, 1.06197, 1, -0.736177, 0.936881, 1, -0.578243, 0.849771, 1, -0.393622, 0.817836, 1, -0.184709, 0.786919, 1, 0.0175471, 0.772844, 1, 0.240944, 0.759264, 1, 0.456491, 0.797028, 1, 0.664594)
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_gdu4x")
 drawDetail = 0.2
 
 [node name="LoopIndicator" parent="." instance=ExtResource("2_2ft67")]
+visible = false
 
 [node name="SceneRedirect" type="Node" parent="."]
 script = ExtResource("3_1pq33")
@@ -27,32 +23,16 @@ script = ExtResource("3_1pq33")
 [node name="Line" parent="." instance=ExtResource("4_twyhr")]
 
 [node name="DrawPlaneCollision" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0)
 collision_layer = 2
 collision_mask = 0
-
-[node name="DrawPlane" type="MeshInstance3D" parent="DrawPlaneCollision"]
-transform = Transform3D(1.04562, 0, 0, 0, 1.04562, 0, 0, 0, 1.04562, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_8a7a3")
-mesh = SubResource("PlaneMesh_esno4")
-skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DrawPlaneCollision"]
 shape = SubResource("WorldBoundaryShape3D_ii066")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="DrawPlaneCollision"]
-visible = false
-offset_right = 1080.0
-offset_bottom = 1080.0
+[node name="ShapeCast" type="ShapeCast3D" parent="."]
+enabled = false
+shape = SubResource("ConvexPolygonShape3D_twyhr")
+collision_mask = 4
+debug_shape_custom_color = Color(0, 1, 0, 1)
 
-[node name="SubViewport" type="SubViewport" parent="DrawPlaneCollision/SubViewportContainer"]
-disable_3d = true
-transparent_bg = true
-handle_input_locally = false
-render_target_update_mode = 0
-
-[node name="Camera2D" type="Camera2D" parent="DrawPlaneCollision/SubViewportContainer/SubViewport"]
-
-[node name="Line2D" type="Line2D" parent="DrawPlaneCollision/SubViewportContainer/SubViewport"]
-points = PackedVector2Array(467, 346, 0, 0)
-default_color = Color(0, 0, 1, 1)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]

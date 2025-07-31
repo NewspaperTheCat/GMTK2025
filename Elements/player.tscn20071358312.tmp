@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwlm62q1aprja"]
+
+[ext_resource type="Script" uid="uid://saielibv2plm" path="res://Elements/player.gd" id="1_gdu4x"]
+[ext_resource type="PackedScene" uid="uid://c6r1b0gioe5p5" path="res://Elements/loopIndicator.tscn" id="2_2ft67"]
+[ext_resource type="Script" uid="uid://c3ca7ynedm1wt" path="res://Navigation/scene_redirector.gd" id="3_1pq33"]
+[ext_resource type="PackedScene" uid="uid://0iwa30yn20po" path="res://LineRenderer/Line.tscn" id="4_twyhr"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_twyhr"]
+
+[node name="Player" type="Node3D"]
+script = ExtResource("1_gdu4x")
+
+[node name="LoopIndicator" parent="." instance=ExtResource("2_2ft67")]
+visible = false
+
+[node name="SceneRedirect" type="Node" parent="."]
+script = ExtResource("3_1pq33")
+
+[node name="Line" parent="." instance=ExtResource("4_twyhr")]
+
+[node name="ShapeCast" type="ShapeCast3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_twyhr")
