@@ -128,14 +128,9 @@ func pass_sequence():
 	await get_tree().create_timer(.8).timeout
 	
 	# check if we are going to be golfing
-	if chosen_recipient.hasMoved:
-		Global.camera_rig.return_to_resting()
-		Global.level.sim_timescale = 1
-		Global.level.current_game_state = Global.level.game_state.DEFAULT
-	else:
-		Global.camera_rig.return_to_resting()
-		Global.level.sim_timescale = .2
-		Global.level.current_game_state = Global.level.game_state.GOLFING
+	Global.camera_rig.return_to_resting()
+	Global.level.sim_timescale = .2
+	Global.level.current_game_state = Global.level.game_state.GOLFING
 
 func loop_is_closed() -> bool:
 	return points.size() > 2 and points[points.size() - 1].distance_to(points[0]) < drawDetail * 10
