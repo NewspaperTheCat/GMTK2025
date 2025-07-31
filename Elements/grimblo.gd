@@ -10,6 +10,10 @@ class_name Grimblo extends CharacterBody3D
 
 @export var direction : Vector3
 @export var hasMoved := false
+var hasClicked := false
+var initMousePos : Vector2
+var launchVector : Vector2
+
 @export var activeAlignment : alignment = alignment.PASSIVE
 
 enum alignment { ACTIVE, PASSIVE, ENEMY, TARGET }
@@ -22,10 +26,15 @@ func _ready() -> void:
 	
 
 func _physics_process(delta: float) -> void:
+	if((activeAlignment == alignment.ACTIVE) && !hasMoved):
+		handle_active_player()
+	else:
+		handle_passive_player()
+
+func handle_passive_player() -> void:
 	var vel := velocity
 	velocity *= Global.level.sim_timescale
 	move_and_slide()
-	
 	# Calculates wall bounce
 	var bounced = false
 	for i in range(get_slide_collision_count()):
@@ -38,13 +47,16 @@ func _physics_process(delta: float) -> void:
 	
 	look_at(position + velocity)
 	
-	if(activeAlignment == alignment.ACTIVE):
-		handle_active_player()
-	
 func handle_active_player() -> void:
-	if(hasMoved):
-		null
-
+	if(hasClicked == false && Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
+		hasClicked = true
+		initMousePos = get_viewport().get_mouse_position()
+	if(hasClicked == true && !Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
+		launchVector = get_viewport().get_mouse_position() - initMousePos
+		velocity = Vector3(launchVector.x, 0, launchVector.y).normalized() * GM.level.crowd_speed
+		move_and_slide()
+		hasMoved = true
+		hasClicked = false
 func set_color() -> void:
 	for shape in grimbloShapes:
 		shape.material_override = grimbloMaterial[activeAlignment]
