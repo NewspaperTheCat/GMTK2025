@@ -53,4 +53,4 @@ grow_vertical = 2
 text = "Play"
 label_settings = SubResource("LabelSettings_yi8iy")
 
-[connection signal="pressed" from="Button" to="." method="_to_level"]
+[connection signal="pressed" from="Button" to="." method="_to_select"]

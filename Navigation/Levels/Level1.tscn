@@ -18,6 +18,7 @@ size = Vector3(10, 2, 0.5)
 
 [node name="Level1" type="Node3D"]
 script = ExtResource("1_fhqol")
+level_num = 1
 crowd_speed = 3.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

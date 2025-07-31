@@ -1,6 +1,7 @@
 class_name Player extends Node3D
 
 @onready var loop_indicator: LoopIndicator = $LoopIndicator
+@onready var scene_redirect: SceneRedirect = $SceneRedirect
 
 var drawing = false
 var points := []
@@ -75,6 +76,8 @@ func pass_sequence():
 	
 	if to_win:
 		print("HUZZAH, you did it!!")
+		Global.level_progress = Global.level.level_num
+		scene_redirect._to_select()
 	else:
 		chosen_recipient.activeAlignment = Grimblo.alignment.ACTIVE
 		chosen_recipient.set_color()

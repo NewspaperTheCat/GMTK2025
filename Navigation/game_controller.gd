@@ -32,11 +32,12 @@ func change_gui_scene(new_scene: String,
 			current_gui_scene.visible = false
 		else:
 			gui.remove_child(current_gui_scene)
-	var new = load(new_scene).instantiate()
-	gui.add_child(new)
-	current_gui_scene = new
+	if new_scene != "blank":
+		var new = load(new_scene).instantiate()
+		gui.add_child(new)
+		current_gui_scene = new
 	
-	transition_controller.transition(transition_in, seconds)
+	if transition: transition_controller.transition(transition_in, seconds)
 
 func change_2d_scene(new_scene: String,
 	delete: bool = true,
@@ -57,13 +58,15 @@ func change_2d_scene(new_scene: String,
 			current_2d_scene.visible = false
 		else:
 			gui.remove_child(current_2d_scene)
-	var new = load(new_scene).instantiate()
-	gui.add_child(new)
-	current_2d_scene = new
+	if new_scene != "blank":
+		var new = load(new_scene).instantiate()
+		gui.add_child(new)
+		current_2d_scene = new
 	
-	transition_controller.transition(transition_in, seconds)
+	if transition: transition_controller.transition(transition_in, seconds)
 
-func change_3d_scene(new_scene: String,
+func change_3d_scene(
+	new_scene: String,
 	delete: bool = true,
 	keep_running: bool = false,
 	transition: bool = true,
@@ -82,8 +85,9 @@ func change_3d_scene(new_scene: String,
 			current_3d_scene.visible = false
 		else:
 			gui.remove_child(current_3d_scene)
-	var new = load(new_scene).instantiate()
-	gui.add_child(new)
-	current_3d_scene = new
+	if new_scene != "blank":
+		var new = load(new_scene).instantiate()
+		gui.add_child(new)
+		current_3d_scene = new
 	
-	transition_controller.transition(transition_in, seconds)
+	if transition: transition_controller.transition(transition_in, seconds)
