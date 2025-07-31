@@ -7,9 +7,6 @@
 [node name="Player" type="Node3D"]
 script = ExtResource("1_gdu4x")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.604599, 0.79653, 0, -0.79653, 0.604599, 0, 6.94802, 6.38123)
-
 [node name="LoopIndicator" parent="." instance=ExtResource("2_2ft67")]
 
 [node name="SceneRedirect" type="Node" parent="."]

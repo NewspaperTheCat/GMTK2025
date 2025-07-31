@@ -51,20 +51,18 @@ func pass_sequence():
 	var recipients = []
 	var secret_holder = null
 	var holds_opp = false
+	var chosen_recipient = null
 	for i in range(captured.size()):
 		if captured[i].activeAlignment == Grimblo.alignment.ENEMY:
 			holds_opp = true
+			chosen_recipient = captured[i]
 		elif captured[i].activeAlignment == Grimblo.alignment.ACTIVE:
 			secret_holder = captured[i]
 		else:
 			recipients.append(captured[i])
 	if secret_holder == null:
 		return
-	if holds_opp:
-		print("Whoopsies, GAME OVER")
-		return
 	
-	var chosen_recipient = null
 	var to_win = false
 	for i in range(recipients.size()):
 		if recipients[i].activeAlignment == Grimblo.alignment.TARGET:
@@ -73,6 +71,16 @@ func pass_sequence():
 			break
 		elif chosen_recipient == null or chosen_recipient.position.distance_squared_to(secret_holder.position) > recipients[i].position.distance_squared_to(secret_holder.position):
 			chosen_recipient = recipients[i]
+	
+	# Move camera to view the interaction
+	Global.level.sim_timescale = 0
+	Global.camera_rig.view_interaction(secret_holder.position, chosen_recipient.position)
+	await Global.camera_rig.finished_moving
+	
+	if holds_opp:
+		print("Whoopsies, GAME OVER")
+		scene_redirect._to_select()
+		return
 	
 	if to_win:
 		print("HUZZAH, you did it!!")
@@ -83,4 +91,9 @@ func pass_sequence():
 		chosen_recipient.set_color()
 	secret_holder.activeAlignment = Grimblo.alignment.PASSIVE
 	secret_holder.set_color()
-	MeshInstance3D
+	
+	#Temp placeholder for cutscene
+	await get_tree().create_timer(.8).timeout
+	
+	Global.camera_rig.return_to_resting()
+	Global.level.sim_timescale = 1

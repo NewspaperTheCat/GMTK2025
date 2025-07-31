@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://btdsdpbb5wvlb"]
+[gd_scene load_steps=9 format=3 uid="uid://btdsdpbb5wvlb"]
 
 [ext_resource type="PackedScene" uid="uid://oqpsd56sxbch" path="res://Elements/grimblo.tscn" id="1_3anf8"]
 [ext_resource type="Script" uid="uid://dgw18dh6btfxp" path="res://Navigation/Levels/level.gd" id="1_fhqol"]
 [ext_resource type="PackedScene" uid="uid://bwlm62q1aprja" path="res://Elements/player.tscn" id="2_fhqol"]
+[ext_resource type="PackedScene" uid="uid://nenh7chlqfv1" path="res://Elements/camera_rig.tscn" id="4_w5t0j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ma5b5"]
 size = Vector3(10, 0.5, 10)
@@ -100,3 +101,5 @@ activeAlignment = 3
 [node name="Grimblo6" parent="." instance=ExtResource("1_3anf8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.987118, 0.25, 3.43036)
 direction = Vector3(6, 0, 1)
+
+[node name="CameraRig" parent="." instance=ExtResource("4_w5t0j")]
