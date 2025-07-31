@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://c6r1b0gioe5p5"]
+
+[ext_resource type="Script" uid="uid://dmb6s8vkvw45d" path="res://Elements/loopIndicator.gd" id="1_h5ib7"]
+[ext_resource type="Material" uid="uid://qmvg4a4q5ng2" path="res://Materials/LoopIndicatorHighlight.tres" id="2_c83ab"]
+[ext_resource type="Material" uid="uid://dkvl221uegonc" path="res://Materials/LoopIndicatorShadow.tres" id="3_cyifc"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_fhqol"]
+inner_radius = 0.625
+outer_radius = 0.75
+rings = 32
+ring_segments = 16
+
+[sub_resource type="SphereMesh" id="SphereMesh_a8gr1"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6n7p2"]
+top_radius = 0.0
+bottom_radius = 0.7
+height = 0.1
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_cyifc"]
+height = 1.0
+radius = 0.625
+
+[node name="LoopIndicator" type="Node3D"]
+script = ExtResource("1_h5ib7")
+
+[node name="Ring" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00254512, 0.0596086, 0.00156879)
+material_override = ExtResource("2_c83ab")
+mesh = SubResource("TorusMesh_fhqol")
+skeleton = NodePath("../..")
+
+[node name="Center" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, 0)
+material_override = ExtResource("2_c83ab")
+mesh = SubResource("SphereMesh_a8gr1")
+
+[node name="Fill" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, 0)
+material_override = ExtResource("3_cyifc")
+mesh = SubResource("CylinderMesh_6n7p2")
+
+[node name="Detector" type="ShapeCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CylinderShape3D_cyifc")
+collision_mask = 4

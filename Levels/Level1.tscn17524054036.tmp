@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://btdsdpbb5wvlb"]
+[gd_scene load_steps=9 format=3 uid="uid://btdsdpbb5wvlb"]
 
 [ext_resource type="PackedScene" uid="uid://oqpsd56sxbch" path="res://Elements/grimblo.tscn" id="1_3anf8"]
 [ext_resource type="Script" uid="uid://dgw18dh6btfxp" path="res://Levels/level.gd" id="1_fhqol"]
 [ext_resource type="PackedScene" uid="uid://bwlm62q1aprja" path="res://Elements/player.tscn" id="2_fhqol"]
+[ext_resource type="PackedScene" uid="uid://c6r1b0gioe5p5" path="res://Elements/loopIndicator.tscn" id="4_iotdp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ma5b5"]
 size = Vector3(10, 0.5, 10)
@@ -27,7 +28,7 @@ transform = Transform3D(0.516068, 0.641181, -0.567944, -0.405022, 0.766919, 0.49
 
 [node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-collision_layer = 2
+collision_layer = 0
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
@@ -88,3 +89,5 @@ direction = Vector3(2, 0, 2)
 [node name="Grimblo2" parent="." instance=ExtResource("1_3anf8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.825112, 0.25, 2.30308)
 direction = Vector3(-3, 0, 1)
+
+[node name="LoopIndicator" parent="." instance=ExtResource("4_iotdp")]
