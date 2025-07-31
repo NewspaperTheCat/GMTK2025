@@ -40,11 +40,39 @@ func get_mouse_coord() -> Vector3:
 	
 	return mouse_position_3D
 
-#func find_captured_grimblos():
-	#var radius = loop_indicator.get_radius()
-	#
-	#ShapeCast3D
-	#if shape_cast.is_colliding():
-	#for i in shape_cast.get_collision_count():
-		#var body = shape_cast.get_collider(i)
-		#if body.is_in_group("Enemy"): print("It`s Enemy, Kill Him!")
+func pass_sequence():
+	var captured = loop_indicator.get_captured()
+	if captured.size() < 2:
+		return
+	
+	var recipients = []
+	var secret_holder = null
+	var holds_opp = false
+	for i in range(captured.size()):
+		if captured[i].activeAlignment == Grimblo.alignment.ENEMY:
+			holds_opp = true
+		elif captured[i].knows:
+			secret_holder = captured[i]
+		else:
+			recipients.append(captured[i])
+	if secret_holder == null:
+		return
+	if holds_opp:
+		print("Whoopsies, GAME OVER")
+		return
+	
+	var chosen_recipient = null
+	var to_win = false
+	for i in range(recipients.size):
+		if recipients[i].activeAlignment == Grimblo.alignment.TARGET:
+			chosen_recipient = recipients[i]
+			to_win = true
+			break
+		elif chosen_recipient == null or chosen_recipient.position.distance_squared_to(secret_holder.position) > recipients[i].position.distance_squared_to(secret_holder.position):
+			chosen_recipient = recipients[i]
+	
+	if to_win:
+		print("HUZZAH, you did it!!")
+	else:
+		chosen_recipient.activeAlignment = Grimblo.alignment.ACTIVE
+	secret_holder.activeAlignment = Grimblo.alignment.PASSIVE
