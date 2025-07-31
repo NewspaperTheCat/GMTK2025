@@ -53,7 +53,7 @@ func handle_active_player() -> void:
 		initMousePos = get_viewport().get_mouse_position()
 	if(hasClicked == true && !Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
 		launchVector = get_viewport().get_mouse_position() - initMousePos
-		velocity = Vector3(launchVector.x, 0, launchVector.y).normalized() * GM.level.crowd_speed
+		velocity = Vector3(launchVector.x, 0, launchVector.y).normalized() * Global.level.crowd_speed
 		move_and_slide()
 		hasMoved = true
 		hasClicked = false

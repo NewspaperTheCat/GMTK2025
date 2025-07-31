@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cid6qokd0pwe3"]
+
+[ext_resource type="Script" uid="uid://b0cnpk0ymgsu6" path="res://Navigation/game_controller.gd" id="1_3iy47"]
+[ext_resource type="PackedScene" uid="uid://gct2ttl1x15w" path="res://Navigation/title.tscn" id="2_alenl"]
+[ext_resource type="PackedScene" uid="uid://dhkf2waclclh" path="res://Navigation/transition_controller.tscn" id="3_alenl"]
+
+[node name="GameController" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3iy47")
+
+[node name="World3D" type="Node3D" parent="."]
+
+[node name="World2D" type="Node2D" parent="."]
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" parent="GUI" instance=ExtResource("2_alenl")]
+layout_mode = 1
+
+[node name="TransitionController" parent="." instance=ExtResource("3_alenl")]
+layout_mode = 1
