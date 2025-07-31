@@ -13,6 +13,10 @@ const pointVisual = preload("res://art/sphereVisual.tscn")
 const DRAW_MAT = preload("res://Materials/drawMat.tres")
 
 func _input(event: InputEvent) -> void:
+	if Global.level.current_game_state != Global.level.game_state.DEFAULT:
+		end_line()
+		return
+	
 	if event is InputEventMouseButton:
 		if event.pressed:
 			drawing = true
@@ -20,6 +24,7 @@ func _input(event: InputEvent) -> void:
 		else:
 			drawing = false
 			end_line()
+			pass_sequence()
 	if drawing and event is InputEventMouseMotion:
 		var newPoint = get_mouse_coord()
 		if (newPoint.distance_to(points[points.size()-1])) > drawDetail:
@@ -30,26 +35,12 @@ func end_line():
 	for visual in pointVisuals:
 		visual.queue_free()
 	pointVisuals = []
-	pass_sequence()
 
 func create_point_visual(newPoint: Vector3):
 	var newPointer = pointVisual.instantiate()
 	add_child(newPointer)
 	newPointer.global_position = newPoint
 	pointVisuals.append(newPointer)
-#func _process(delta: float) -> void:
-	#loop_indicator.position = get_mouse_coord()
-	#if Input.is_mouse_button_pressed(1):
-		#drawing = true
-		##loop_indicator.scale_up(delta)
-	#elif drawing:
-		#drawing = false
-		##if get_mouse_coord().y == 11:
-			##loop_indicator.reset_scale()
-		#else:
-			#pass
-			#pass_sequence()
-			#loop_indicator.reset_scale()
 
 func get_mouse_coord() -> Vector3:
 	var viewport = get_viewport()
@@ -86,6 +77,7 @@ func pass_sequence():
 		return
 	
 	print("captured a relevant: " + str(captured.size()) + " peeps")
+	Global.level.current_game_state = Global.level.game_state.CUTSCENE
 	
 	var recipients = []
 	var secret_holder = null
@@ -103,13 +95,14 @@ func pass_sequence():
 		return
 	
 	var to_win = false
-	for i in range(recipients.size()):
-		if recipients[i].activeAlignment == Grimblo.alignment.TARGET:
-			chosen_recipient = recipients[i]
-			to_win = true
-			break
-		elif chosen_recipient == null or chosen_recipient.position.distance_squared_to(secret_holder.position) > recipients[i].position.distance_squared_to(secret_holder.position):
-			chosen_recipient = recipients[i]
+	if chosen_recipient == null:
+		for i in range(recipients.size()):
+			if recipients[i].activeAlignment == Grimblo.alignment.TARGET:
+				chosen_recipient = recipients[i]
+				to_win = true
+				break
+			elif chosen_recipient == null or chosen_recipient.position.distance_squared_to(secret_holder.position) > recipients[i].position.distance_squared_to(secret_holder.position):
+				chosen_recipient = recipients[i]
 	
 	# Move camera to view the interaction
 	Global.level.sim_timescale = 0
@@ -120,23 +113,29 @@ func pass_sequence():
 		print("Whoopsies, GAME OVER")
 		scene_redirect._to_select()
 		return
-	
-	if to_win:
+	elif to_win:
 		print("HUZZAH, you did it!!")
 		Global.level_progress = Global.level.level_num
 		scene_redirect._to_select()
 	else:
 		chosen_recipient.activeAlignment = Grimblo.alignment.ACTIVE
 		chosen_recipient.set_color()
+	
 	secret_holder.activeAlignment = Grimblo.alignment.PASSIVE
 	secret_holder.set_color()
 	
 	#Temp placeholder for cutscene
 	await get_tree().create_timer(.8).timeout
 	
-	Global.camera_rig.return_to_resting()
-	Global.level.sim_timescale = 1
-
+	# check if we are going to be golfing
+	if chosen_recipient.hasMoved:
+		Global.camera_rig.return_to_resting()
+		Global.level.sim_timescale = 1
+		Global.level.current_game_state = Global.level.game_state.DEFAULT
+	else:
+		Global.camera_rig.return_to_resting()
+		Global.level.sim_timescale = .2
+		Global.level.current_game_state = Global.level.game_state.GOLFING
 
 func loop_is_closed() -> bool:
 	return points.size() > 2 and points[points.size() - 1].distance_to(points[0]) < drawDetail * 10
