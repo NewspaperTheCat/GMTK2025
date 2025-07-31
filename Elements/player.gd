@@ -2,21 +2,38 @@ class_name Player extends Node3D
 
 #@onready var loop_indicator: LoopIndicator = $LoopIndicator
 @onready var scene_redirect: SceneRedirect = $SceneRedirect
-@onready var line: Line2D = $SubViewport/Line2D
-
+@export var drawDetail:= 0.5
 var drawing = false
 var points := []
+var pointVisuals := []
+
+const pointVisual = preload("res://art/sphereVisual.tscn")
+const DRAW_MAT = preload("res://Materials/drawMat.tres")
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.pressed:
 			drawing = true
-			start_line(get_texture_coord(get_mouse_coord()))
+			start_line(get_mouse_coord())
 		else:
 			drawing = false
+			end_line()
 	if drawing and event is InputEventMouseMotion:
-		add_to_line(get_texture_coord(get_mouse_coord()))
+		var newPoint = get_mouse_coord()
+		if (newPoint.distance_to(points[points.size()-1])) > drawDetail:
+			add_to_line(get_mouse_coord())
+			create_point_visual(get_mouse_coord())
 
+func end_line():
+	for visual in pointVisuals:
+		visual.queue_free()
+	pointVisuals = []
+func create_point_visual(newPoint: Vector3):
+	var newPointer = pointVisual.instantiate()
+	add_child(newPointer)
+	newPointer.global_position = newPoint
+	pointVisuals.append(newPointer)
+	print(newPoint)
 #func _process(delta: float) -> void:
 	#loop_indicator.position = get_mouse_coord()
 	#if Input.is_mouse_button_pressed(1):
@@ -48,18 +65,17 @@ func get_mouse_coord() -> Vector3:
 	
 	# The default vector is an edge case that means we found nothing
 	var mouse_position_3D: Vector3 = result.get("position", Vector3(0, 11, 0))
-	
 	return mouse_position_3D
 
 func get_texture_coord(world_pos: Vector3):
 	return Vector2(world_pos.x, world_pos.z)
 
-func start_line(point: Vector2):
-	line.points.clear()
-	line.points.append(point)
+func start_line(point: Vector3):
+	points.clear()
+	points.append(point)
 
-func add_to_line(point: Vector2):
-	line.points.append(point)
+func add_to_line(point: Vector3):
+	points.append(point)
 
 #func pass_sequence():
 	#var captured = loop_indicator.get_captured()
