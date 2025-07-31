@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwlm62q1aprja"]
+[gd_scene load_steps=9 format=3 uid="uid://bwlm62q1aprja"]
 
 [ext_resource type="Script" uid="uid://saielibv2plm" path="res://Elements/player.gd" id="1_gdu4x"]
 [ext_resource type="PackedScene" uid="uid://c6r1b0gioe5p5" path="res://Elements/loopIndicator.tscn" id="2_2ft67"]
 [ext_resource type="Script" uid="uid://c3ca7ynedm1wt" path="res://Navigation/scene_redirector.gd" id="3_1pq33"]
+[ext_resource type="PackedScene" uid="uid://0iwa30yn20po" path="res://LineRenderer/Line.tscn" id="4_twyhr"]
+[ext_resource type="Texture2D" uid="uid://biwp8lq6rsdph" path="res://Materials/DrawViewport.tres" id="5_8a7a3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8a7a3"]
+albedo_texture = ExtResource("5_8a7a3")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_esno4"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_ii066"]
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_gdu4x")
@@ -11,3 +20,35 @@ script = ExtResource("1_gdu4x")
 
 [node name="SceneRedirect" type="Node" parent="."]
 script = ExtResource("3_1pq33")
+
+[node name="Line" parent="." instance=ExtResource("4_twyhr")]
+
+[node name="DrawPlaneCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0)
+collision_layer = 2
+collision_mask = 0
+
+[node name="DrawPlane" type="MeshInstance3D" parent="DrawPlaneCollision"]
+transform = Transform3D(1.04562, 0, 0, 0, 1.04562, 0, 0, 0, 1.04562, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_8a7a3")
+mesh = SubResource("PlaneMesh_esno4")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DrawPlaneCollision"]
+shape = SubResource("WorldBoundaryShape3D_ii066")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+disable_3d = true
+handle_input_locally = false
+render_target_update_mode = 0
+
+[node name="Camera2D" type="Camera2D" parent="SubViewport"]
+
+[node name="Line2D" type="Line2D" parent="SubViewport"]
+points = PackedVector2Array(467, 346, 0, 0)
+default_color = Color(0, 0, 1, 1)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+visible = false
+offset_right = 1080.0
+offset_bottom = 1080.0

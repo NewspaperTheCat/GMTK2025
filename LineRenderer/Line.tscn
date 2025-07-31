@@ -34,3 +34,5 @@ material = SubResource("2")
 
 [node name="Path" type="Path3D" parent="."]
 curve = SubResource("1")
+
+[connection signal="curve_changed" from="Path" to="." method="_on_path_curve_changed"]
