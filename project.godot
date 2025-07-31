@@ -11,10 +11,10 @@ config_version=5
 [application]
 
 config/name="GMTK2025"
-run/main_scene="res://Levels/Level1.tscn"
+run/main_scene="uid://cid6qokd0pwe3"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GM="*res://game_manager.gd"
+Global="*res://global.gd"

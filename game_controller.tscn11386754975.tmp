@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cid6qokd0pwe3"]
+
+[ext_resource type="Script" uid="uid://b0cnpk0ymgsu6" path="res://game_controller.gd" id="1_3iy47"]
+[ext_resource type="PackedScene" uid="uid://btdsdpbb5wvlb" path="res://Levels/Level1.tscn" id="2_soqow"]
+
+[node name="GameController" type="Node2D"]
+script = ExtResource("1_3iy47")
+
+[node name="World3D" type="Node3D" parent="."]
+
+[node name="Level1" parent="World3D" instance=ExtResource("2_soqow")]
+
+[node name="World2D" type="Node2D" parent="."]
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
