@@ -26,7 +26,9 @@ func _physics_process(delta: float) -> void:
 	if detector.is_colliding():
 		for i in detector.get_collision_count():
 			var body = detector.get_collider(i)
-	print(detector.get_collision_count())
 
 func get_captured():
-	return detector.collision_result
+	var collided_bodies = []
+	for i in detector.get_collision_count():
+			collided_bodies.append(detector.get_collider(i))
+	return collided_bodies

@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 			loop_indicator.reset_scale()
 		else:
 			pass
-			#initiate swap scan/sequence
+			pass_sequence()
 			loop_indicator.reset_scale()
 
 func get_mouse_coord() -> Vector3:
@@ -45,13 +45,15 @@ func pass_sequence():
 	if captured.size() < 2:
 		return
 	
+	print("captured a relevant: " + str(captured.size()) + " peeps")
+	
 	var recipients = []
 	var secret_holder = null
 	var holds_opp = false
 	for i in range(captured.size()):
 		if captured[i].activeAlignment == Grimblo.alignment.ENEMY:
 			holds_opp = true
-		elif captured[i].knows:
+		elif captured[i].activeAlignment == Grimblo.alignment.ACTIVE:
 			secret_holder = captured[i]
 		else:
 			recipients.append(captured[i])
@@ -63,7 +65,7 @@ func pass_sequence():
 	
 	var chosen_recipient = null
 	var to_win = false
-	for i in range(recipients.size):
+	for i in range(recipients.size()):
 		if recipients[i].activeAlignment == Grimblo.alignment.TARGET:
 			chosen_recipient = recipients[i]
 			to_win = true
@@ -75,4 +77,7 @@ func pass_sequence():
 		print("HUZZAH, you did it!!")
 	else:
 		chosen_recipient.activeAlignment = Grimblo.alignment.ACTIVE
+		chosen_recipient.set_color()
 	secret_holder.activeAlignment = Grimblo.alignment.PASSIVE
+	secret_holder.set_color()
+	MeshInstance3D

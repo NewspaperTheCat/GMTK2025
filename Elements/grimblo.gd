@@ -10,7 +10,7 @@ class_name Grimblo extends CharacterBody3D
 
 @export var direction : Vector3
 @export var hasMoved := false
-@export var activeAlignment : alignment
+@export var activeAlignment : alignment = alignment.PASSIVE
 
 enum alignment { ACTIVE, PASSIVE, ENEMY, TARGET }
 
@@ -42,4 +42,3 @@ func handle_active_player() -> void:
 func set_color() -> void:
 	for shape in grimbloShapes:
 		shape.material_override = grimbloMaterial[activeAlignment]
-	
