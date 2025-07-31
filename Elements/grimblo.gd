@@ -23,22 +23,28 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	var vel := velocity
+	velocity *= GM.level.sim_timescale
 	move_and_slide()
+	
 	# Calculates wall bounce
+	var bounced = false
 	for i in range(get_slide_collision_count()):
 		var col := get_slide_collision(i)
 		var dir := vel - 2 * (vel.dot(col.get_normal())) * col.get_normal()
 		velocity = dir.normalized() * GM.level.crowd_speed
+		bounced = true
+	if !bounced:
+		velocity = vel
 	
 	look_at(position + velocity)
 	
-	if(activeAlignment == 0):
+	if(activeAlignment == alignment.ACTIVE):
 		handle_active_player()
 	
 func handle_active_player() -> void:
 	if(hasMoved):
 		null
-		
+
 func set_color() -> void:
 	for shape in grimbloShapes:
 		shape.material_override = grimbloMaterial[activeAlignment]
