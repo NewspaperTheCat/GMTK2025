@@ -1,36 +1,38 @@
-class_name Player extends Node
+class_name Player extends Node3D
 
-@onready var line_mesh: MeshInstance3D = $LineMesh
+@onready var path: Path3D = $Line/Path
+@onready var camera3d: Camera3D = $Camera3D
 
 var drawing = false
 var points := []
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		drawing = event.pressed
-		start_line(Vector3(0, 3, 0))
+		if event.pressed:
+			drawing = true
+			start_line(get_mouse_coord())
+		else:
+			drawing = false
 	
 	if drawing and event is InputEventMouseMotion:
-		pass
+		add_to_line(get_mouse_coord())
 
-func start_line(point:Vector3, color = Color.WHITE_SMOKE):
-	var immediate_mesh := ImmediateMesh.new()
-	points = [point]
-	var material := ORMMaterial3D.new()
-	material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	material.albedo_color = color
+func get_mouse_coord() -> Vector3:
+	var space_state = get_world_3d().direct_space_state
+	var mouse_position = get_viewport().get_mouse_position()
+	var from = camera3d.project_ray_origin(mouse_position)
+	var to = from + camera3d.project_ray_normal(mouse_position) * 5
+	return to
+	#var query = PhysicsRayQueryParameters3D.create(position, position + Vector3(0, -10, 0))
+	#var intersect := space_state.intersect_ray(query)
 	
-	line_mesh.mesh = immediate_mesh
-	line_mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	#if intersect.is_empty():
+		#return Vector3(0, 11, 0)
+	#return intersect.position
 
-	immediate_mesh.surface_begin(Mesh.PRIMITIVE_LINES, material)
-	immediate_mesh.surface_add_vertex(point)
-	immediate_mesh.surface_end()
+func start_line(point: Vector3, color = Color.WHITE_SMOKE):
+	path.curve.clear_points()
+	path.curve.add_point(point)
 
-func add_to_line(point:Vector3) :
-	var immediate_mesh := ImmediateMesh.new()
-	immediate_mesh.surface_begin(Mesh.PRIMITIVE_LINES, line_mesh.mesh.surface_get_material(0))
-	points.append(point)
-	for i in range(points.size()):
-		immediate_mesh.surface_add_vertex(points[i])
-	immediate_mesh.surface_end()
+func add_to_line(point: Vector3):
+	path.curve.add_point(point)

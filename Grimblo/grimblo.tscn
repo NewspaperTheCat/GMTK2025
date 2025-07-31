@@ -156,7 +156,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dwyiq")
 
 [node name="Character" type="Node3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 0, 0, 0)
 
 [node name="Player" type="Node3D" parent="Character"]
 
@@ -165,17 +165,17 @@ mesh = SubResource("ArrayMesh_y2wu8")
 skeleton = NodePath("")
 
 [node name="Cube_001" type="MeshInstance3D" parent="Character/Player"]
-transform = Transform3D(0.980866, -0.194683, 0, 0.194683, 0.980866, 0, 0, 0, 1, -0.191519, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_3fsfv")
 skeleton = NodePath("")
 
 [node name="Cube_002" type="MeshInstance3D" parent="Character/Player"]
-transform = Transform3D(0.980866, 0.194683, 0, -0.194683, 0.980866, 0, 0, 0, 1, 0.208254, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_unftq")
 skeleton = NodePath("")
 
 [node name="Cylinder" type="MeshInstance3D" parent="Character/Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0081939, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.118683, 0)
 mesh = SubResource("ArrayMesh_wt1qo")
 skeleton = NodePath("")
 
@@ -183,3 +183,5 @@ skeleton = NodePath("")
 libraries = {
 &"": SubResource("AnimationLibrary_ooc87")
 }
+autoplay = "Walking"
+speed_scale = 2.0

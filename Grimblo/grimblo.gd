@@ -12,4 +12,6 @@ func _physics_process(delta: float) -> void:
 	for i in range(get_slide_collision_count()):
 		var col := get_slide_collision(i)
 		var dir := vel - 2 * (vel.dot(col.get_normal())) * col.get_normal()
-		velocity = dir
+		velocity = dir.normalized() * GM.level.crowd_speed
+	
+	look_at(position + velocity)
