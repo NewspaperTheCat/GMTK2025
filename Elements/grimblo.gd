@@ -5,6 +5,7 @@ class_name Grimblo extends CharacterBody3D
 @onready var cylinder: GeometryInstance3D = $Character/Player/Cylinder
 @onready var cube_001: GeometryInstance3D = $Character/Player/Cube_001
 
+@onready var pointer: Node3D = $Character/Player/Pointer
 @onready var grimbloShapes = [cube, cube_001, cylinder, cube_002]
 @onready var grimbloMaterial: Array[Material] = [preload("res://Materials/ActiveGrimblo.tres"), preload("res://Materials/Grimblo.tres"), preload("res://Materials/EnemyGrimblo.tres"), preload("res://Materials/TargetGrimblo.tres")]
 
@@ -22,7 +23,6 @@ enum alignment { ACTIVE, PASSIVE, ENEMY, TARGET }
 func _ready() -> void:
 	velocity = direction.normalized() * Global.level.crowd_speed
 	set_color()
-	print(activeAlignment)
 	
 
 func _physics_process(delta: float) -> void:
@@ -51,12 +51,17 @@ func handle_active_player() -> void:
 	if(hasClicked == false && Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
 		hasClicked = true
 		initMousePos = get_viewport().get_mouse_position()
-	if(hasClicked == true && !Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
+		pointer.visible = true
+	if(hasClicked == true):
 		launchVector = get_viewport().get_mouse_position() - initMousePos
-		velocity = Vector3(launchVector.x, 0, launchVector.y).normalized() * Global.level.crowd_speed
-		move_and_slide()
-		hasMoved = true
-		hasClicked = false
+		if(!Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
+			velocity = Vector3(launchVector.x, 0, launchVector.y).normalized() * Global.level.crowd_speed
+			move_and_slide()
+			hasMoved = true
+			hasClicked = false
+			pointer.visible = false
+		else:
+			look_at(position + Vector3(launchVector.x, 0, launchVector.y))
 func set_color() -> void:
 	for shape in grimbloShapes:
 		shape.material_override = grimbloMaterial[activeAlignment]
