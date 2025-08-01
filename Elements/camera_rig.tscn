@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://nenh7chlqfv1"]
+[gd_scene load_steps=5 format=3 uid="uid://nenh7chlqfv1"]
 
 [ext_resource type="Script" uid="uid://b2l541ohj6x63" path="res://Elements/camera_rig.gd" id="1_c3s8v"]
 
@@ -13,6 +13,10 @@ point_count = 2
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
+[sub_resource type="Environment" id="Environment_c3s8v"]
+background_mode = 1
+background_color = Color(0.402356, 0.655926, 0.671292, 1)
+
 [node name="CameraRig" type="Path3D"]
 curve = SubResource("Curve3D_d7yol")
 script = ExtResource("1_c3s8v")
@@ -25,4 +29,5 @@ tilt_enabled = false
 
 [node name="Camera3D" type="Camera3D" parent="PathFollow"]
 transform = Transform3D(1, 0, 0, 0, 0.604611, 0.796546, 0, -0.796548, 0.604613, 0, 0, 0)
+environment = SubResource("Environment_c3s8v")
 near = 0.2
