@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dgw18dh6btfxp" path="res://Navigation/Levels/level.gd" id="1_fhqol"]
 [ext_resource type="PackedScene" uid="uid://bwlm62q1aprja" path="res://Elements/player.tscn" id="2_fhqol"]
 [ext_resource type="PackedScene" uid="uid://nenh7chlqfv1" path="res://Elements/camera_rig.tscn" id="4_w5t0j"]
-[ext_resource type="PackedScene" path="res://Elements/breakable_door.tscn" id="5_d7yol"]
+[ext_resource type="PackedScene" uid="uid://bt4bydgxxlscj" path="res://Elements/breakable_door.tscn" id="5_d7yol"]
 [ext_resource type="PackedScene" uid="uid://st0knmypcpun" path="res://art/Level1.glb" id="6_4c3cj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ma5b5"]
@@ -39,7 +39,6 @@ shape = SubResource("BoxShape3D_ma5b5")
 
 [node name="Wall" type="StaticBody3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -4.03559, 0.790001, 0.165012)
-collision_layer = 5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.355592, -0.725667, 0.503159)

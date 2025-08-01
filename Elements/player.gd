@@ -76,66 +76,82 @@ func pass_sequence():
 	if captured.size() < 2:
 		return
 	
-	print("captured a relevant: " + str(captured.size()) + " peeps")
-	Global.level.current_game_state = Global.level.game_state.CUTSCENE
-	
 	var recipients = []
 	var secret_holder = null
 	var holds_opp = false
 	var chosen_recipient = null
 	for i in range(captured.size()):
-		if captured[i].activeAlignment == Grimblo.alignment.ENEMY:
-			holds_opp = true
-			chosen_recipient = captured[i]
-		elif captured[i].activeAlignment == Grimblo.alignment.ACTIVE:
+		if captured[i].activeAlignment == Grimblo.alignment.ACTIVE:
 			secret_holder = captured[i]
 		else:
 			recipients.append(captured[i])
+	
 	if secret_holder == null:
 		return
+	Global.level.current_game_state = Global.level.game_state.CUTSCENE
 	
 	var to_win = false
-	if chosen_recipient == null:
-		for i in range(recipients.size()):
-			# CHECK LINE OF SIGHT HERE TODO
-			
-			if recipients[i].activeAlignment == Grimblo.alignment.ENEMY:
-				holds_opp = true
-				chosen_recipient = captured[i]
-				break
-			if recipients[i].activeAlignment == Grimblo.alignment.TARGET:
-				chosen_recipient = recipients[i]
-				to_win = true
-			elif recipients[i].activeAlignment == Grimblo.alignment.PASSIVE and (chosen_recipient == null or chosen_recipient.position.distance_squared_to(secret_holder.position) > recipients[i].position.distance_squared_to(secret_holder.position)):
-				chosen_recipient = recipients[i]
+	for i in range(recipients.size()):
+		# CHECK LINE OF SIGHT HERE TODO
+		
+		if recipients[i].activeAlignment == Grimblo.alignment.ENEMY:
+			holds_opp = true
+			chosen_recipient = recipients[i]
+			break
+		if recipients[i].activeAlignment == Grimblo.alignment.TARGET:
+			chosen_recipient = recipients[i]
+			to_win = true
+		elif (chosen_recipient == null or chosen_recipient.position.distance_squared_to(secret_holder.position) > recipients[i].position.distance_squared_to(secret_holder.position)) and !to_win:
+			chosen_recipient = recipients[i]
+	
+	# Tell grimblos to look at each other
+	chosen_recipient.look_at(secret_holder.position)
+	secret_holder.look_at(chosen_recipient.position)
 	
 	# Move camera to view the interaction
 	Global.level.sim_timescale = 0
 	Global.camera_rig.view_interaction(secret_holder.position, chosen_recipient.position)
 	await Global.camera_rig.finished_moving
 	
+	var openers = ["Keep quiet about this", "Between you and me", "Don't tell anyone"]
+	var dialogue: Array[String]
+	var result: int # 0 = pass ; 1 = win ; 2 = lose
+	
 	if holds_opp:
-		print("Whoopsies, GAME OVER")
-		scene_redirect._to_select()
-		return
+		result = 2
+		var enemy_responses = ["You don't say >:)", "The world needs to know this"]
+		dialogue = [openers[randi() % openers.size()], enemy_responses[randi() % enemy_responses.size()], "uh oh...", "HEY EVERYONE!!"]
 	elif to_win:
-		print("HUZZAH, you did it!!")
-		Global.level_progress = Global.level.level_num
-		scene_redirect._to_select()
+		result = 1
+		dialogue = ["A little birdy told me", "!!!!!"]
 	else:
+		result = 0
+		var neutral_responses = ["Safe with me", "Not a word", "Lips are sealed"]
+		dialogue = [openers[randi() % openers.size()], neutral_responses[randi() % neutral_responses.size()]]
+	
+	await play_dialogue(secret_holder, chosen_recipient, dialogue)
+	
+	if result == 0:
 		chosen_recipient.activeAlignment = Grimblo.alignment.ACTIVE
 		chosen_recipient.set_color()
-	
-	secret_holder.activeAlignment = Grimblo.alignment.PASSIVE
-	secret_holder.set_color()
-	
-	#Temp placeholder for cutscene
-	await get_tree().create_timer(.8).timeout
-	
-	# check if we are going to be golfing
-	Global.camera_rig.return_to_resting()
-	Global.level.sim_timescale = 1
-	Global.level.current_game_state = Global.level.game_state.GOLFING
+		secret_holder.activeAlignment = Grimblo.alignment.PASSIVE
+		secret_holder.set_color()
+		
+		Global.camera_rig.return_to_resting()
+		Global.level.sim_timescale = 1
+		Global.level.current_game_state = Global.level.game_state.GOLFING
+	elif result == 1:
+		Global.level_progress = Global.level.level_num
+		scene_redirect._to_select()
+	elif result == 2:
+		scene_redirect._to_select()
+
+func play_dialogue(initiator: Grimblo, recipient: Grimblo, transcript: Array[String]):
+	var speaker: Grimblo
+	for i in range(transcript.size()):
+		speaker = initiator if i % 2 == 0 else recipient
+		speaker.say(transcript[i])
+		await speaker.done_speaking
 
 func loop_is_closed() -> bool:
 	return points.size() > 2 and points[points.size() - 1].distance_to(points[0]) < drawDetail * 10

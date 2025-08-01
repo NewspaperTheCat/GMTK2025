@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://53o2s6enb05h"]
 
-[ext_resource type="Shader" uid="uid://di304nug6ctl5" path="res://Materials/cross_hatch.gdshader" id="1_jpfl2"]
+[ext_resource type="Shader" uid="uid://di304nug6ctl5" path="res://Materials/Shaders/cross_hatch_canvas.gdshader" id="1_jpfl2"]
 [ext_resource type="Texture2D" uid="uid://dmo1e2ci2i76r" path="res://art/CrossHatch/CrossHatchLight.png" id="2_jpfl2"]
 [ext_resource type="Texture2D" uid="uid://decgacw2550wm" path="res://art/CrossHatch/GradientHatchCovering.png" id="2_pb063"]
 [ext_resource type="Texture2D" uid="uid://c0pyrlnxwpumg" path="res://art/CrossHatch/SingleHatchLight.png" id="3_lu6pr"]

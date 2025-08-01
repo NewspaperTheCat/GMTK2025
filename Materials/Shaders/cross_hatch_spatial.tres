@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://tq2e7m4rk0nv"]
+
+[ext_resource type="Shader" uid="uid://61eib6wholil" path="res://Materials/Shaders/cross_hatch_spatial.gdshader" id="1_4tn21"]
+[ext_resource type="Texture2D" uid="uid://bxhb75bpv1typ" path="res://art/CrossHatch/UniversalHatch.png" id="2_v64gp"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_4tn21")
+shader_parameter/cross_hatch_texture = ExtResource("2_v64gp")

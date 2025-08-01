@@ -10,6 +10,7 @@ class_name Grimblo extends CharacterBody3D
 @onready var grimbloMaterial: Array[Material] = [preload("res://Materials/ActiveGrimblo.tres"), preload("res://Materials/Grimblo.tres"), preload("res://Materials/EnemyGrimblo.tres"), preload("res://Materials/TargetGrimblo.tres")]
 
 @onready var animation_player: AnimationPlayer = $Character/AnimationPlayer
+@onready var label: Label3D = $LabelPivot/Label3D
 
 @export var direction : Vector3
 var hasClicked := false
@@ -20,19 +21,24 @@ var launchVector : Vector2
 
 enum alignment { ACTIVE, PASSIVE, ENEMY, TARGET }
 
+signal done_speaking
 
 func _ready() -> void:
 	velocity = direction.normalized() * Global.level.crowd_speed
 	set_color()
+	
+	Global.level.timescale_changed.connect(_update_animation_speed)
 
-func _process(delta: float) -> void:
-	animation_player.speed_scale = 2.0 * Global.level.sim_timescale
+func _update_animation_speed(timescale) -> void:
+	animation_player.speed_scale = 2.0 * timescale
 
 func _physics_process(delta: float) -> void:
 	if(Global.level.current_game_state == Global.level.game_state.GOLFING and (activeAlignment == alignment.ACTIVE)):
 		handle_active_player()
 	else:
 		handle_passive_player()
+	
+	if label.visible: label.get_parent().look_at(get_viewport().get_camera_3d().global_position)
 
 func handle_passive_player() -> void:
 	var vel := velocity
@@ -49,8 +55,8 @@ func handle_passive_player() -> void:
 		velocity = vel
 	velocity = velocity.normalized() * lerp(velocity.length(), Global.level.crowd_speed, .02) 
 	
-	look_at(position + velocity)
-	
+	if Global.level.sim_timescale > 0: look_at(position + velocity)
+
 func handle_active_player() -> void:
 	if(hasClicked == false && Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
 		hasClicked = true
@@ -71,3 +77,16 @@ func handle_active_player() -> void:
 func set_color() -> void:
 	for shape in grimbloShapes:
 		shape.material_override = grimbloMaterial[activeAlignment]
+
+func say(message: String, letter_speed: float = .05):
+	label.text = ""
+	label.visible = true
+	
+	for i in range(message.length()):
+		label.text = label.text + message[i]
+		await get_tree().create_timer(letter_speed).timeout
+	#add a buffer time after the message is done being written
+	await get_tree().create_timer(.4).timeout
+	
+	done_speaking.emit()
+	label.visible = false
