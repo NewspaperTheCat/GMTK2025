@@ -12,7 +12,6 @@ class_name Grimblo extends CharacterBody3D
 @onready var animation_player: AnimationPlayer = $Character/AnimationPlayer
 
 @export var direction : Vector3
-@export var hasMoved := false
 var hasClicked := false
 var initMousePos : Vector2
 var launchVector : Vector2
@@ -30,7 +29,7 @@ func _process(delta: float) -> void:
 	animation_player.speed_scale = 2.0 * Global.level.sim_timescale
 
 func _physics_process(delta: float) -> void:
-	if(Global.level.current_game_state == Global.level.game_state.GOLFING and (activeAlignment == alignment.ACTIVE) && !hasMoved):
+	if(Global.level.current_game_state == Global.level.game_state.GOLFING and (activeAlignment == alignment.ACTIVE)):
 		handle_active_player()
 	else:
 		handle_passive_player()
@@ -56,13 +55,13 @@ func handle_active_player() -> void:
 	if(hasClicked == false && Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
 		hasClicked = true
 		initMousePos = get_viewport().get_mouse_position()
+		Global.level.sim_timescale = .2
 		pointer.visible = true
 	if(hasClicked == true):
 		launchVector = get_viewport().get_mouse_position() - initMousePos
 		if(!Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
 			velocity = Vector3(launchVector.x, 0, launchVector.y).normalized() * Global.level.crowd_speed * 1.5
 			move_and_slide()
-			hasMoved = true
 			hasClicked = false
 			pointer.visible = false
 			Global.level.sim_timescale = 1
