@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bwlm62q1aprja" path="res://Elements/player.tscn" id="2_fhqol"]
 [ext_resource type="PackedScene" uid="uid://nenh7chlqfv1" path="res://Elements/camera_rig.tscn" id="4_w5t0j"]
 [ext_resource type="PackedScene" path="res://Elements/breakable_door.tscn" id="5_d7yol"]
-[ext_resource type="PackedScene" uid="uid://b6qhgyryv7o" path="res://art/updatedLV1.glb" id="6_4c3cj"]
+[ext_resource type="PackedScene" uid="uid://ctv4axuwyue2j" path="res://art/updatedLevel1.glb" id="6_4c3cj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ma5b5"]
 size = Vector3(5.0832, 0.5, 10)
@@ -121,5 +121,5 @@ activeAlignment = 3
 [node name="BreakableDoor" parent="." instance=ExtResource("5_d7yol")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0416, 0, -6.76269)
 
-[node name="updatedLV1" parent="." instance=ExtResource("6_4c3cj")]
+[node name="Level1" parent="." instance=ExtResource("6_4c3cj")]
 transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, -1.53125, 0.228497, 0.343842)
