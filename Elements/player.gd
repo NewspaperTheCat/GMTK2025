@@ -5,6 +5,7 @@ class_name Player extends Node3D
 @onready var shape_cast: ShapeCast3D = $ShapeCast
 
 @export var drawDetail:= 0.5
+@export var maxDrawRadius := 1.5
 var drawing = false
 var points := []
 var pointVisuals := []
@@ -27,9 +28,11 @@ func _input(event: InputEvent) -> void:
 			pass_sequence()
 	if drawing and event is InputEventMouseMotion:
 		var newPoint = get_mouse_coord()
+		#if points[0].distance_to(newPoint) > maxDrawRadius:
+			#newPoint = points[0] + (newPoint - points[0]).normalized() * maxDrawRadius
 		if (newPoint.distance_to(points[points.size()-1])) > drawDetail:
-			add_to_line(get_mouse_coord())
-			create_point_visual(get_mouse_coord())
+			add_to_line(newPoint)
+			create_point_visual(newPoint)
 
 func end_line():
 	for visual in pointVisuals:

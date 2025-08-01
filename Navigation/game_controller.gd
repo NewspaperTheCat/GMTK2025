@@ -71,11 +71,10 @@ func change_3d_scene(
 	keep_running: bool = false,
 	transition: bool = true,
 	transition_in: String = "Fade In",
-	transition_out: String = "Fade Out",
-	seconds: float = 1.0
+	transition_out: String = "Fade Out"
 ) -> void:
 	if transition:
-		transition_controller.transition(transition_out, seconds)
+		transition_controller.transition(transition_out)
 		await transition_controller.animation_player.animation_finished
 	
 	if current_3d_scene != null:
@@ -90,4 +89,4 @@ func change_3d_scene(
 		gui.add_child(new)
 		current_3d_scene = new
 	
-	if transition: transition_controller.transition(transition_in, seconds)
+	if transition: transition_controller.transition(transition_in)
