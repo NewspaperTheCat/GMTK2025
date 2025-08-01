@@ -97,11 +97,16 @@ func pass_sequence():
 	var to_win = false
 	if chosen_recipient == null:
 		for i in range(recipients.size()):
+			# CHECK LINE OF SIGHT HERE TODO
+			
+			if recipients[i].activeAlignment == Grimblo.alignment.ENEMY:
+				holds_opp = true
+				chosen_recipient = captured[i]
+				break
 			if recipients[i].activeAlignment == Grimblo.alignment.TARGET:
 				chosen_recipient = recipients[i]
 				to_win = true
-				break
-			elif chosen_recipient == null or chosen_recipient.position.distance_squared_to(secret_holder.position) > recipients[i].position.distance_squared_to(secret_holder.position):
+			elif recipients[i].activeAlignment == Grimblo.alignment.PASSIVE and (chosen_recipient == null or chosen_recipient.position.distance_squared_to(secret_holder.position) > recipients[i].position.distance_squared_to(secret_holder.position)):
 				chosen_recipient = recipients[i]
 	
 	# Move camera to view the interaction

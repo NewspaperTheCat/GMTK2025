@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=3 uid="uid://bt4bydgxxlscj"]
+
+[ext_resource type="Script" uid="uid://cmsnhad4wof4n" path="res://Elements/breakable_door.gd" id="1_l5a7p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ck6ya"]
+size = Vector3(1, 1.25, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fmjn8"]
+size = Vector3(1, 1.25, 0.125)
+
+[sub_resource type="Animation" id="Animation_l5a7p"]
+resource_name = "door_open"
+length = 0.8
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.233333, 1, 0, 0.898265, 0, -0.439453, 0.333333, 1, 0, 0.89841, 0, -0.439158, 0.466667, 1, 0, -0.805764, 0, 0.592237, 0.8, 1, 0, -0.738686, 0, 0.67405)
+
+[sub_resource type="Animation" id="Animation_ck6ya"]
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_fmjn8"]
+resource_name = "door_close"
+length = 0.2
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.738686, 0, 0.67405, 0.147291, 1, 0, -0.466183, 0, 0.884688, 0.2, 1, 0, 0, 0, 1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ck6ya"]
+_data = {
+&"RESET": SubResource("Animation_ck6ya"),
+&"door_close": SubResource("Animation_fmjn8"),
+&"door_open": SubResource("Animation_l5a7p")
+}
+
+[sub_resource type="BoxMesh" id="BoxMesh_l5a7p"]
+size = Vector3(1, 1.25, 0.125)
+
+[node name="BreakableDoor" type="Node3D"]
+script = ExtResource("1_l5a7p")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_ck6ya")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_fmjn8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ck6ya")
+}
+
+[node name="Pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+mesh = SubResource("BoxMesh_l5a7p")
+skeleton = NodePath("../..")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_grimblo_entered"]

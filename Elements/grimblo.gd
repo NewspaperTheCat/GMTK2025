@@ -44,10 +44,11 @@ func handle_passive_player() -> void:
 	for i in range(get_slide_collision_count()):
 		var col := get_slide_collision(i)
 		var dir := vel - 2 * (vel.dot(col.get_normal())) * col.get_normal()
-		velocity = dir.normalized() * Global.level.crowd_speed
+		velocity = dir.normalized() * vel.length()
 		bounced = true
 	if !bounced:
 		velocity = vel
+	velocity = velocity.normalized() * lerp(velocity.length(), Global.level.crowd_speed, .02) 
 	
 	look_at(position + velocity)
 	
@@ -59,7 +60,7 @@ func handle_active_player() -> void:
 	if(hasClicked == true):
 		launchVector = get_viewport().get_mouse_position() - initMousePos
 		if(!Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
-			velocity = Vector3(launchVector.x, 0, launchVector.y).normalized() * Global.level.crowd_speed
+			velocity = Vector3(launchVector.x, 0, launchVector.y).normalized() * Global.level.crowd_speed * 1.5
 			move_and_slide()
 			hasMoved = true
 			hasClicked = false
