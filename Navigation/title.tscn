@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://gct2ttl1x15w"]
+[gd_scene load_steps=9 format=3 uid="uid://gct2ttl1x15w"]
 
 [ext_resource type="Script" uid="uid://c3ca7ynedm1wt" path="res://Navigation/scene_redirector.gd" id="1_yi8iy"]
 [ext_resource type="PackedScene" uid="uid://oqpsd56sxbch" path="res://Elements/grimblo.tscn" id="2_4q1p3"]
-[ext_resource type="Material" uid="uid://c1yia1fgx2i1w" path="res://Materials/EnemyGrimblo.tres" id="3_ny8t6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8bpl4"]
 font_size = 48
@@ -15,6 +14,65 @@ size = Vector3(3, 0.2, 10)
 
 [sub_resource type="BoxMesh" id="BoxMesh_f6gwl"]
 size = Vector3(0.25, 3, 10)
+
+[sub_resource type="Shader" id="Shader_3qeqw"]
+code = "// NOTE: Shader automatically converted from Godot Engine 4.4.1.stable's StandardMaterial3D.
+
+shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_burley, specular_schlick_ggx;
+
+uniform vec4 albedo : source_color;
+uniform sampler2D texture_albedo : source_color, filter_linear_mipmap, repeat_enable;
+uniform ivec2 albedo_texture_size;
+uniform float point_size : hint_range(0.1, 128.0, 0.1);
+
+uniform float roughness : hint_range(0.0, 1.0);
+uniform sampler2D texture_metallic : hint_default_white, filter_linear_mipmap, repeat_enable;
+uniform vec4 metallic_texture_channel;
+uniform sampler2D texture_roughness : hint_roughness_r, filter_linear_mipmap, repeat_enable;
+
+uniform float specular : hint_range(0.0, 1.0, 0.01);
+uniform float metallic : hint_range(0.0, 1.0, 0.01);
+
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+uniform vec3 uv2_scale;
+uniform vec3 uv2_offset;
+
+void vertex() {
+	UV = UV * uv1_scale.xy + uv1_offset.xy;
+}
+
+void fragment() {
+	vec2 base_uv = UV;
+
+	vec4 albedo_tex = texture(texture_albedo, base_uv);
+	ALBEDO = albedo.rgb * albedo_tex.rgb;
+
+	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
+	METALLIC = metallic_tex * metallic;
+	SPECULAR = specular;
+
+	vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
+	float roughness_tex = dot(texture(texture_roughness, base_uv), roughness_texture_channel);
+	ROUGHNESS = roughness_tex * roughness;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j7ckx"]
+render_priority = 0
+shader = SubResource("Shader_3qeqw")
+shader_parameter/albedo = Color(0.945098, 0, 0.0666667, 1)
+shader_parameter/albedo_texture_size = Vector2i(0, 0)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -99,19 +157,19 @@ transform = Transform3D(0.98483, -0.0728862, -0.157473, 0.0570095, 0.993037, -0.
 script = null
 
 [node name="Cube" parent="BackgroundScene/Grimblo2/Character/Player" index="0"]
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cube_001" parent="BackgroundScene/Grimblo2/Character/Player" index="1"]
 transform = Transform3D(0.914409, -0.404792, 0, 0.404792, 0.914409, 0, 0, 0, 1, -0.407497, 0, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cube_002" parent="BackgroundScene/Grimblo2/Character/Player" index="2"]
 transform = Transform3D(0.914409, 0.404792, 0, -0.404792, 0.914409, 0, 0, 0, 1, 0.452932, 0, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cylinder" parent="BackgroundScene/Grimblo2/Character/Player" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.035355, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="AnimationPlayer" parent="BackgroundScene/Grimblo2/Character" index="1"]
 autoplay = ""
@@ -121,19 +179,19 @@ transform = Transform3D(0.990524, -0.0433356, 0.130326, 0.0570095, 0.993037, -0.
 script = null
 
 [node name="Cube" parent="BackgroundScene/Grimblo3/Character/Player" index="0"]
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cube_001" parent="BackgroundScene/Grimblo3/Character/Player" index="1"]
 transform = Transform3D(0.949648, 0.313318, 0, -0.313318, 0.949648, 0, 0, 0, 1, 0.311148, 0, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cube_002" parent="BackgroundScene/Grimblo3/Character/Player" index="2"]
 transform = Transform3D(0.949649, -0.313317, 0, 0.313317, 0.949649, 0, 0, 0, 1, -0.313055, 0, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cylinder" parent="BackgroundScene/Grimblo3/Character/Player" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0855325, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="AnimationPlayer" parent="BackgroundScene/Grimblo3/Character" index="1"]
 autoplay = ""
@@ -143,19 +201,19 @@ transform = Transform3D(0.988895, 0.103836, -0.106321, -0.113205, 0.989822, -0.0
 script = null
 
 [node name="Cube" parent="BackgroundScene/Grimblo4/Character/Player" index="0"]
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cube_001" parent="BackgroundScene/Grimblo4/Character/Player" index="1"]
 transform = Transform3D(0.956952, -0.290246, 0, 0.290246, 0.956952, 0, 0, 0, 1, -0.287892, 0, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cube_002" parent="BackgroundScene/Grimblo4/Character/Player" index="2"]
 transform = Transform3D(0.956952, 0.290246, 0, -0.290246, 0.956952, 0, 0, 0, 1, 0.316241, 0, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cylinder" parent="BackgroundScene/Grimblo4/Character/Player" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00374765, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="AnimationPlayer" parent="BackgroundScene/Grimblo4/Character" index="1"]
 autoplay = ""
@@ -165,19 +223,19 @@ transform = Transform3D(0.944602, -0.299688, -0.133842, 0.322071, 0.924891, 0.20
 script = null
 
 [node name="Cube" parent="BackgroundScene/Grimblo5/Character/Player" index="0"]
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cube_001" parent="BackgroundScene/Grimblo5/Character/Player" index="1"]
 transform = Transform3D(0.999786, 0.0206772, 0, -0.0206772, 0.999786, 0, 0, 0, 1, 0.0201181, 0, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cube_002" parent="BackgroundScene/Grimblo5/Character/Player" index="2"]
 transform = Transform3D(0.999786, -0.0206772, 0, 0.0206772, 0.999786, 0, 0, 0, 1, -0.0212723, 0, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cylinder" parent="BackgroundScene/Grimblo5/Character/Player" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0165296, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="AnimationPlayer" parent="BackgroundScene/Grimblo5/Character" index="1"]
 autoplay = ""
@@ -187,19 +245,19 @@ transform = Transform3D(0.996027, -0.0636473, -0.0622863, 0.0570095, 0.993037, -
 script = null
 
 [node name="Cube" parent="BackgroundScene/Grimblo6/Character/Player" index="0"]
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cube_001" parent="BackgroundScene/Grimblo6/Character/Player" index="1"]
 transform = Transform3D(0.998432, -0.0559839, 0, 0.0559839, 0.998432, 0, 0, 0, 1, -0.0547707, 0, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cube_002" parent="BackgroundScene/Grimblo6/Character/Player" index="2"]
 transform = Transform3D(0.998432, 0.0559839, 0, -0.0559839, 0.998432, 0, 0, 0, 1, 0.0609707, 0, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cylinder" parent="BackgroundScene/Grimblo6/Character/Player" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.113868, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="AnimationPlayer" parent="BackgroundScene/Grimblo6/Character" index="1"]
 autoplay = ""
@@ -212,19 +270,19 @@ script = null
 transform = Transform3D(0.413675, -0.0240921, -0.279809, 0.0338981, 0.498798, 0.0071682, 0.278791, -0.0249006, 0.414314, 0, 0, 0)
 
 [node name="Cube" parent="BackgroundScene/Grimblo7/Character/Player" index="0"]
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cube_001" parent="BackgroundScene/Grimblo7/Character/Player" index="1"]
 transform = Transform3D(0.928347, 0.371714, 0, -0.371714, 0.928347, 0, 0, 0, 1, 0.371848, 0, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cube_002" parent="BackgroundScene/Grimblo7/Character/Player" index="2"]
 transform = Transform3D(0.928347, -0.371714, 0, 0.371714, 0.928347, 0, 0, 0, 1, -0.374128, 0, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="Cylinder" parent="BackgroundScene/Grimblo7/Character/Player" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0748423, 0)
-material_override = ExtResource("3_ny8t6")
+material_override = SubResource("ShaderMaterial_j7ckx")
 
 [node name="AnimationPlayer" parent="BackgroundScene/Grimblo7/Character" index="1"]
 autoplay = ""

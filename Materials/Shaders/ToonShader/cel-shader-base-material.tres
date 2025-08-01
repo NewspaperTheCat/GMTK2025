@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cvlmswvwk8qrx"]
+
+[ext_resource type="Shader" uid="uid://bvsurc2j4dqpg" path="res://Materials/Shaders/ToonShader/cel-shader-base.gdshader" id="1_nusuq"]
+[ext_resource type="Material" uid="uid://h7l6uths11rg" path="res://Materials/Shaders/ToonShader/outline.tres" id="1_yy6na"]
+
+[resource]
+render_priority = 0
+next_pass = ExtResource("1_yy6na")
+shader = ExtResource("1_nusuq")
+shader_parameter/color = Color(0.7, 0.12, 0.86, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.5)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)

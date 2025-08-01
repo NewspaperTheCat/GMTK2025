@@ -74,6 +74,7 @@ func handle_active_player() -> void:
 			Global.level.current_game_state = Global.level.game_state.DEFAULT
 		else:
 			look_at(position + Vector3(launchVector.x, 0, launchVector.y))
+
 func set_color() -> void:
 	for shape in grimbloShapes:
 		shape.material_override = grimbloMaterial[activeAlignment]

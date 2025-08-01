@@ -17,7 +17,7 @@ tracks/0/enabled = true
 tracks/0/path = NodePath("Pivot")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.233333, 1, 0, 0.898265, 0, -0.439453, 0.333333, 1, 0, 0.89841, 0, -0.439158, 0.466667, 1, 0, -0.805764, 0, 0.592237, 0.8, 1, 0, -0.738686, 0, 0.67405)
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.233333, 1, 0, -0.898, 0, -0.439, 0.333333, 1, 0, -0.898, 0, -0.439, 0.466667, 1, 0, 0.806, 0, 0.592, 0.8, 1, 0, 0.739, 0, 0.674)
 
 [sub_resource type="Animation" id="Animation_ck6ya"]
 length = 0.001
@@ -38,7 +38,7 @@ tracks/0/enabled = true
 tracks/0/path = NodePath("Pivot")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.738686, 0, 0.67405, 0.147291, 1, 0, -0.466183, 0, 0.884688, 0.2, 1, 0, 0, 0, 1)
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.739, 0, 0.674, 0.133333, 1, 0, 0.505269, 0, 0.862962, 0.2, 1, 0, 0, 0, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ck6ya"]
 _data = {
@@ -72,10 +72,10 @@ libraries = {
 }
 
 [node name="Pivot" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
 mesh = SubResource("BoxMesh_l5a7p")
 skeleton = NodePath("../..")
 

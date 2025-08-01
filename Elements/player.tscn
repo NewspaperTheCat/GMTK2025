@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwlm62q1aprja"]
+[gd_scene load_steps=4 format=3 uid="uid://bwlm62q1aprja"]
 
 [ext_resource type="Script" uid="uid://saielibv2plm" path="res://Elements/player.gd" id="1_gdu4x"]
 [ext_resource type="Script" uid="uid://c3ca7ynedm1wt" path="res://Navigation/scene_redirector.gd" id="3_1pq33"]
-
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_ii066"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_twyhr"]
 points = PackedVector3Array(0.866731, 1, 0.638974, 0.93353, 1, 0.86563, 1.0864, 1, 1.01199, 1.25173, 1, 1.15471, 1.42907, 1, 1.29393, 1.6086, 1, 1.38486, 1.80104, 1, 1.47433, 2.02222, 1, 1.47433, 2.22074, 1, 1.42978, 2.42459, 1, 1.29393, 2.67155, 1, 1.13117, 2.90926, 1, 0.963612, 3.12052, 1, 0.791047, 3.29423, 1, 0.587402, 3.45463, 1, 0.322672, 3.54289, 1, 0.0741553, 3.52763, 1, -0.126256, 3.43833, 1, -0.333233, 3.32736, 1, -0.547106, 2.8723, 1, -0.865298, 3.08365, 1, -0.704286, 2.7072, 1, -0.99696, 2.49357, 1, -1.09742, 2.27928, 1, -1.09742, 2.04551, 1, -1.09742, 1.75329, 1, -1.09742, 1.43448, 1, -1.03028, 1.23152, 1, -0.930806, 1.06197, 1, -0.736177, 0.936881, 1, -0.578243, 0.849771, 1, -0.393622, 0.817836, 1, -0.184709, 0.786919, 1, 0.0175471, 0.772844, 1, 0.240944, 0.759264, 1, 0.456491, 0.797028, 1, 0.664594)
@@ -14,13 +12,6 @@ drawDetail = 0.2
 
 [node name="SceneRedirect" type="Node" parent="."]
 script = ExtResource("3_1pq33")
-
-[node name="DrawPlaneCollision" type="StaticBody3D" parent="."]
-collision_layer = 2
-collision_mask = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DrawPlaneCollision"]
-shape = SubResource("WorldBoundaryShape3D_ii066")
 
 [node name="ShapeCast" type="ShapeCast3D" parent="."]
 enabled = false
