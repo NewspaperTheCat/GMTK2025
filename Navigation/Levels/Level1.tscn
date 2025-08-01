@@ -24,7 +24,8 @@ level_num = 1
 crowd_speed = 3.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.516068, 0.641181, -0.567944, -0.405022, 0.766919, 0.497787, 0.754739, -0.0268626, 0.655475, 0, 8, 0)
+transform = Transform3D(0.93925, 0.298709, -0.16906, -0.156225, 0.810625, 0.56434, 0.305618, -0.503645, 0.808047, -0.0164103, 7.98203, 0.00157928)
+shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("2_fhqol")]
 

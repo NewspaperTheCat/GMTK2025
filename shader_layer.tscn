@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://53o2s6enb05h"]
+
+[ext_resource type="Shader" uid="uid://di304nug6ctl5" path="res://Materials/cross_hatch.gdshader" id="1_jpfl2"]
+[ext_resource type="Texture2D" uid="uid://dmo1e2ci2i76r" path="res://art/CrossHatch/CrossHatchLight.png" id="2_jpfl2"]
+[ext_resource type="Texture2D" uid="uid://decgacw2550wm" path="res://art/CrossHatch/GradientHatchCovering.png" id="2_pb063"]
+[ext_resource type="Texture2D" uid="uid://c0pyrlnxwpumg" path="res://art/CrossHatch/SingleHatchLight.png" id="3_lu6pr"]
+[ext_resource type="Texture2D" uid="uid://fwvp7txjiyic" path="res://art/CrossHatch/GradientHatchMinimal.png" id="4_dyymv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_53uqr"]
+shader = ExtResource("1_jpfl2")
+shader_parameter/minimal_hatch = ExtResource("4_dyymv")
+shader_parameter/single_hatch = ExtResource("3_lu6pr")
+shader_parameter/covering_hatch = ExtResource("2_pb063")
+shader_parameter/cross_hatch = ExtResource("2_jpfl2")
+
+[node name="ShaderLayer" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_53uqr")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
