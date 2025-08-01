@@ -122,15 +122,15 @@ func pass_sequence():
 	
 	if holds_opp:
 		result = 2
-		var enemy_responses = ["You don't say >:)", "The world needs to know this"]
-		dialogue = [openers[randi() % openers.size()], enemy_responses[randi() % enemy_responses.size()], "uh oh...", "HEY EVERYONE!!"]
+		var enemy_responses := ["You don't say >:)", "The world needs to know this"]
+		dialogue = [openers.pick_random(), enemy_responses.pick_random(), "uh oh...", "HEY EVERYONE!!"]
 	elif to_win:
 		result = 1
-		dialogue = ["A little birdy told me", "!!!!!"]
+		dialogue = ["A little birdy told me...", "!!!!!"]
 	else:
 		result = 0
 		var neutral_responses = ["Safe with me", "Not a word", "Lips are sealed"]
-		dialogue = [openers[randi() % openers.size()], neutral_responses[randi() % neutral_responses.size()]]
+		dialogue = [openers.pick_random(), neutral_responses.pick_random()]
 	
 	await play_dialogue(secret_holder, chosen_recipient, dialogue)
 	

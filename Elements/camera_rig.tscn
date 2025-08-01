@@ -31,3 +31,5 @@ tilt_enabled = false
 transform = Transform3D(1, 0, 0, 0, 0.604611, 0.796546, 0, -0.796548, 0.604613, 0, 0, 0)
 environment = SubResource("Environment_c3s8v")
 near = 0.2
+
+[node name="AudioListener3D" type="AudioListener3D" parent="PathFollow/Camera3D"]

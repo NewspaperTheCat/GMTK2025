@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://do2mg6bic1ab0"]
+
+[ext_resource type="Script" uid="uid://doc3o1jh4s0ee" path="res://Audio/SFX/audio_stream_3d.gd" id="1_2v8x7"]
+
+[node name="AudioStream3d" type="AudioStreamPlayer3D"]
+script = ExtResource("1_2v8x7")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

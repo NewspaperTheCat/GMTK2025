@@ -85,6 +85,14 @@ func say(message: String, letter_speed: float = .05):
 	
 	for i in range(message.length()):
 		label.text = label.text + message[i]
+		
+		if message[i] in "aeiouAEIOU":
+			var beep = Global.AUDIO_STREAM_3D.instantiate()
+			beep.pitch_scale = randf_range(.8, 1.2)
+			beep.stream = Global.beep_speech_array.pick_random()
+			add_child(beep)
+			beep.play()
+		
 		await get_tree().create_timer(letter_speed).timeout
 	#add a buffer time after the message is done being written
 	await get_tree().create_timer(.4).timeout
