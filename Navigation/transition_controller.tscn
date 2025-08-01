@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhkf2waclclh"]
+[gd_scene load_steps=7 format=3 uid="uid://dhkf2waclclh"]
 
 [ext_resource type="Script" uid="uid://c76hxkahxvx6v" path="res://Navigation/transition_controller.gd" id="1_0r2wm"]
+[ext_resource type="AudioStream" uid="uid://ptqqth4yuhlx" path="res://Audio/SFX/TransitionWoosh.wav" id="2_8c4av"]
 
 [sub_resource type="Animation" id="Animation_soqow"]
 resource_name = "Fade In"
@@ -78,3 +79,6 @@ color = Color(0, 0, 0, 0)
 libraries = {
 &"": SubResource("AnimationLibrary_i1fhm")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_8c4av")
