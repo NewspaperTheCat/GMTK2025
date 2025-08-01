@@ -54,6 +54,7 @@ func handle_active_player() -> void:
 	if(hasClicked == false && Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
 		hasClicked = true
 		initMousePos = get_viewport().get_mouse_position()
+		Global.level.sim_timescale = .2
 		pointer.visible = true
 	if(hasClicked == true):
 		launchVector = get_viewport().get_mouse_position() - initMousePos

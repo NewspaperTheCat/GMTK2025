@@ -129,7 +129,7 @@ func pass_sequence():
 	
 	# check if we are going to be golfing
 	Global.camera_rig.return_to_resting()
-	Global.level.sim_timescale = .2
+	Global.level.sim_timescale = 1
 	Global.level.current_game_state = Global.level.game_state.GOLFING
 
 func loop_is_closed() -> bool:
