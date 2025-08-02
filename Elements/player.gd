@@ -116,12 +116,12 @@ func pass_sequence():
 	Global.level.current_game_state = Global.level.game_state.CUTSCENE
 	
 	# Tell grimblos to look at each other
-	chosen_recipient.look_at(secret_holder.position)
-	secret_holder.look_at(chosen_recipient.position)
+	chosen_recipient.look_at(secret_holder.global_position)
+	secret_holder.look_at(chosen_recipient.global_position)
 	
 	# Move camera to view the interaction
 	Global.level.sim_timescale = 0
-	Global.camera_rig.view_interaction(secret_holder.position, chosen_recipient.position)
+	Global.camera_rig.view_interaction(secret_holder.global_position, chosen_recipient.global_position)
 	await Global.camera_rig.finished_moving
 	
 	var openers = ["Keep quiet about this", "Between you and me", "Don't tell anyone", "On the down low", "Psst, hey", "Codeword: Grimblo"]

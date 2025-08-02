@@ -15,8 +15,7 @@ class_name Grimblo extends CharacterBody3D
 
 @export var direction : Vector3
 var hasClicked := false
-var initMousePos : Vector2
-var launchVector : Vector2
+var launchVector : Vector3
 
 @export var activeAlignment : alignment = alignment.PASSIVE
 
@@ -64,15 +63,15 @@ func handle_passive_player() -> void:
 	if Global.level.sim_timescale > 0: look_at(position + velocity)
 
 func handle_active_player() -> void:
+	animation_player.speed_scale = 0
 	if(hasClicked == false && Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
 		hasClicked = true
-		initMousePos = get_viewport().get_mouse_position()
 		Global.level.sim_timescale = .2
 		pointer.visible = true
 	if(hasClicked == true):
-		launchVector = get_viewport().get_mouse_position() - initMousePos
+		launchVector = get_mouse_coord() - global_position
 		if(!Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
-			velocity = Vector3(launchVector.x, 0, launchVector.y).normalized() * Global.level.crowd_speed * 3
+			velocity = Vector3(launchVector.x, 0, launchVector.z).normalized() * Global.level.crowd_speed * 3
 			move_and_slide()
 			hasClicked = false
 			pointer.visible = false
@@ -80,7 +79,7 @@ func handle_active_player() -> void:
 			Global.level.current_game_state = Global.level.game_state.DEFAULT
 			Global.audio_controller.generate_sfx_3d(self, Global.audio_controller.tom_tom_hit_array, 24, .9, 1.8)
 		else:
-			look_at(position + Vector3(launchVector.x, 0, launchVector.y))
+			look_at(global_position + Vector3(launchVector.x, 0, launchVector.z))
 
 func set_color() -> void:
 	for shape in grimbloShapes:
@@ -112,3 +111,22 @@ func can_see(target: Grimblo) -> bool:
 	var result = space_state.intersect_ray(query)
 	target.set_collision_layer_value(4, false)
 	return result.collider == target
+
+func get_mouse_coord() -> Vector3:
+	var viewport = get_viewport()
+	var mouse_position = viewport.get_mouse_position()
+	var camera = viewport.get_camera_3d()
+
+	var origin = camera.project_ray_origin(mouse_position)
+	var direction = camera.project_ray_normal(mouse_position)
+
+	var ray_length = camera.far
+	var end = origin + direction * ray_length
+
+	var space_state = get_world_3d().direct_space_state
+	var query = PhysicsRayQueryParameters3D.create(origin, end, 2)
+	var result = space_state.intersect_ray(query)
+	
+	# The default vector is an edge case that means we found nothing
+	var mouse_position_3D: Vector3 = result.get("position", Vector3(0, 11, 0))
+	return mouse_position_3D
