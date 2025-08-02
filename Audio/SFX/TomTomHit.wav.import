@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bclyjdl0nm5t7"
-path="res://.godot/imported/TomTomHit.wav-da9522de717be3471a254877ebc952f6.sample"
+path="res://.godot/imported/TomTomHit.wav-4adee0c95664c7dbc2a2d237c2384eef.sample"
 
 [deps]
 
-source_file="res://Audio/SFX/TomTomHit.wav"
-dest_files=["res://.godot/imported/TomTomHit.wav-da9522de717be3471a254877ebc952f6.sample"]
+source_file="res://audio/SFX/TomTomHit.wav"
+dest_files=["res://.godot/imported/TomTomHit.wav-4adee0c95664c7dbc2a2d237c2384eef.sample"]
 
 [params]
 
