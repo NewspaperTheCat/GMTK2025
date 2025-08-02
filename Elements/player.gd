@@ -18,7 +18,7 @@ func _input(event: InputEvent) -> void:
 		end_line()
 		return
 	
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and event.button_index == 1:
 		if event.pressed:
 			drawing = true
 			start_line(get_mouse_coord())
@@ -79,6 +79,8 @@ func pass_sequence():
 	var captured = get_captured()
 	if captured.size() < 2:
 		return
+	
+	Global.level.hide_tutorial()
 	
 	var recipients = []
 	var secret_holder = null

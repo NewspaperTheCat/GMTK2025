@@ -92,10 +92,10 @@ func say(message: String, letter_speed: float = .05):
 		var letter = message[i]
 		label.text = label.text + letter
 		
-		if letter.to_upper() == letter or letter in "aeiou!?:":
+		if letter in "aeiouAEIOU!?:":
 			var beep = Global.audio_controller.generate_sfx_3d(self, Global.audio_controller.beep_speech_array, 6, pitch)
 		
-		var real_speed = letter_speed if letter not in " .,!?;:" else letter_speed * 1.25
+		var real_speed = letter_speed if letter not in ".,!?;:" else .1
 		await get_tree().create_timer(real_speed).timeout
 	#add a buffer time after the message is done being written
 	await get_tree().create_timer(.4).timeout

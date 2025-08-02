@@ -10,7 +10,7 @@ func _ready() -> void:
 	current_scene = $World/Title
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.is_pressed():
+	if event is InputEventMouseButton and event.button_index == 1 and event.is_pressed():
 		Global.audio_controller.generate_sfx_universal(Global.audio_controller.mouse_click_array, -12, .5, 1.5)
 
 func change_scene(

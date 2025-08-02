@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://btdsdpbb5wvlb"]
+[gd_scene load_steps=16 format=3 uid="uid://btdsdpbb5wvlb"]
 
 [ext_resource type="PackedScene" uid="uid://oqpsd56sxbch" path="res://Elements/grimblo.tscn" id="1_3anf8"]
 [ext_resource type="Script" uid="uid://dgw18dh6btfxp" path="res://Navigation/Levels/level.gd" id="1_fhqol"]
 [ext_resource type="PackedScene" uid="uid://bwlm62q1aprja" path="res://Elements/player.tscn" id="2_fhqol"]
 [ext_resource type="PackedScene" uid="uid://nenh7chlqfv1" path="res://Elements/camera_rig.tscn" id="4_w5t0j"]
 [ext_resource type="PackedScene" uid="uid://ctv4axuwyue2j" path="res://art/updatedLevel1.glb" id="6_4c3cj"]
+[ext_resource type="Material" uid="uid://h7l6uths11rg" path="res://Materials/Shaders/ToonShader/outline.tres" id="6_8eeyl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4c3cj"]
 size = Vector3(1.87219, 1, 7.18739)
@@ -29,10 +30,17 @@ size = Vector3(1.41846, 1, 3.07031)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_d7yol"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_4c3cj"]
+font_size = 32
+font_color = Color(0.592157, 0.913725, 1, 1)
+outline_size = 20
+outline_color = Color(0, 0.52549, 0.619608, 1)
+
 [node name="Level1" type="Node3D"]
 script = ExtResource("1_fhqol")
 level_num = 1
 crowd_speed = 3.0
+tutorial_text = "You got a message to tell Yellow, launch yourself towards them and draw a circle over both characters. Be careful, the floor has been waxxed really well."
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.93925, 0.298709, -0.16906, -0.156225, 0.810625, 0.56434, 0.305618, -0.503645, 0.808047, -0.0164103, 7.98203, 0.00157928)
@@ -90,6 +98,312 @@ activeAlignment = 3
 [node name="Level1" parent="." instance=ExtResource("6_4c3cj")]
 transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, -1.53125, 0.228497, 0.343842)
 
+[node name="Cube_003" parent="Level1" index="0"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Cube_004" parent="Level1" index="1"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Chair1" parent="Level1" index="2"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Couch" parent="Level1" index="3"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Shelf" parent="Level1" index="4"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Table" parent="Level1" index="5"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Chair1_001" parent="Level1" index="6"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Table_001" parent="Level1" index="7"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Chair1_002" parent="Level1" index="8"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Table_002" parent="Level1" index="9"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Couch_001" parent="Level1" index="10"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Cube_008" parent="Level1" index="11"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Window Cross_003" parent="Level1" index="12"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Cube_009" parent="Level1" index="13"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Window Cross_004" parent="Level1" index="14"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Window Cross_005" parent="Level1" index="15"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Cube_005" parent="Level1" index="16"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Computer" parent="Level1" index="17"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Keyboard" parent="Level1" index="18"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Computer_001" parent="Level1" index="19"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Keyboard_001" parent="Level1" index="20"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Computer_002" parent="Level1" index="21"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Keyboard_002" parent="Level1" index="22"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book Stack" parent="Level1" index="23"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book" parent="Level1" index="24"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_001" parent="Level1" index="25"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_002" parent="Level1" index="26"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_003" parent="Level1" index="27"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_005" parent="Level1" index="28"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_006" parent="Level1" index="29"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_007" parent="Level1" index="30"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_008" parent="Level1" index="31"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_009" parent="Level1" index="32"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_010" parent="Level1" index="33"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_011" parent="Level1" index="34"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_012" parent="Level1" index="35"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_013" parent="Level1" index="36"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_014" parent="Level1" index="37"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_015" parent="Level1" index="38"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_016" parent="Level1" index="39"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_017" parent="Level1" index="40"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_004" parent="Level1" index="41"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_018" parent="Level1" index="42"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_019" parent="Level1" index="43"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_020" parent="Level1" index="44"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_021" parent="Level1" index="45"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_022" parent="Level1" index="46"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_023" parent="Level1" index="47"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_024" parent="Level1" index="48"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_025" parent="Level1" index="49"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_026" parent="Level1" index="50"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_027" parent="Level1" index="51"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_028" parent="Level1" index="52"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_029" parent="Level1" index="53"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_030" parent="Level1" index="54"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_031" parent="Level1" index="55"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_032" parent="Level1" index="56"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_033" parent="Level1" index="57"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_034" parent="Level1" index="58"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_035" parent="Level1" index="59"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Shelf_002" parent="Level1" index="60"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book Stack_001" parent="Level1" index="61"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_036" parent="Level1" index="62"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_037" parent="Level1" index="63"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_038" parent="Level1" index="64"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_039" parent="Level1" index="65"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_040" parent="Level1" index="66"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_041" parent="Level1" index="67"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_042" parent="Level1" index="68"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_043" parent="Level1" index="69"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_044" parent="Level1" index="70"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_045" parent="Level1" index="71"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_046" parent="Level1" index="72"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_047" parent="Level1" index="73"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_048" parent="Level1" index="74"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_049" parent="Level1" index="75"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_050" parent="Level1" index="76"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_051" parent="Level1" index="77"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_053" parent="Level1" index="78"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_054" parent="Level1" index="79"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_055" parent="Level1" index="80"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_056" parent="Level1" index="81"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_057" parent="Level1" index="82"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_058" parent="Level1" index="83"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_059" parent="Level1" index="84"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_060" parent="Level1" index="85"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_061" parent="Level1" index="86"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_062" parent="Level1" index="87"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_063" parent="Level1" index="88"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_064" parent="Level1" index="89"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_065" parent="Level1" index="90"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_066" parent="Level1" index="91"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_067" parent="Level1" index="92"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_068" parent="Level1" index="93"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_069" parent="Level1" index="94"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_070" parent="Level1" index="95"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_071" parent="Level1" index="96"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Book_052" parent="Level1" index="97"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Cube_006" parent="Level1" index="98"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Wall Skirting" parent="Level1" index="99"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Wall Skirting_001" parent="Level1" index="100"]
+material_overlay = ExtResource("6_8eeyl")
+
+[node name="Wall Skirting_002" parent="Level1" index="101"]
+material_overlay = ExtResource("6_8eeyl")
+
 [node name="DrawPlaneCollision" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.222464, 0)
 collision_layer = 2
@@ -97,3 +411,25 @@ collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DrawPlaneCollision"]
 shape = SubResource("WorldBoundaryShape3D_d7yol")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+offset_left = 60.0
+offset_top = 31.0
+offset_right = 1060.0
+offset_bottom = 220.0
+text = "You got a message to tell Yellow, launch yourself towards them and draw a circle ariybd both characters. Be careful, the floor has been waxxed really well."
+label_settings = SubResource("LabelSettings_4c3cj")
+autowrap_mode = 2
+
+[editable path="Level1"]

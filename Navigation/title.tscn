@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://gct2ttl1x15w"]
+[gd_scene load_steps=11 format=3 uid="uid://gct2ttl1x15w"]
 
 [ext_resource type="Script" uid="uid://c3ca7ynedm1wt" path="res://Navigation/scene_redirector.gd" id="1_yi8iy"]
 [ext_resource type="PackedScene" uid="uid://oqpsd56sxbch" path="res://Elements/grimblo.tscn" id="2_4q1p3"]
@@ -6,7 +6,8 @@
 [ext_resource type="Theme" uid="uid://cs11afo5dvmke" path="res://UI/button_theme.tres" id="3_f6gwl"]
 [ext_resource type="Material" uid="uid://dic817itim346" path="res://Materials/EnemyGrimblo.tres" id="3_ny8t6"]
 [ext_resource type="Environment" uid="uid://c24ex8sf28aiu" path="res://UI/camera_environment.tres" id="4_f6gwl"]
-[ext_resource type="PackedScene" path="res://art/level1Visual.tscn" id="5_k83qo"]
+[ext_resource type="PackedScene" uid="uid://ctv4axuwyue2j" path="res://art/updatedLevel1.glb" id="5_k83qo"]
+[ext_resource type="Material" uid="uid://h7l6uths11rg" path="res://Materials/Shaders/ToonShader/outline.tres" id="6_h3qt5"]
 
 [sub_resource type="Shader" id="Shader_3qeqw"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.4.1.stable's StandardMaterial3D.
@@ -78,12 +79,19 @@ script = ExtResource("1_yi8iy")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
-offset_left = 89.0
-offset_top = 66.0
-offset_right = 177.0
-offset_bottom = 89.0
+anchors_preset = -1
+anchor_left = 0.197
+anchor_top = 0.12
+anchor_right = 0.803
+anchor_bottom = 0.39
+offset_left = 0.0559845
+offset_top = 0.239998
+offset_right = -0.0560303
+offset_bottom = 0.279984
+grow_horizontal = 2
 text = "In the Loop"
 label_settings = ExtResource("2_767tf")
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -109,8 +117,314 @@ transform = Transform3D(0.886751, 0.254647, -0.38578, 0.00201258, 0.832443, 0.55
 environment = ExtResource("4_f6gwl")
 fov = 99.0331
 
-[node name="Level1" parent="BackgroundScene" instance=ExtResource("5_k83qo")]
+[node name="updatedLevel1" parent="BackgroundScene" instance=ExtResource("5_k83qo")]
 transform = Transform3D(0.0597181, 0, -0.242763, 0, 0.25, 0, 0.242763, 0, 0.0597181, -3.5613, 0.690385, 2.43574)
+
+[node name="Cube_003" parent="BackgroundScene/updatedLevel1" index="0"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Cube_004" parent="BackgroundScene/updatedLevel1" index="1"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Chair1" parent="BackgroundScene/updatedLevel1" index="2"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Couch" parent="BackgroundScene/updatedLevel1" index="3"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Shelf" parent="BackgroundScene/updatedLevel1" index="4"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Table" parent="BackgroundScene/updatedLevel1" index="5"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Chair1_001" parent="BackgroundScene/updatedLevel1" index="6"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Table_001" parent="BackgroundScene/updatedLevel1" index="7"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Chair1_002" parent="BackgroundScene/updatedLevel1" index="8"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Table_002" parent="BackgroundScene/updatedLevel1" index="9"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Couch_001" parent="BackgroundScene/updatedLevel1" index="10"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Cube_008" parent="BackgroundScene/updatedLevel1" index="11"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Window Cross_003" parent="BackgroundScene/updatedLevel1" index="12"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Cube_009" parent="BackgroundScene/updatedLevel1" index="13"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Window Cross_004" parent="BackgroundScene/updatedLevel1" index="14"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Window Cross_005" parent="BackgroundScene/updatedLevel1" index="15"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Cube_005" parent="BackgroundScene/updatedLevel1" index="16"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Computer" parent="BackgroundScene/updatedLevel1" index="17"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Keyboard" parent="BackgroundScene/updatedLevel1" index="18"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Computer_001" parent="BackgroundScene/updatedLevel1" index="19"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Keyboard_001" parent="BackgroundScene/updatedLevel1" index="20"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Computer_002" parent="BackgroundScene/updatedLevel1" index="21"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Keyboard_002" parent="BackgroundScene/updatedLevel1" index="22"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book Stack" parent="BackgroundScene/updatedLevel1" index="23"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book" parent="BackgroundScene/updatedLevel1" index="24"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_001" parent="BackgroundScene/updatedLevel1" index="25"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_002" parent="BackgroundScene/updatedLevel1" index="26"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_003" parent="BackgroundScene/updatedLevel1" index="27"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_005" parent="BackgroundScene/updatedLevel1" index="28"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_006" parent="BackgroundScene/updatedLevel1" index="29"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_007" parent="BackgroundScene/updatedLevel1" index="30"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_008" parent="BackgroundScene/updatedLevel1" index="31"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_009" parent="BackgroundScene/updatedLevel1" index="32"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_010" parent="BackgroundScene/updatedLevel1" index="33"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_011" parent="BackgroundScene/updatedLevel1" index="34"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_012" parent="BackgroundScene/updatedLevel1" index="35"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_013" parent="BackgroundScene/updatedLevel1" index="36"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_014" parent="BackgroundScene/updatedLevel1" index="37"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_015" parent="BackgroundScene/updatedLevel1" index="38"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_016" parent="BackgroundScene/updatedLevel1" index="39"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_017" parent="BackgroundScene/updatedLevel1" index="40"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_004" parent="BackgroundScene/updatedLevel1" index="41"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_018" parent="BackgroundScene/updatedLevel1" index="42"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_019" parent="BackgroundScene/updatedLevel1" index="43"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_020" parent="BackgroundScene/updatedLevel1" index="44"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_021" parent="BackgroundScene/updatedLevel1" index="45"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_022" parent="BackgroundScene/updatedLevel1" index="46"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_023" parent="BackgroundScene/updatedLevel1" index="47"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_024" parent="BackgroundScene/updatedLevel1" index="48"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_025" parent="BackgroundScene/updatedLevel1" index="49"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_026" parent="BackgroundScene/updatedLevel1" index="50"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_027" parent="BackgroundScene/updatedLevel1" index="51"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_028" parent="BackgroundScene/updatedLevel1" index="52"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_029" parent="BackgroundScene/updatedLevel1" index="53"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_030" parent="BackgroundScene/updatedLevel1" index="54"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_031" parent="BackgroundScene/updatedLevel1" index="55"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_032" parent="BackgroundScene/updatedLevel1" index="56"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_033" parent="BackgroundScene/updatedLevel1" index="57"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_034" parent="BackgroundScene/updatedLevel1" index="58"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_035" parent="BackgroundScene/updatedLevel1" index="59"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Shelf_002" parent="BackgroundScene/updatedLevel1" index="60"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book Stack_001" parent="BackgroundScene/updatedLevel1" index="61"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_036" parent="BackgroundScene/updatedLevel1" index="62"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_037" parent="BackgroundScene/updatedLevel1" index="63"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_038" parent="BackgroundScene/updatedLevel1" index="64"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_039" parent="BackgroundScene/updatedLevel1" index="65"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_040" parent="BackgroundScene/updatedLevel1" index="66"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_041" parent="BackgroundScene/updatedLevel1" index="67"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_042" parent="BackgroundScene/updatedLevel1" index="68"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_043" parent="BackgroundScene/updatedLevel1" index="69"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_044" parent="BackgroundScene/updatedLevel1" index="70"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_045" parent="BackgroundScene/updatedLevel1" index="71"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_046" parent="BackgroundScene/updatedLevel1" index="72"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_047" parent="BackgroundScene/updatedLevel1" index="73"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_048" parent="BackgroundScene/updatedLevel1" index="74"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_049" parent="BackgroundScene/updatedLevel1" index="75"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_050" parent="BackgroundScene/updatedLevel1" index="76"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_051" parent="BackgroundScene/updatedLevel1" index="77"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_053" parent="BackgroundScene/updatedLevel1" index="78"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_054" parent="BackgroundScene/updatedLevel1" index="79"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_055" parent="BackgroundScene/updatedLevel1" index="80"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_056" parent="BackgroundScene/updatedLevel1" index="81"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_057" parent="BackgroundScene/updatedLevel1" index="82"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_058" parent="BackgroundScene/updatedLevel1" index="83"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_059" parent="BackgroundScene/updatedLevel1" index="84"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_060" parent="BackgroundScene/updatedLevel1" index="85"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_061" parent="BackgroundScene/updatedLevel1" index="86"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_062" parent="BackgroundScene/updatedLevel1" index="87"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_063" parent="BackgroundScene/updatedLevel1" index="88"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_064" parent="BackgroundScene/updatedLevel1" index="89"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_065" parent="BackgroundScene/updatedLevel1" index="90"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_066" parent="BackgroundScene/updatedLevel1" index="91"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_067" parent="BackgroundScene/updatedLevel1" index="92"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_068" parent="BackgroundScene/updatedLevel1" index="93"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_069" parent="BackgroundScene/updatedLevel1" index="94"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_070" parent="BackgroundScene/updatedLevel1" index="95"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_071" parent="BackgroundScene/updatedLevel1" index="96"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Book_052" parent="BackgroundScene/updatedLevel1" index="97"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Cube_006" parent="BackgroundScene/updatedLevel1" index="98"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Wall Skirting" parent="BackgroundScene/updatedLevel1" index="99"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Wall Skirting_001" parent="BackgroundScene/updatedLevel1" index="100"]
+material_overlay = ExtResource("6_h3qt5")
+
+[node name="Wall Skirting_002" parent="BackgroundScene/updatedLevel1" index="101"]
+material_overlay = ExtResource("6_h3qt5")
 
 [node name="Grimblo" parent="BackgroundScene" instance=ExtResource("2_4q1p3")]
 transform = Transform3D(0.915928, 0.225991, -0.331667, -0.23955, 0.970884, 0, 0.32201, 0.079451, 0.943396, 0, 0.595109, 3.61964)
@@ -265,6 +579,7 @@ autoplay = ""
 
 [connection signal="pressed" from="Button" to="." method="_to_select"]
 
+[editable path="BackgroundScene/updatedLevel1"]
 [editable path="BackgroundScene/Grimblo"]
 [editable path="BackgroundScene/Grimblo2"]
 [editable path="BackgroundScene/Grimblo3"]
