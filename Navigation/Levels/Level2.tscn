@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://nenh7chlqfv1" path="res://Elements/camera_rig.tscn" id="3_27x7i"]
 [ext_resource type="PackedScene" uid="uid://oqpsd56sxbch" path="res://Elements/grimblo.tscn" id="4_gddun"]
 [ext_resource type="PackedScene" uid="uid://bt4bydgxxlscj" path="res://Elements/breakable_door.tscn" id="5_8heo5"]
-[ext_resource type="PackedScene" uid="uid://st0knmypcpun" path="res://art/Level1Visual.glb" id="6_7ksrq"]
+[ext_resource type="PackedScene" path="res://art/Level1Visual.glb" id="6_7ksrq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4c3cj"]
 size = Vector3(1.87219, 1, 7.18739)
