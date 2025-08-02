@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://drufopauv0tj"
-path="res://.godot/imported/BeepSpeech-07.wav-b6cae84c00ee11a426f1893c9ebf1106.sample"
+path="res://.godot/imported/BeepSpeech-07.wav-35abf3aeec739c104777bb33db59eefc.sample"
 
 [deps]
 
-source_file="res://Audio/SFX/BeepSpeech/BeepSpeech-07.wav"
-dest_files=["res://.godot/imported/BeepSpeech-07.wav-b6cae84c00ee11a426f1893c9ebf1106.sample"]
+source_file="res://audio/SFX/BeepSpeech/BeepSpeech-07.wav"
+dest_files=["res://.godot/imported/BeepSpeech-07.wav-35abf3aeec739c104777bb33db59eefc.sample"]
 
 [params]
 
