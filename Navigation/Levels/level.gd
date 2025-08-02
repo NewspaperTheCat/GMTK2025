@@ -45,3 +45,8 @@ func scrawl_tutorial():
 
 func hide_tutorial():
 	tutorial_label.visible = false
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and OS.get_keycode_string(event.keycode) in "rR" and event.is_pressed():
+		hide_tutorial()
+		Global.game_controller.change_scene("res://Navigation/Levels/Level" + str(level_num) + ".tscn")

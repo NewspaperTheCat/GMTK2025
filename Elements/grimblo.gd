@@ -25,6 +25,8 @@ enum alignment { ACTIVE, PASSIVE, ENEMY, TARGET }
 var pitch: float
 signal done_speaking
 
+@export_flags_3d_physics var LOS_mask
+
 func _ready() -> void:
 	velocity = direction.normalized() * Global.level.crowd_speed
 	set_color()
@@ -70,7 +72,7 @@ func handle_active_player() -> void:
 	if(hasClicked == true):
 		launchVector = get_viewport().get_mouse_position() - initMousePos
 		if(!Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
-			velocity = Vector3(launchVector.x, 0, launchVector.y).normalized() * Global.level.crowd_speed * 1.5
+			velocity = Vector3(launchVector.x, 0, launchVector.y).normalized() * Global.level.crowd_speed * 3
 			move_and_slide()
 			hasClicked = false
 			pointer.visible = false
@@ -102,3 +104,11 @@ func say(message: String, letter_speed: float = .05):
 	
 	done_speaking.emit()
 	label.visible = false
+
+func can_see(target: Grimblo) -> bool:
+	target.set_collision_layer_value(4, true)
+	var space_state = get_world_3d().direct_space_state
+	var query = PhysicsRayQueryParameters3D.create(global_position, target.global_position, LOS_mask)
+	var result = space_state.intersect_ray(query)
+	target.set_collision_layer_value(4, false)
+	return result.collider == target
