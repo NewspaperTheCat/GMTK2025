@@ -94,10 +94,11 @@ func pass_sequence():
 	
 	if secret_holder == null:
 		return
-	Global.level.current_game_state = Global.level.game_state.CUTSCENE
 	
 	var to_win = false
 	for i in range(recipients.size()):
+		if not secret_holder.can_see(recipients[i]):
+			continue
 		# CHECK LINE OF SIGHT HERE TODO
 		
 		if recipients[i].activeAlignment == Grimblo.alignment.ENEMY:
@@ -110,13 +111,17 @@ func pass_sequence():
 		elif (chosen_recipient == null or chosen_recipient.position.distance_squared_to(secret_holder.position) > recipients[i].position.distance_squared_to(secret_holder.position)) and !to_win:
 			chosen_recipient = recipients[i]
 	
+	if chosen_recipient == null:
+		return
+	Global.level.current_game_state = Global.level.game_state.CUTSCENE
+	
 	# Tell grimblos to look at each other
-	chosen_recipient.look_at(secret_holder.position)
-	secret_holder.look_at(chosen_recipient.position)
+	chosen_recipient.look_at(secret_holder.global_position)
+	secret_holder.look_at(chosen_recipient.global_position)
 	
 	# Move camera to view the interaction
 	Global.level.sim_timescale = 0
-	Global.camera_rig.view_interaction(secret_holder.position, chosen_recipient.position)
+	Global.camera_rig.view_interaction(secret_holder.global_position, chosen_recipient.global_position)
 	await Global.camera_rig.finished_moving
 	
 	var openers = ["Keep quiet about this", "Between you and me", "Don't tell anyone", "On the down low", "Psst, hey", "Codeword: Grimblo"]
