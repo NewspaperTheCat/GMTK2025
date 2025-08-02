@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ptqqth4yuhlx"
-path="res://.godot/imported/TransitionWoosh.wav-e905267dd89e258956baf1ab2a5f216d.sample"
+path="res://.godot/imported/TransitionWoosh.wav-1685e6ae52c549f681981f4eb8973aa1.sample"
 
 [deps]
 
-source_file="res://audio/SFX/TransitionWoosh.wav"
-dest_files=["res://.godot/imported/TransitionWoosh.wav-e905267dd89e258956baf1ab2a5f216d.sample"]
+source_file="res://Audio/SFX/TransitionWoosh.wav"
+dest_files=["res://.godot/imported/TransitionWoosh.wav-1685e6ae52c549f681981f4eb8973aa1.sample"]
 
 [params]
 

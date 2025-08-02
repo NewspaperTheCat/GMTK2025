@@ -69,11 +69,11 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/Control"]
 layout_mode = 1
-offset_left = 60.0
-offset_top = 31.0
-offset_right = 1060.0
-offset_bottom = 220.0
-text = "You have a message to tell Yellow, launch yourself towards them and draw a circle around both characters. Be careful, the floor has been waxed really well!"
+offset_left = 43.0
+offset_top = 33.0
+offset_right = 1118.0
+offset_bottom = 222.0
+text = "You have a message to tell Yellow, launch yourself towards them and draw a circle around both characters (left click + drag)."
 label_settings = SubResource("LabelSettings_4c3cj")
 autowrap_mode = 2
 

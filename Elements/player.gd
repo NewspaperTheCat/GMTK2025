@@ -22,7 +22,7 @@ func _input(event: InputEvent) -> void:
 		if event.pressed:
 			drawing = true
 			start_line(get_mouse_coord())
-		else:
+		elif drawing:
 			drawing = false
 			end_line()
 			pass_sequence()
@@ -37,6 +37,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == 2 and drawing:
 		drawing = false
 		end_line()
+		points = []
 
 func end_line():
 	for visual in pointVisuals:
