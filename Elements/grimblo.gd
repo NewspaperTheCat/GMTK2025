@@ -101,7 +101,7 @@ func say(message: String, letter_speed: float = .05):
 		var real_speed = letter_speed if letter not in ".,!?;:" else .1
 		await get_tree().create_timer(real_speed).timeout
 	#add a buffer time after the message is done being written
-	await get_tree().create_timer(.4).timeout
+	await get_tree().create_timer(.5).timeout
 	
 	done_speaking.emit()
 	label.visible = false

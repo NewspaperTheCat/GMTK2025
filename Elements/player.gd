@@ -129,7 +129,7 @@ func pass_sequence():
 	Global.camera_rig.view_interaction(secret_holder.global_position, chosen_recipient.global_position)
 	await Global.camera_rig.finished_moving
 	
-	var openers = ["Keep quiet about this", "Between you and me", "Don't tell anyone", "On the down low", "Psst, hey", "Codeword: Grimblo"]
+	var openers = ["Keep quiet about this", "Between you and me", "Don't tell anyone", "On the down low", "Psst, hey", "Codeword: Grimblo", "Pass this along"]
 	var dialogue: Array[String]
 	var close_up_index = -1
 	var jingle = -1
@@ -144,7 +144,8 @@ func pass_sequence():
 	elif to_win:
 		result = 1
 		var victory_openers = ["A little birdy told me...", "I got something for you"]
-		dialogue = [victory_openers.pick_random(), "!!!!!"]
+		var victory_responses = ["!!!!!", "No. Way!!", "The whole time!?", "Inconceivable!"]
+		dialogue = [victory_openers.pick_random(), victory_responses.pick_random()]
 		close_up_index = 1
 		jingle = 1
 	else:

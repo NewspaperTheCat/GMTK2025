@@ -11,6 +11,7 @@ func _on_grimblo_entered(body: Node3D) -> void:
 		break_door()
 
 func break_door():
+	Global.audio_controller.generate_sfx_3d(self, Global.audio_controller.door_burst_array, 0, 1, 1.6)
 	area_3d.collision_mask = 0
 	static_body_3d.collision_layer = 0
 	animation_player.play("door_open")

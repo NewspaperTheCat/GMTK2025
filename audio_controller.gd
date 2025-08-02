@@ -23,12 +23,16 @@ const DEFEAT_JINGLE = preload("res://Audio/DefeatJingle.wav")
 const VICTORY_JINGLE = preload("res://Audio/VictoryJingle.wav")
 var jingles = [DEFEAT_JINGLE, VICTORY_JINGLE]
 
+var door_burst_folder_path = "res://Audio/SFX/DoorBurst/"
+var door_burst_array = []
+
 func _ready() -> void:
 	Global.audio_controller = self
 	
 	read_folder_to_array(beep_speech_folder_path, beep_speech_array)
 	read_folder_to_array(mouse_click_folder_path, mouse_click_array)
 	read_folder_to_array(synth_pop_folder_path, synth_pop_array)
+	read_folder_to_array(door_burst_folder_path, door_burst_array)
 
 func read_folder_to_array(folder: String, array: Array):
 	# Fill beep_speech_array
