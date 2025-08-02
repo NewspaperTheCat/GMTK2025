@@ -44,6 +44,7 @@ func create_point_visual(newPoint: Vector3):
 	add_child(newPointer)
 	newPointer.global_position = newPoint
 	pointVisuals.append(newPointer)
+	Global.audio_controller.generate_sfx_3d(newPointer, Global.audio_controller.synth_pop_array, -15, .7, 1.5)
 
 func get_mouse_coord() -> Vector3:
 	var viewport = get_viewport()
@@ -116,20 +117,20 @@ func pass_sequence():
 	Global.camera_rig.view_interaction(secret_holder.position, chosen_recipient.position)
 	await Global.camera_rig.finished_moving
 	
-	var openers = ["Keep quiet about this", "Between you and me", "Don't tell anyone"]
+	var openers = ["Keep quiet about this", "Between you and me", "Don't tell anyone", "On the down low", "Psst, hey", "Codeword: Grimblo"]
 	var dialogue: Array[String]
 	var result: int # 0 = pass ; 1 = win ; 2 = lose
 	
 	if holds_opp:
 		result = 2
-		var enemy_responses := ["You don't say >:)", "The world needs to know this"]
+		var enemy_responses := ["You don't say >:)", "The world needs to know", "I'm a bit of a blabbermouth", "You're so busted"]
 		dialogue = [openers.pick_random(), enemy_responses.pick_random(), "uh oh...", "HEY EVERYONE!!"]
 	elif to_win:
 		result = 1
 		dialogue = ["A little birdy told me...", "!!!!!"]
 	else:
 		result = 0
-		var neutral_responses = ["Safe with me", "Not a word", "Lips are sealed"]
+		var neutral_responses = ["Safe with me", "Not a word", "Lips are sealed", "Aye aye, captain", "Roger that", "Silent as the night"]
 		dialogue = [openers.pick_random(), neutral_responses.pick_random()]
 	
 	await play_dialogue(secret_holder, chosen_recipient, dialogue)

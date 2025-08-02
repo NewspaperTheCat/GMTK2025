@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cid6qokd0pwe3"]
+[gd_scene load_steps=7 format=3 uid="uid://cid6qokd0pwe3"]
 
 [ext_resource type="Script" uid="uid://b0cnpk0ymgsu6" path="res://Navigation/game_controller.gd" id="1_3iy47"]
 [ext_resource type="PackedScene" uid="uid://gct2ttl1x15w" path="res://Navigation/title.tscn" id="2_alenl"]
 [ext_resource type="PackedScene" uid="uid://dhkf2waclclh" path="res://Navigation/transition_controller.tscn" id="3_alenl"]
 [ext_resource type="PackedScene" uid="uid://53o2s6enb05h" path="res://shader_layer.tscn" id="4_bqgkb"]
 [ext_resource type="AudioStream" uid="uid://dj5l0o0fcbsyp" path="res://Audio/InTheLoopTheme.wav" id="5_cp2b6"]
+[ext_resource type="Script" uid="uid://dcersbxet1mqd" path="res://audio_controller.gd" id="6_osaii"]
 
 [node name="GameController" type="Control"]
 layout_mode = 3
@@ -31,7 +32,8 @@ layout_mode = 1
 
 [node name="ShaderLayer" parent="." instance=ExtResource("4_bqgkb")]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioController" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_cp2b6")
-volume_db = -6.0
+volume_db = -8.0
 autoplay = true
+script = ExtResource("6_osaii")

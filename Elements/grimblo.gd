@@ -21,6 +21,7 @@ var launchVector : Vector2
 
 enum alignment { ACTIVE, PASSIVE, ENEMY, TARGET }
 
+var pitch: float
 signal done_speaking
 
 func _ready() -> void:
@@ -28,6 +29,8 @@ func _ready() -> void:
 	set_color()
 	
 	Global.level.timescale_changed.connect(_update_animation_speed)
+	
+	pitch = randf_range(.8, 2);
 
 func _update_animation_speed(timescale) -> void:
 	animation_player.speed_scale = 2.0 * timescale
@@ -72,6 +75,7 @@ func handle_active_player() -> void:
 			pointer.visible = false
 			Global.level.sim_timescale = 1
 			Global.level.current_game_state = Global.level.game_state.DEFAULT
+			Global.audio_controller.generate_sfx_3d(self, Global.audio_controller.tom_tom_hit_array, 24, .6, 1.8)
 		else:
 			look_at(position + Vector3(launchVector.x, 0, launchVector.y))
 
@@ -84,16 +88,14 @@ func say(message: String, letter_speed: float = .05):
 	label.visible = true
 	
 	for i in range(message.length()):
-		label.text = label.text + message[i]
+		var letter = message[i]
+		label.text = label.text + letter
 		
-		if message[i] in "aeiouAEIOU":
-			var beep = Global.AUDIO_STREAM_3D.instantiate()
-			beep.pitch_scale = randf_range(.8, 1.2)
-			beep.stream = Global.beep_speech_array.pick_random()
-			add_child(beep)
-			beep.play()
+		if letter.to_upper() == letter or letter in "aeiou!?:":
+			var beep = Global.audio_controller.generate_sfx_3d(self, Global.audio_controller.beep_speech_array, 6, pitch)
 		
-		await get_tree().create_timer(letter_speed).timeout
+		var real_speed = letter_speed if letter not in " .,!?;:" else letter_speed * 1.25
+		await get_tree().create_timer(real_speed).timeout
 	#add a buffer time after the message is done being written
 	await get_tree().create_timer(.4).timeout
 	
