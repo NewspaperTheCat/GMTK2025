@@ -427,7 +427,7 @@ material_overlay = ExtResource("6_h3qt5")
 material_overlay = ExtResource("6_h3qt5")
 
 [node name="Grimblo" parent="BackgroundScene" instance=ExtResource("2_4q1p3")]
-transform = Transform3D(0.915928, 0.225991, -0.331667, -0.23955, 0.970884, 0, 0.32201, 0.079451, 0.943396, 0, 0.595109, 3.61964)
+transform = Transform3D(-0.915928, -0.225991, 0.331667, -0.23955, 0.970884, -4.66022e-08, -0.32201, -0.0794509, -0.943396, 0, 0.595109, 3.61964)
 script = null
 
 [node name="Cube_001" parent="BackgroundScene/Grimblo/Character/Player" index="1"]
@@ -443,7 +443,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.059646, 0)
 autoplay = ""
 
 [node name="Grimblo2" parent="BackgroundScene" instance=ExtResource("2_4q1p3")]
-transform = Transform3D(0.98483, -0.0728862, -0.157473, 0.0570095, 0.993037, -0.103091, 0.16389, 0.0925493, 0.982127, 0.73798, 0.595109, 1.85882)
+transform = Transform3D(-0.98483, 0.0728861, 0.157473, 0.0570095, 0.993037, -0.103091, -0.16389, -0.0925493, -0.982127, 0.73798, 0.595109, 1.85882)
 script = null
 
 [node name="Cube" parent="BackgroundScene/Grimblo2/Character/Player" index="0"]
@@ -465,7 +465,7 @@ material_override = ExtResource("3_ny8t6")
 autoplay = ""
 
 [node name="Grimblo3" parent="BackgroundScene" instance=ExtResource("2_4q1p3")]
-transform = Transform3D(0.990524, -0.0433356, 0.130326, 0.0570095, 0.993037, -0.103091, -0.124951, 0.109544, 0.986097, -0.409132, 0.595109, 2.21613)
+transform = Transform3D(-0.990524, 0.0433356, -0.130326, 0.0570095, 0.993037, -0.103091, 0.124951, -0.109544, -0.986097, -0.409132, 0.595109, 2.21613)
 script = null
 
 [node name="Cube" parent="BackgroundScene/Grimblo3/Character/Player" index="0"]
@@ -487,7 +487,7 @@ material_override = ExtResource("3_ny8t6")
 autoplay = ""
 
 [node name="Grimblo4" parent="BackgroundScene" instance=ExtResource("2_4q1p3")]
-transform = Transform3D(0.988895, 0.103836, -0.106321, -0.113205, 0.989822, -0.0862302, 0.0962847, 0.0973086, 0.990586, -0.90589, 0.595109, 0.961755)
+transform = Transform3D(-0.98012, -0.125484, -0.153685, -0.113205, 0.989822, -0.0862303, 0.162941, -0.067118, -0.98435, -0.90589, 0.595109, 0.961755)
 script = null
 
 [node name="Cube" parent="BackgroundScene/Grimblo4/Character/Player" index="0"]
@@ -509,7 +509,7 @@ material_override = ExtResource("3_ny8t6")
 autoplay = ""
 
 [node name="Grimblo5" parent="BackgroundScene" instance=ExtResource("2_4q1p3")]
-transform = Transform3D(0.944602, -0.299688, -0.133842, 0.322071, 0.924891, 0.202107, 0.0632204, -0.234018, 0.970175, 0.381637, 0.595109, 0.939588)
+transform = Transform3D(-0.944602, 0.299688, 0.133842, 0.322071, 0.924891, 0.202108, -0.0632203, 0.234018, -0.970175, 0.381637, 0.595109, 0.939588)
 script = null
 
 [node name="Cube" parent="BackgroundScene/Grimblo5/Character/Player" index="0"]
@@ -531,7 +531,7 @@ material_override = ExtResource("3_ny8t6")
 autoplay = ""
 
 [node name="Grimblo6" parent="BackgroundScene" instance=ExtResource("2_4q1p3")]
-transform = Transform3D(0.996027, -0.0636473, -0.0622863, 0.0570095, 0.993037, -0.103091, 0.0684139, 0.0991302, 0.99272, -0.701772, 0.701553, -1.16592)
+transform = Transform3D(-0.979795, 0.0358218, -0.196771, 0.0570095, 0.993037, -0.103091, 0.191708, -0.112226, -0.975015, -0.701772, 0.701553, -1.16592)
 script = null
 
 [node name="Cube" parent="BackgroundScene/Grimblo6/Character/Player" index="0"]
@@ -553,7 +553,7 @@ material_override = ExtResource("3_ny8t6")
 autoplay = ""
 
 [node name="Grimblo7" parent="BackgroundScene" instance=ExtResource("2_4q1p3")]
-transform = Transform3D(0.990524, -0.0433356, 0.130326, 0.0570095, 0.993037, -0.103091, -0.124951, 0.109544, 0.986097, 0.27345, 0.744695, -0.735637)
+transform = Transform3D(-0.989112, 0.070211, 0.129336, 0.0570095, 0.993037, -0.103091, -0.135673, -0.0945953, -0.986227, 0.27345, 0.744695, -0.735637)
 script = null
 
 [node name="CollisionShape3D" parent="BackgroundScene/Grimblo7" index="0"]
