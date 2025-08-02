@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d07fucal0mo6q"]
+
+[node name="Level1"]
+
+[node name="Cube_009" parent="." index="13"]
+transform = Transform3D(-20, 0, -6.51683e-08, 0, 4, 0, 6.51683e-06, 0, -0.2, -0.0622191, 1.718, -27.058)
+
+[node name="Cube_005" parent="." index="16"]
+transform = Transform3D(1.07288e-05, 0, -0.2, 0, 4, 0, 20, 0, 1.07288e-07, -20.198, 1.718, -7.21)
