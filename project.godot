@@ -19,12 +19,6 @@ config/icon="res://icon.svg"
 
 Global="*res://global.gd"
 
-[layer_names]
-
-3d_physics/layer_1="Terrain"
-3d_physics/layer_2="Draw"
-3d_physics/layer_3="Grimblo"
-
 [rendering]
 
 environment/defaults/default_clear_color=Color(0.282353, 0.560784, 0.607843, 1)

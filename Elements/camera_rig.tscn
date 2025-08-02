@@ -26,6 +26,6 @@ tilt_enabled = false
 [node name="Camera3D" type="Camera3D" parent="PathFollow"]
 transform = Transform3D(1, 0, 0, 0, 0.604611, 0.796546, 0, -0.796548, 0.604613, 0, 0, 0)
 environment = ExtResource("2_s1k2u")
-near = 0.6
+near = 1.0
 
 [node name="AudioListener3D" type="AudioListener3D" parent="PathFollow/Camera3D"]

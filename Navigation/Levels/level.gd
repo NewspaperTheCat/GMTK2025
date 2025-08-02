@@ -40,7 +40,7 @@ func scrawl_tutorial():
 		if letter.to_upper() == letter or letter in "aeiou!?:":
 			var beep = Global.audio_controller.generate_sfx_universal(Global.audio_controller.beep_speech_array, 6, .6, 1.8)
 		
-		var real_speed = letter_speed if letter not in ".,!?;:" else .75
+		var real_speed = letter_speed if letter not in ".,!?;:" else .5
 		await get_tree().create_timer(real_speed).timeout
 
 func hide_tutorial():

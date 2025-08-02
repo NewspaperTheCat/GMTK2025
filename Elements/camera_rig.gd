@@ -52,7 +52,7 @@ func close_up(target: Grimblo):
 	camera.look_at(target.global_position + Vector3.UP * target.close_up.position.y)
 
 func return_to_resting():
-	camera.near = .6
+	camera.near = 1
 	
 	self.curve.set_point_position(0, resting_pos)
 	self.curve.set_point_in(0, Vector3.ZERO)

@@ -4,7 +4,7 @@ extends Node3D
 @onready var static_body_3d: StaticBody3D = $StaticBody3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-var break_margin = 1.25
+var break_margin = 1.75
 
 func _on_grimblo_entered(body: Node3D) -> void:
 	if body.velocity.length() > Global.level.crowd_speed * break_margin:
