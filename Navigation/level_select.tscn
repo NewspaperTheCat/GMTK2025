@@ -2,11 +2,16 @@
 
 [ext_resource type="Script" uid="uid://c3ca7ynedm1wt" path="res://Navigation/scene_redirector.gd" id="1_ni7ld"]
 [ext_resource type="Theme" uid="uid://cs11afo5dvmke" path="res://UI/button_theme.tres" id="2_4lhgg"]
-[ext_resource type="LabelSettings" uid="uid://b6sk6t1cakeqd" path="res://UI/large_label_theme.tres" id="2_gjey3"]
 [ext_resource type="Script" uid="uid://dkfpqjhm8dtd4" path="res://Navigation/level_lock.gd" id="2_q7rdg"]
 
 [sub_resource type="Theme" id="Theme_6hpme"]
 Label/font_sizes/font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_4lhgg"]
+font_size = 72
+font_color = Color(0, 0.52549, 0.619608, 1)
+outline_size = 10
+outline_color = Color(0.592157, 0.913725, 1, 1)
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -20,35 +25,35 @@ script = ExtResource("1_ni7ld")
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.32
-anchor_top = 0.131
-anchor_right = 0.68
-anchor_bottom = 0.267
-offset_left = 187.36
-offset_top = 0.111992
-offset_right = -187.36
-offset_bottom = -65.016
+anchor_left = 0.298
+anchor_top = 0.083
+anchor_right = 0.702
+anchor_bottom = 0.236
+offset_left = -0.296021
+offset_top = 0.215996
+offset_right = 0.295959
+offset_bottom = 0.071991
 grow_horizontal = 2
 theme = SubResource("Theme_6hpme")
 text = "Select a Level"
-label_settings = ExtResource("2_gjey3")
+label_settings = SubResource("LabelSettings_4lhgg")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.385
-anchor_top = 0.321
-anchor_right = 0.615
-anchor_bottom = 0.679
-offset_left = 0.47998
-offset_top = -0.00801086
-offset_right = 0.52002
-offset_bottom = 0.00799561
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -207.0
+offset_top = -123.0
+offset_right = 208.0
+offset_bottom = 197.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 10
-columns = 3
+columns = 4
 
 [node name="Button" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(125, 100)
@@ -91,6 +96,63 @@ text = "5"
 script = ExtResource("2_q7rdg")
 level_num = 5
 
+[node name="Button6" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(125, 100)
+layout_mode = 2
+theme = ExtResource("2_4lhgg")
+text = "6
+"
+script = ExtResource("2_q7rdg")
+level_num = 5
+
+[node name="Button7" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(125, 100)
+layout_mode = 2
+theme = ExtResource("2_4lhgg")
+text = "7"
+script = ExtResource("2_q7rdg")
+level_num = 5
+
+[node name="Button8" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(125, 100)
+layout_mode = 2
+theme = ExtResource("2_4lhgg")
+text = "8"
+script = ExtResource("2_q7rdg")
+level_num = 5
+
+[node name="Button9" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(125, 100)
+layout_mode = 2
+theme = ExtResource("2_4lhgg")
+text = "9"
+script = ExtResource("2_q7rdg")
+level_num = 5
+
+[node name="Button10" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(125, 100)
+layout_mode = 2
+theme = ExtResource("2_4lhgg")
+text = "10"
+script = ExtResource("2_q7rdg")
+level_num = 5
+
+[node name="Button11" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(125, 100)
+layout_mode = 2
+theme = ExtResource("2_4lhgg")
+text = "11"
+script = ExtResource("2_q7rdg")
+level_num = 5
+
+[node name="Button12" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(125, 100)
+layout_mode = 2
+theme = ExtResource("2_4lhgg")
+text = "12"
+script = ExtResource("2_q7rdg")
+level_num = 5
+
 [node name="TitleButton" type="Button" parent="."]
 custom_minimum_size = Vector2(150, 62.5)
 layout_mode = 1
@@ -99,10 +161,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -216.0
-offset_top = -109.0
-offset_right = -116.0
-offset_bottom = -59.0
+offset_left = -240.0
+offset_top = -138.0
+offset_right = -90.0
+offset_bottom = -56.0
 grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("2_4lhgg")
@@ -113,4 +175,11 @@ text = "Title"
 [connection signal="pressed" from="GridContainer/Button3" to="." method="_to_level" binds= [3]]
 [connection signal="pressed" from="GridContainer/Button4" to="." method="_to_level" binds= [4]]
 [connection signal="pressed" from="GridContainer/Button5" to="." method="_to_level" binds= [5]]
+[connection signal="pressed" from="GridContainer/Button6" to="." method="_to_level" binds= [5]]
+[connection signal="pressed" from="GridContainer/Button7" to="." method="_to_level" binds= [5]]
+[connection signal="pressed" from="GridContainer/Button8" to="." method="_to_level" binds= [5]]
+[connection signal="pressed" from="GridContainer/Button9" to="." method="_to_level" binds= [5]]
+[connection signal="pressed" from="GridContainer/Button10" to="." method="_to_level" binds= [5]]
+[connection signal="pressed" from="GridContainer/Button11" to="." method="_to_level" binds= [5]]
+[connection signal="pressed" from="GridContainer/Button12" to="." method="_to_level" binds= [5]]
 [connection signal="pressed" from="TitleButton" to="." method="_to_title"]
