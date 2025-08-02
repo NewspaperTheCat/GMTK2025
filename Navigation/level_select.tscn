@@ -103,7 +103,7 @@ theme = ExtResource("2_4lhgg")
 text = "6
 "
 script = ExtResource("2_q7rdg")
-level_num = 5
+level_num = 6
 
 [node name="Button7" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(125, 100)
@@ -111,7 +111,7 @@ layout_mode = 2
 theme = ExtResource("2_4lhgg")
 text = "7"
 script = ExtResource("2_q7rdg")
-level_num = 5
+level_num = 7
 
 [node name="Button8" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(125, 100)
@@ -119,7 +119,7 @@ layout_mode = 2
 theme = ExtResource("2_4lhgg")
 text = "8"
 script = ExtResource("2_q7rdg")
-level_num = 5
+level_num = 8
 
 [node name="Button9" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(125, 100)
@@ -127,7 +127,7 @@ layout_mode = 2
 theme = ExtResource("2_4lhgg")
 text = "9"
 script = ExtResource("2_q7rdg")
-level_num = 5
+level_num = 9
 
 [node name="Button10" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(125, 100)
@@ -135,7 +135,7 @@ layout_mode = 2
 theme = ExtResource("2_4lhgg")
 text = "10"
 script = ExtResource("2_q7rdg")
-level_num = 5
+level_num = 10
 
 [node name="Button11" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(125, 100)
@@ -143,7 +143,7 @@ layout_mode = 2
 theme = ExtResource("2_4lhgg")
 text = "11"
 script = ExtResource("2_q7rdg")
-level_num = 5
+level_num = 11
 
 [node name="Button12" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(125, 100)
@@ -151,7 +151,7 @@ layout_mode = 2
 theme = ExtResource("2_4lhgg")
 text = "12"
 script = ExtResource("2_q7rdg")
-level_num = 5
+level_num = 12
 
 [node name="TitleButton" type="Button" parent="."]
 custom_minimum_size = Vector2(150, 62.5)
