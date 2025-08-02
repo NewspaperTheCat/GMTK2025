@@ -19,6 +19,10 @@ var tom_tom_hit_array = [TOM_TOM_HIT]
 var synth_pop_folder_path = "res://Audio/SFX/SynthPops/"
 var synth_pop_array = []
 
+const DEFEAT_JINGLE = preload("res://Audio/DefeatJingle.wav")
+const VICTORY_JINGLE = preload("res://Audio/VictoryJingle.wav")
+var jingles = [DEFEAT_JINGLE, VICTORY_JINGLE]
+
 func _ready() -> void:
 	Global.audio_controller = self
 	
@@ -41,11 +45,19 @@ func generate_sfx_3d(source: Node3D, sfx_array: Array, gain: float = 0, pitch_mi
 	audio.stream = sfx_array.pick_random()
 	source.add_child(audio)
 	audio.play()
+	return audio
 
-func generate_sfx_universal(sfx_array: Array, gain: float = 0, pitch_min: float = 1, pitch_max: float = pitch_min):
+func generate_sfx_universal(sfx_array: Array, gain: float = 0, pitch_min: float = 1, pitch_max: float = pitch_min) -> AudioStreamPlayer:
 	var audio : AudioStreamPlayer = AUDIO_STREAM.instantiate()
 	audio.pitch_scale = randf_range(pitch_min, pitch_max)
 	audio.volume_db = gain
 	audio.stream = sfx_array.pick_random()
 	add_child(audio)
 	audio.play()
+	return audio
+
+func play_jingle(tone: int):
+	volume_db = -20
+	await generate_sfx_universal([jingles[tone]], -4).finished
+	volume_db = -6
+	

@@ -18,7 +18,6 @@ point_count = 2
 curve = SubResource("Curve3D_d7yol")
 script = ExtResource("1_c3s8v")
 camera_velocity_curve = SubResource("Curve_w5t0j")
-camera_follow_extent = 0.85
 
 [node name="PathFollow" type="PathFollow3D" parent="."]
 transform = Transform3D(0.999993, 0, 0, 0, 0.999974, 0, 0, 0, 0.999971, 0, 7, 6.25)

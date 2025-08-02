@@ -119,21 +119,28 @@ func pass_sequence():
 	
 	var openers = ["Keep quiet about this", "Between you and me", "Don't tell anyone", "On the down low", "Psst, hey", "Codeword: Grimblo"]
 	var dialogue: Array[String]
+	var close_up_index = -1
+	var jingle = -1
 	var result: int # 0 = pass ; 1 = win ; 2 = lose
 	
 	if holds_opp:
 		result = 2
 		var enemy_responses := ["You don't say >:)", "The world needs to know", "I'm a bit of a blabbermouth", "You're so busted"]
 		dialogue = [openers.pick_random(), enemy_responses.pick_random(), "uh oh...", "HEY EVERYONE!!"]
+		close_up_index = 3
+		jingle = 0
 	elif to_win:
 		result = 1
-		dialogue = ["A little birdy told me...", "!!!!!"]
+		var victory_openers = ["A little birdy told me...", "I got something for you"]
+		dialogue = [victory_openers.pick_random(), "!!!!!"]
+		close_up_index = 1
+		jingle = 1
 	else:
 		result = 0
 		var neutral_responses = ["Safe with me", "Not a word", "Lips are sealed", "Aye aye, captain", "Roger that", "Silent as the night"]
 		dialogue = [openers.pick_random(), neutral_responses.pick_random()]
 	
-	await play_dialogue(secret_holder, chosen_recipient, dialogue)
+	await play_dialogue(secret_holder, chosen_recipient, dialogue, close_up_index, jingle)
 	
 	if result == 0:
 		chosen_recipient.activeAlignment = Grimblo.alignment.ACTIVE
@@ -150,10 +157,13 @@ func pass_sequence():
 	elif result == 2:
 		scene_redirect._to_select()
 
-func play_dialogue(initiator: Grimblo, recipient: Grimblo, transcript: Array[String]):
+func play_dialogue(initiator: Grimblo, recipient: Grimblo, transcript: Array[String], close_up_index: int = -1, jingle = -1):
 	var speaker: Grimblo
 	for i in range(transcript.size()):
 		speaker = initiator if i % 2 == 0 else recipient
+		if i == close_up_index:
+			Global.camera_rig.close_up(speaker)
+			if jingle > -1: Global.audio_controller.play_jingle(jingle)
 		speaker.say(transcript[i])
 		await speaker.done_speaking
 

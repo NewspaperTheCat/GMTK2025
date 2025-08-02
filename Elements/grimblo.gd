@@ -11,6 +11,7 @@ class_name Grimblo extends CharacterBody3D
 
 @onready var animation_player: AnimationPlayer = $Character/AnimationPlayer
 @onready var label: Label3D = $LabelPivot/Label3D
+@onready var close_up: Node3D = $CloseUp # Accessed externally by camera rig
 
 @export var direction : Vector3
 var hasClicked := false

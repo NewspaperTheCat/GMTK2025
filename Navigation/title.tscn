@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://gct2ttl1x15w"]
+[gd_scene load_steps=10 format=3 uid="uid://gct2ttl1x15w"]
 
 [ext_resource type="Script" uid="uid://c3ca7ynedm1wt" path="res://Navigation/scene_redirector.gd" id="1_yi8iy"]
 [ext_resource type="PackedScene" uid="uid://oqpsd56sxbch" path="res://Elements/grimblo.tscn" id="2_4q1p3"]
@@ -6,12 +6,7 @@
 [ext_resource type="Theme" uid="uid://cs11afo5dvmke" path="res://UI/button_theme.tres" id="3_f6gwl"]
 [ext_resource type="Material" uid="uid://dic817itim346" path="res://Materials/EnemyGrimblo.tres" id="3_ny8t6"]
 [ext_resource type="Environment" uid="uid://c24ex8sf28aiu" path="res://UI/camera_environment.tres" id="4_f6gwl"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_767tf"]
-size = Vector3(3, 0.2, 10)
-
-[sub_resource type="BoxMesh" id="BoxMesh_f6gwl"]
-size = Vector3(0.25, 3, 10)
+[ext_resource type="PackedScene" path="res://art/level1Visual.tscn" id="5_k83qo"]
 
 [sub_resource type="Shader" id="Shader_3qeqw"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.4.1.stable's StandardMaterial3D.
@@ -105,13 +100,6 @@ text = "Begin"
 
 [node name="BackgroundScene" type="Node3D" parent="."]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="BackgroundScene"]
-mesh = SubResource("BoxMesh_767tf")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="BackgroundScene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42267, 0, 0)
-mesh = SubResource("BoxMesh_f6gwl")
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="BackgroundScene"]
 transform = Transform3D(0.932324, -0.200651, 0.300852, 0, 0.831944, 0.554859, -0.361625, -0.517308, 0.775642, 7.49374, 2.64631, 4.13612)
 shadow_enabled = true
@@ -120,6 +108,9 @@ shadow_enabled = true
 transform = Transform3D(0.886751, 0.254647, -0.38578, 0.00201258, 0.832443, 0.554108, 0.462242, -0.492132, 0.737657, -0.520511, 1.02901, 3.95388)
 environment = ExtResource("4_f6gwl")
 fov = 99.0331
+
+[node name="Level1" parent="BackgroundScene" instance=ExtResource("5_k83qo")]
+transform = Transform3D(0.0597181, 0, -0.242763, 0, 0.25, 0, 0.242763, 0, 0.0597181, -3.5613, 0.690385, 2.43574)
 
 [node name="Grimblo" parent="BackgroundScene" instance=ExtResource("2_4q1p3")]
 transform = Transform3D(0.915928, 0.225991, -0.331667, -0.23955, 0.970884, 0, 0.32201, 0.079451, 0.943396, 0, 0.595109, 3.61964)

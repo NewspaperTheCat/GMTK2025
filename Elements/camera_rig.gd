@@ -2,7 +2,7 @@ class_name CameraRig extends Path3D
 
 @export var camera_move_duration = .75;
 @export var camera_velocity_curve : Curve
-@export var camera_follow_extent = .5;
+@export var camera_follow_extent = .85;
 
 @onready var follow: PathFollow3D = $PathFollow
 @onready var camera: Camera3D = $PathFollow/Camera3D
@@ -45,7 +45,28 @@ func view_interaction(initiator_pos: Vector3, recipient_pos: Vector3):
 	moving = true
 	move_dir = 1
 
+func close_up(target: Grimblo):
+	camera.near = .3
+	#var curve = Curve3D.new()
+	#curve.add_point(target.close_up.global_position)
+	#curve.add_point(camera.global_position, Vector3.ZERO, Vector3(0, 2, 0))
+	#self.curve = curve
+	#target_rot = target.close_up.global_rotation
+	#resting_rot = camera.global_rotation
+	
+	#moving = true
+	#move_dir = -1
+	
+	camera.global_position = target.close_up.global_position
+	camera.look_at(target.global_position + Vector3.UP * target.close_up.position.y)
+
 func return_to_resting():
+	camera.near = 1
+	
+	self.curve.set_point_position(0, resting_pos)
+	self.curve.set_point_in(0, Vector3.ZERO)
+	self.curve.set_point_out(0, Vector3(0, -3, 0))
+	
 	moving = true
 	move_dir = -1
 
