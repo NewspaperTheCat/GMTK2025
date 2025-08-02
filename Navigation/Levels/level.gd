@@ -4,7 +4,7 @@ class_name Level extends Node3D
 @export var crowd_speed : float
 
 @onready var tutorial_label: Label = $CanvasLayer/Control/Label
-@export var tutorial_text : String
+var tutorial_text : String
 var letter_speed = .05
 
 signal timescale_changed
@@ -28,6 +28,7 @@ func _ready() -> void:
 	scrawl_tutorial()
 
 func scrawl_tutorial():
+	tutorial_text = tutorial_label.text
 	tutorial_label.text = ""
 	
 	for i in range(tutorial_text.length()):

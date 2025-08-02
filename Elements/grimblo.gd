@@ -13,7 +13,8 @@ class_name Grimblo extends CharacterBody3D
 @onready var label: Label3D = $LabelPivot/Label3D
 @onready var close_up: Node3D = $CloseUp # Accessed externally by camera rig
 
-@export var direction : Vector3
+@export_range(0, 2 * PI) var start_dir 
+var direction : Vector3
 var hasClicked := false
 var launchVector : Vector3
 
@@ -27,6 +28,7 @@ signal done_speaking
 @export_flags_3d_physics var LOS_mask
 
 func _ready() -> void:
+	direction = Vector3(cos(start_dir), 0, sin(start_dir))
 	velocity = direction.normalized() * Global.level.crowd_speed
 	set_color()
 	
@@ -110,7 +112,7 @@ func can_see(target: Grimblo) -> bool:
 	var query = PhysicsRayQueryParameters3D.create(global_position, target.global_position, LOS_mask)
 	var result = space_state.intersect_ray(query)
 	target.set_collision_layer_value(4, false)
-	return result.collider == target
+	return !result.is_empty() and result.collider == target
 
 func get_mouse_coord() -> Vector3:
 	var viewport = get_viewport()

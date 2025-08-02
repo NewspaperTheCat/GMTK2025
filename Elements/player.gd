@@ -33,6 +33,10 @@ func _input(event: InputEvent) -> void:
 		if (newPoint.distance_to(points[points.size()-1])) > drawDetail:
 			add_to_line(newPoint)
 			create_point_visual(newPoint)
+	
+	if event is InputEventMouseButton and event.button_index == 2 and drawing:
+		drawing = false
+		end_line()
 
 func end_line():
 	for visual in pointVisuals:
@@ -191,5 +195,4 @@ func get_captured():
 			collided_bodies.append(shape_cast.get_collider(i))
 	shape_cast.enabled = false
 	
-	print(str(collided_bodies.size()) + " <-- the result")
 	return collided_bodies
