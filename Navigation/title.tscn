@@ -1,14 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://gct2ttl1x15w"]
+[gd_scene load_steps=11 format=3 uid="uid://gct2ttl1x15w"]
 
 [ext_resource type="Script" uid="uid://c3ca7ynedm1wt" path="res://Navigation/scene_redirector.gd" id="1_yi8iy"]
 [ext_resource type="PackedScene" uid="uid://oqpsd56sxbch" path="res://Elements/grimblo.tscn" id="2_4q1p3"]
+[ext_resource type="LabelSettings" uid="uid://b6sk6t1cakeqd" path="res://UI/large_label_theme.tres" id="2_767tf"]
+[ext_resource type="Theme" uid="uid://cs11afo5dvmke" path="res://UI/button_theme.tres" id="3_f6gwl"]
 [ext_resource type="Material" uid="uid://dic817itim346" path="res://Materials/EnemyGrimblo.tres" id="3_ny8t6"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_8bpl4"]
-font_size = 48
-
-[sub_resource type="LabelSettings" id="LabelSettings_yi8iy"]
-font_size = 32
+[ext_resource type="Environment" uid="uid://c24ex8sf28aiu" path="res://UI/camera_environment.tres" id="4_f6gwl"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_767tf"]
 size = Vector3(3, 0.2, 10)
@@ -91,7 +88,7 @@ offset_top = 66.0
 offset_right = 177.0
 offset_bottom = 89.0
 text = "In the Loop"
-label_settings = SubResource("LabelSettings_8bpl4")
+label_settings = ExtResource("2_767tf")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -103,22 +100,8 @@ offset_top = -190.0
 offset_right = 405.0
 offset_bottom = -81.0
 grow_vertical = 0
-
-[node name="Label" type="Label" parent="Button"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -0.5
-offset_top = -11.5
-offset_right = 0.5
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Play"
-label_settings = SubResource("LabelSettings_yi8iy")
+theme = ExtResource("3_f6gwl")
+text = "Begin"
 
 [node name="BackgroundScene" type="Node3D" parent="."]
 
@@ -135,6 +118,7 @@ shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="BackgroundScene"]
 transform = Transform3D(0.886751, 0.254647, -0.38578, 0.00201258, 0.832443, 0.554108, 0.462242, -0.492132, 0.737657, -0.520511, 1.02901, 3.95388)
+environment = ExtResource("4_f6gwl")
 fov = 99.0331
 
 [node name="Grimblo" parent="BackgroundScene" instance=ExtResource("2_4q1p3")]

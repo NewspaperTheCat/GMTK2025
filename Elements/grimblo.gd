@@ -75,7 +75,7 @@ func handle_active_player() -> void:
 			pointer.visible = false
 			Global.level.sim_timescale = 1
 			Global.level.current_game_state = Global.level.game_state.DEFAULT
-			Global.audio_controller.generate_sfx_3d(self, Global.audio_controller.tom_tom_hit_array, 24, .6, 1.8)
+			Global.audio_controller.generate_sfx_3d(self, Global.audio_controller.tom_tom_hit_array, 24, .9, 1.8)
 		else:
 			look_at(position + Vector3(launchVector.x, 0, launchVector.y))
 

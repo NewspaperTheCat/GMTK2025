@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Global="*res://global.gd"
 
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.282353, 0.560784, 0.607843, 1)
+
 [shader_globals]
 
 diffuse_curve={
