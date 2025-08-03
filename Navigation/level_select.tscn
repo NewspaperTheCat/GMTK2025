@@ -2,17 +2,12 @@
 
 [ext_resource type="Script" uid="uid://c3ca7ynedm1wt" path="res://Navigation/scene_redirector.gd" id="1_ni7ld"]
 [ext_resource type="Theme" uid="uid://cs11afo5dvmke" path="res://UI/button_theme.tres" id="2_4lhgg"]
+[ext_resource type="LabelSettings" uid="uid://lvc75807blu1" path="res://UI/header_label.tres" id="2_6hpme"]
 [ext_resource type="Script" uid="uid://dkfpqjhm8dtd4" path="res://Navigation/level_lock.gd" id="2_q7rdg"]
 [ext_resource type="Script" uid="uid://b7lydmbfr6pq1" path="res://Navigation/stats_toggle.gd" id="4_gjey3"]
 
 [sub_resource type="Theme" id="Theme_6hpme"]
 Label/font_sizes/font_size = 64
-
-[sub_resource type="LabelSettings" id="LabelSettings_4lhgg"]
-font_size = 72
-font_color = Color(0, 0.52549, 0.619608, 1)
-outline_size = 10
-outline_color = Color(0.592157, 0.913725, 1, 1)
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -37,7 +32,7 @@ offset_bottom = 0.071991
 grow_horizontal = 2
 theme = SubResource("Theme_6hpme")
 text = "Select a Level"
-label_settings = SubResource("LabelSettings_4lhgg")
+label_settings = ExtResource("2_6hpme")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1

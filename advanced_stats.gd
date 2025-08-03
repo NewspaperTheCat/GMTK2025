@@ -1,9 +1,19 @@
-class_name AdvancedStats extends VBoxContainer
+class_name AdvancedStats extends Control
 
-@onready var speedrun_timer: Label = $SpeedrunTimer
-@onready var hit_count: Label = $ParCount
+@onready var in_level_stats: VBoxContainer = $InLevelStats
+@onready var speedrun_timer: Label = $InLevelStats/SpeedrunTimer
+@onready var hit_count: Label = $InLevelStats/ParCount
+
+@onready var total_stats: VBoxContainer = $TotalStats
+@onready var total_timer: Label = $TotalStats/TotalTimer
+@onready var total_hits: Label = $TotalStats/TotalHits
+
+
+var total_time = 0
+var total_par = 0
 
 var toggled = false
+var stopped = true
 
 var scene_time = 0:
 	set(value):
@@ -20,10 +30,22 @@ func _ready() -> void:
 	_on_scene_changed()
 
 func _process(delta: float) -> void:
-	scene_time += delta
+	if !stopped: scene_time += delta
+
+func stop_timer():
+	stopped = true
 
 func _on_scene_changed() -> void:
-	visible = toggled and Global.level != null
+	in_level_stats.visible = toggled and Global.level != null
+	total_stats.visible = toggled and Global.level == null
+	stopped = Global.level == null
+	
+	total_time += scene_time
+	total_timer.text = "Total: " + time_convert(total_time)
+	
+	total_par += level_par
+	total_hits.text = "Total Hits: " + str(total_par)
+	
 	scene_time = 0
 	level_par = 0
 
@@ -39,3 +61,4 @@ func increase_par():
 
 func toggle(set_to: bool):
 	toggled = set_to
+	total_stats.visible = toggled and Global.level == null

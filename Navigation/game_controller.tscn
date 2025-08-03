@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cid6qokd0pwe3"]
+[gd_scene load_steps=15 format=3 uid="uid://cid6qokd0pwe3"]
 
 [ext_resource type="Script" uid="uid://b0cnpk0ymgsu6" path="res://Navigation/game_controller.gd" id="1_3iy47"]
 [ext_resource type="PackedScene" uid="uid://gct2ttl1x15w" path="res://Navigation/title.tscn" id="2_alenl"]
@@ -7,7 +7,9 @@
 [ext_resource type="LabelSettings" uid="uid://dpmgf7egj0x4s" path="res://UI/advanced_label.tres" id="3_rrpbx"]
 [ext_resource type="PackedScene" uid="uid://53o2s6enb05h" path="res://shader_layer.tscn" id="4_bqgkb"]
 [ext_resource type="AudioStream" uid="uid://dj5l0o0fcbsyp" path="res://Audio/InTheLoopTheme.wav" id="5_cp2b6"]
+[ext_resource type="Theme" uid="uid://cs11afo5dvmke" path="res://UI/button_theme.tres" id="5_ntsfb"]
 [ext_resource type="Script" uid="uid://dcersbxet1mqd" path="res://audio_controller.gd" id="6_osaii"]
+[ext_resource type="LabelSettings" uid="uid://lvc75807blu1" path="res://UI/header_label.tres" id="6_sk3y1"]
 
 [sub_resource type="Animation" id="Animation_osaii"]
 resource_name = "BGMusic Fade In"
@@ -82,29 +84,104 @@ grow_vertical = 2
 [node name="Title" parent="World" instance=ExtResource("2_alenl")]
 layout_mode = 1
 
-[node name="AdvancedStats" type="VBoxContainer" parent="World"]
+[node name="AdvancedStats" type="Control" parent="World"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_04mc1")
+
+[node name="InLevelStats" type="VBoxContainer" parent="World/AdvancedStats"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -179.0
+offset_left = -183.0
 offset_top = 23.0
-offset_right = -22.0
+offset_right = -26.0
 offset_bottom = 117.0
 grow_horizontal = 0
-script = ExtResource("3_04mc1")
 
-[node name="SpeedrunTimer" type="Label" parent="World/AdvancedStats"]
+[node name="SpeedrunTimer" type="Label" parent="World/AdvancedStats/InLevelStats"]
 layout_mode = 2
 text = "XX:XX.XXX"
 label_settings = ExtResource("3_rrpbx")
 horizontal_alignment = 2
 
-[node name="ParCount" type="Label" parent="World/AdvancedStats"]
+[node name="ParCount" type="Label" parent="World/AdvancedStats/InLevelStats"]
 layout_mode = 2
 text = "Par: X"
 label_settings = ExtResource("3_rrpbx")
 horizontal_alignment = 2
+
+[node name="TotalStats" type="VBoxContainer" parent="World/AdvancedStats"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -183.0
+offset_top = 23.0
+offset_right = -26.0
+offset_bottom = 117.0
+grow_horizontal = 0
+
+[node name="TotalTimer" type="Label" parent="World/AdvancedStats/TotalStats"]
+layout_mode = 2
+text = "Total: 00:00.00"
+label_settings = ExtResource("3_rrpbx")
+horizontal_alignment = 2
+
+[node name="TotalHits" type="Label" parent="World/AdvancedStats/TotalStats"]
+layout_mode = 2
+text = "Hits: 0"
+label_settings = ExtResource("3_rrpbx")
+horizontal_alignment = 2
+
+[node name="Victory Screen" type="Control" parent="World"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Button" type="Button" parent="World/Victory Screen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.394
+anchor_top = 0.437
+anchor_right = 0.606
+anchor_bottom = 0.563
+offset_left = 0.111969
+offset_top = 46.824
+offset_right = -0.112
+offset_bottom = 47.176
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_ntsfb")
+text = "Continue"
+
+[node name="Label" type="Label" parent="World/Victory Screen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.245
+anchor_top = 0.424
+anchor_right = 0.755
+anchor_bottom = 0.576
+offset_left = -0.23999
+offset_top = -51.752
+offset_right = 0.239929
+offset_bottom = -51.248
+grow_horizontal = 2
+grow_vertical = 2
+text = "Secret Delivered!"
+label_settings = ExtResource("6_sk3y1")
+horizontal_alignment = 1
 
 [node name="TransitionController" parent="." instance=ExtResource("3_alenl")]
 layout_mode = 1
@@ -123,3 +200,4 @@ libraries = {
 }
 
 [connection signal="scene_changed" from="." to="World/AdvancedStats" method="_on_scene_changed"]
+[connection signal="pressed" from="World/Victory Screen/Button" to="." method="change_scene" binds= ["res://Navigation/level_select.tscn"]]

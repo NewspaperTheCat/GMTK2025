@@ -169,7 +169,7 @@ func pass_sequence():
 		Global.level.current_game_state = Global.level.game_state.GOLFING
 	elif result == 1:
 		Global.level_progress = Global.level.level_num
-		scene_redirect._to_select()
+		Global.game_controller.show_victory()
 	elif result == 2:
 		scene_redirect._to_level(Global.level.level_num)
 

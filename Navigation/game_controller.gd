@@ -2,6 +2,7 @@ class_name GameController extends Node
 
 @onready var world = $World
 @onready var transition_controller: TransitionController = $TransitionController
+@onready var victory_screen: Control = $"World/Victory Screen"
 
 var current_scene
 signal scene_changed
@@ -22,6 +23,8 @@ func change_scene(
 	transition_in: String = "Fade In",
 	transition_out: String = "Fade Out",
 ) -> void:
+	print("change")
+	
 	if transition:
 		transition_controller.transition(transition_out)
 		await transition_controller.animation_player.animation_finished
@@ -40,5 +43,10 @@ func change_scene(
 		if "Level" not in new_scene:
 			Global.level = null
 		scene_changed.emit()
+		victory_screen.visible = false
 	
 	if transition: transition_controller.transition(transition_in)
+
+func show_victory():
+	Global.advanced_stats.stop_timer()
+	victory_screen.visible = true
