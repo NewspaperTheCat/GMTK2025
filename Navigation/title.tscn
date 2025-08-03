@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://gct2ttl1x15w"]
+[gd_scene load_steps=12 format=3 uid="uid://gct2ttl1x15w"]
 
 [ext_resource type="Script" uid="uid://c3ca7ynedm1wt" path="res://Navigation/scene_redirector.gd" id="1_yi8iy"]
 [ext_resource type="PackedScene" uid="uid://oqpsd56sxbch" path="res://Elements/grimblo.tscn" id="2_4q1p3"]
@@ -8,6 +8,7 @@
 [ext_resource type="Environment" uid="uid://c24ex8sf28aiu" path="res://UI/camera_environment.tres" id="4_f6gwl"]
 [ext_resource type="PackedScene" uid="uid://ctv4axuwyue2j" path="res://art/updatedLevel1.glb" id="5_k83qo"]
 [ext_resource type="Material" uid="uid://h7l6uths11rg" path="res://Materials/Shaders/ToonShader/outline.tres" id="6_h3qt5"]
+[ext_resource type="Material" uid="uid://d005rjxcqr27x" path="res://Materials/EnemyTie.tres" id="9_2or4c"]
 
 [sub_resource type="Shader" id="Shader_3qeqw"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.4.1.stable's StandardMaterial3D.
@@ -465,6 +466,12 @@ material_override = ExtResource("3_ny8t6")
 [node name="AnimationPlayer" parent="BackgroundScene/Grimblo2/Character" index="1"]
 autoplay = ""
 
+[node name="Cube_003" parent="BackgroundScene/Grimblo2/Character" index="2"]
+material_override = ExtResource("9_2or4c")
+
+[node name="Cube_004" parent="BackgroundScene/Grimblo2/Character" index="3"]
+material_override = ExtResource("9_2or4c")
+
 [node name="Grimblo3" parent="BackgroundScene" instance=ExtResource("2_4q1p3")]
 transform = Transform3D(-0.990524, 0.0433356, -0.130326, 0.0570095, 0.993037, -0.103091, 0.124951, -0.109544, -0.986097, -0.409132, 0.595109, 2.21613)
 script = null
@@ -486,6 +493,12 @@ material_override = ExtResource("3_ny8t6")
 
 [node name="AnimationPlayer" parent="BackgroundScene/Grimblo3/Character" index="1"]
 autoplay = ""
+
+[node name="Cube_003" parent="BackgroundScene/Grimblo3/Character" index="2"]
+material_override = ExtResource("9_2or4c")
+
+[node name="Cube_004" parent="BackgroundScene/Grimblo3/Character" index="3"]
+material_override = ExtResource("9_2or4c")
 
 [node name="Grimblo4" parent="BackgroundScene" instance=ExtResource("2_4q1p3")]
 transform = Transform3D(-0.98012, -0.125484, -0.153685, -0.113205, 0.989822, -0.0862303, 0.162941, -0.067118, -0.98435, -0.90589, 0.595109, 0.961755)
@@ -509,6 +522,12 @@ material_override = ExtResource("3_ny8t6")
 [node name="AnimationPlayer" parent="BackgroundScene/Grimblo4/Character" index="1"]
 autoplay = ""
 
+[node name="Cube_003" parent="BackgroundScene/Grimblo4/Character" index="2"]
+material_override = ExtResource("9_2or4c")
+
+[node name="Cube_004" parent="BackgroundScene/Grimblo4/Character" index="3"]
+material_override = ExtResource("9_2or4c")
+
 [node name="Grimblo5" parent="BackgroundScene" instance=ExtResource("2_4q1p3")]
 transform = Transform3D(-0.944602, 0.299688, 0.133842, 0.322071, 0.924891, 0.202108, -0.0632203, 0.234018, -0.970175, 0.381637, 0.595109, 0.939588)
 script = null
@@ -531,6 +550,12 @@ material_override = ExtResource("3_ny8t6")
 [node name="AnimationPlayer" parent="BackgroundScene/Grimblo5/Character" index="1"]
 autoplay = ""
 
+[node name="Cube_003" parent="BackgroundScene/Grimblo5/Character" index="2"]
+material_override = ExtResource("9_2or4c")
+
+[node name="Cube_004" parent="BackgroundScene/Grimblo5/Character" index="3"]
+material_override = ExtResource("9_2or4c")
+
 [node name="Grimblo6" parent="BackgroundScene" instance=ExtResource("2_4q1p3")]
 transform = Transform3D(-0.979795, 0.0358218, -0.196771, 0.0570095, 0.993037, -0.103091, 0.191708, -0.112226, -0.975015, -0.701772, 0.701553, -1.16592)
 script = null
@@ -552,6 +577,12 @@ material_override = ExtResource("3_ny8t6")
 
 [node name="AnimationPlayer" parent="BackgroundScene/Grimblo6/Character" index="1"]
 autoplay = ""
+
+[node name="Cube_003" parent="BackgroundScene/Grimblo6/Character" index="2"]
+material_override = ExtResource("9_2or4c")
+
+[node name="Cube_004" parent="BackgroundScene/Grimblo6/Character" index="3"]
+material_override = ExtResource("9_2or4c")
 
 [node name="Grimblo7" parent="BackgroundScene" instance=ExtResource("2_4q1p3")]
 transform = Transform3D(-0.989112, 0.070211, 0.129336, 0.0570095, 0.993037, -0.103091, -0.135673, -0.0945953, -0.986227, 0.27345, 0.744695, -0.735637)
@@ -578,13 +609,26 @@ material_override = ExtResource("3_ny8t6")
 [node name="AnimationPlayer" parent="BackgroundScene/Grimblo7/Character" index="1"]
 autoplay = ""
 
+[node name="Cube_003" parent="BackgroundScene/Grimblo7/Character" index="2"]
+material_override = ExtResource("9_2or4c")
+
+[node name="Cube_004" parent="BackgroundScene/Grimblo7/Character" index="3"]
+material_override = ExtResource("9_2or4c")
+
 [connection signal="pressed" from="Button" to="." method="_to_select"]
 
 [editable path="BackgroundScene/updatedLevel1"]
 [editable path="BackgroundScene/Grimblo"]
+[editable path="BackgroundScene/Grimblo/Character/Player/Pointer"]
 [editable path="BackgroundScene/Grimblo2"]
+[editable path="BackgroundScene/Grimblo2/Character/Player/Pointer"]
 [editable path="BackgroundScene/Grimblo3"]
+[editable path="BackgroundScene/Grimblo3/Character/Player/Pointer"]
 [editable path="BackgroundScene/Grimblo4"]
+[editable path="BackgroundScene/Grimblo4/Character/Player/Pointer"]
 [editable path="BackgroundScene/Grimblo5"]
+[editable path="BackgroundScene/Grimblo5/Character/Player/Pointer"]
 [editable path="BackgroundScene/Grimblo6"]
+[editable path="BackgroundScene/Grimblo6/Character/Player/Pointer"]
 [editable path="BackgroundScene/Grimblo7"]
+[editable path="BackgroundScene/Grimblo7/Character/Player/Pointer"]
