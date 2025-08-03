@@ -1,10 +1,12 @@
-[gd_scene load_steps=26 format=4 uid="uid://oqpsd56sxbch"]
+[gd_scene load_steps=28 format=4 uid="uid://oqpsd56sxbch"]
 
 [ext_resource type="Script" uid="uid://bbpn22lvaguf4" path="res://Elements/grimblo.gd" id="1_frpx3"]
 [ext_resource type="Animation" uid="uid://c0hunubavdg4p" path="res://Elements/Walking.res" id="2_frpx3"]
 [ext_resource type="Material" uid="uid://b03uwmho7ft7q" path="res://Materials/Grimblo.tres" id="2_hv2v0"]
 [ext_resource type="Shader" uid="uid://bvsurc2j4dqpg" path="res://Materials/Shaders/ToonShader/cel-shader-base.gdshader" id="4_60w84"]
 [ext_resource type="PackedScene" uid="uid://pwefcngg5hft" path="res://art/Pointer.glb" id="4_k2h1b"]
+[ext_resource type="Material" uid="uid://h7l6uths11rg" path="res://Materials/Shaders/ToonShader/outline.tres" id="6_b4ycx"]
+[ext_resource type="Material" uid="uid://wo0ecq5rfen" path="res://Materials/PassiveTie.tres" id="6_scdft"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dwyiq"]
 
@@ -261,7 +263,7 @@ mesh = SubResource("ArrayMesh_unftq")
 skeleton = NodePath("")
 
 [node name="Cylinder" type="MeshInstance3D" parent="Character/Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.118683, 0)
+transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0.00773251, 0.0897679, -0.0240833)
 material_override = ExtResource("2_hv2v0")
 mesh = SubResource("ArrayMesh_wt1qo")
 skeleton = NodePath("")
@@ -283,11 +285,15 @@ speed_scale = 2.0
 
 [node name="Cube_003" type="MeshInstance3D" parent="Character"]
 transform = Transform3D(0.0831591, 0, 0, 0, 0.15555, 0, 0, 0, 0.15555, 0.570533, 0.622705, 0)
+material_override = ExtResource("6_scdft")
+material_overlay = ExtResource("6_b4ycx")
 mesh = SubResource("ArrayMesh_6y7m2")
 skeleton = NodePath("")
 
 [node name="Cube_004" type="MeshInstance3D" parent="Character"]
 transform = Transform3D(0.108848, 0, 0, 0, 0.203601, 0, 0, 0, 0.203601, 0.570533, 0.340769, 0)
+material_override = ExtResource("6_scdft")
+material_overlay = ExtResource("6_b4ycx")
 mesh = SubResource("ArrayMesh_eijqo")
 skeleton = NodePath("")
 

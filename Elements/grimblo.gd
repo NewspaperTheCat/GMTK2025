@@ -4,10 +4,15 @@ class_name Grimblo extends CharacterBody3D
 @onready var cube_002: GeometryInstance3D = $Character/Player/Cube_002
 @onready var cylinder: GeometryInstance3D = $Character/Player/Cylinder
 @onready var cube_001: GeometryInstance3D = $Character/Player/Cube_001
+@onready var cube_003: MeshInstance3D = $Character/Cube_003
+@onready var cube_004: MeshInstance3D = $Character/Cube_004
 
 @onready var pointer: Node3D = $Character/Player/Pointer
 @onready var grimbloShapes = [cube, cube_001, cylinder, cube_002]
 @onready var grimbloMaterial: Array[Material] = [preload("res://Materials/ActiveGrimblo.tres"), preload("res://Materials/Grimblo.tres"), preload("res://Materials/EnemyGrimblo.tres"), preload("res://Materials/TargetGrimblo.tres")]
+
+@onready var grimbloTieShapes = [cube_003, cube_004]
+@onready var grimbloTieMaterial: Array[Material] = [preload("res://Materials/ActiveTie.tres"), preload("res://Materials/PassiveTie.tres"), preload("res://Materials/EnemyTie.tres"), preload("res://Materials/TargetTie.tres")]
 
 @onready var animation_player: AnimationPlayer = $Character/AnimationPlayer
 @onready var label: Label3D = $LabelPivot/Label3D
@@ -87,7 +92,8 @@ func handle_active_player() -> void:
 func set_color() -> void:
 	for shape in grimbloShapes:
 		shape.material_override = grimbloMaterial[activeAlignment]
-
+	for tie in grimbloTieShapes:
+		tie.material_override = grimbloTieMaterial[activeAlignment]
 func say(message: String, letter_speed: float = .05):
 	label.text = ""
 	label.visible = true
