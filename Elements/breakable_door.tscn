@@ -7,7 +7,7 @@
 size = Vector3(0.5979, 1.25, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fmjn8"]
-size = Vector3(0.557617, 1.25, 0.125)
+size = Vector3(0.981445, 1.25, 0.125)
 
 [sub_resource type="Animation" id="Animation_ck6ya"]
 length = 0.001

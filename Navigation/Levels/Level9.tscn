@@ -109,6 +109,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0353847, -0.122587, -0.262
 script = ExtResource("1_gs5nh")
 level_num = 9
 crowd_speed = 3.0
+par = 5
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.93925, 0.298709, -0.16906, -0.156225, 0.810625, 0.56434, 0.305618, -0.503645, 0.808047, -0.0164103, 7.98203, 0.00157928)

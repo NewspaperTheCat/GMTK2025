@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://bhvitn215c8qn"]
+[gd_scene load_steps=51 format=3 uid="uid://bhvitn215c8qn"]
 
 [ext_resource type="Script" uid="uid://dgw18dh6btfxp" path="res://Navigation/Levels/level.gd" id="1_s1xj7"]
 [ext_resource type="PackedScene" uid="uid://bwlm62q1aprja" path="res://Elements/player.tscn" id="2_xybrp"]
@@ -125,6 +125,9 @@ size = Vector3(1.87219, 0.0840138, 2.52749)
 [sub_resource type="BoxShape3D" id="BoxShape3D_q5pkg"]
 size = Vector3(1.87219, 0.0840138, 2.82419)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_djb2w"]
+size = Vector3(1.87219, 0.0840138, 5.1649)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_5khhl"]
 size = Vector3(1.87219, 0.0840138, 1.21756)
 
@@ -138,7 +141,7 @@ size = Vector3(1.87219, 20.2195, 0.319353)
 script = ExtResource("1_s1xj7")
 level_num = 11
 crowd_speed = 3.0
-par = 6
+par = 5
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.93925, 0.298709, -0.16906, -0.156225, 0.810625, 0.56434, 0.305618, -0.503645, 0.808047, -0.0164103, 7.98203, 0.00157928)
@@ -559,6 +562,10 @@ shape = SubResource("BoxShape3D_wy4pm")
 [node name="CollisionShape3D28" type="CollisionShape3D" parent="Node3D/Wall"]
 transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -7.69213, -5.64108)
 shape = SubResource("BoxShape3D_q5pkg")
+
+[node name="CollisionShape3D46" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -7.69213, -0.596012)
+shape = SubResource("BoxShape3D_djb2w")
 
 [node name="CollisionShape3D44" type="CollisionShape3D" parent="Node3D/Wall"]
 transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -7.69213, -0.564327)

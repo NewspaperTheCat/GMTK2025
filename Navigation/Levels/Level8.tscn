@@ -75,6 +75,7 @@ size = Vector3(1.87219, 0.48781, 6.06688)
 script = ExtResource("1_k43qo")
 level_num = 8
 crowd_speed = 3.0
+par = 4
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.93925, 0.298709, -0.16906, -0.156225, 0.810625, 0.56434, 0.305618, -0.503645, 0.808047, -0.0164103, 7.98203, 0.00157928)

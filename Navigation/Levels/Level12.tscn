@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://c367c2rl7t78x"]
+[gd_scene load_steps=33 format=3 uid="uid://bdaybpqkcnnlv"]
 
 [ext_resource type="Script" uid="uid://dgw18dh6btfxp" path="res://Navigation/Levels/level.gd" id="1_0mbek"]
 [ext_resource type="PackedScene" uid="uid://bwlm62q1aprja" path="res://Elements/player.tscn" id="2_2kbe2"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://oqpsd56sxbch" path="res://Elements/grimblo.tscn" id="5_cuqox"]
 [ext_resource type="PackedScene" uid="uid://bt4bydgxxlscj" path="res://Elements/breakable_door.tscn" id="6_sujla"]
 [ext_resource type="PackedScene" uid="uid://c7qluyvfvufim" path="res://art/LV12.glb" id="7_0mbek"]
+[ext_resource type="Material" uid="uid://h7l6uths11rg" path="res://Materials/Shaders/ToonShader/outline.tres" id="8_2kbe2"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_d7yol"]
 
@@ -86,6 +87,7 @@ size = Vector3(1.6727, 1.10291, 0.176391)
 script = ExtResource("1_0mbek")
 level_num = 12
 crowd_speed = 3.0
+par = 8
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.93925, 0.298709, -0.16906, -0.156225, 0.810625, 0.56434, 0.305618, -0.503645, 0.808047, -0.0164103, 7.98203, 0.00157928)
@@ -365,7 +367,281 @@ transform = Transform3D(0.434194, 0, -0.90082, 0, 1, 0, 0.90082, 0, 0.434194, 11
 [node name="LV12" parent="Node3D2" instance=ExtResource("7_0mbek")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.492612, -282.1)
 
+[node name="Cube_215" parent="Node3D2/LV12" index="0"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_230" parent="Node3D2/LV12" index="1"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_139" parent="Node3D2/LV12" index="2"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_254" parent="Node3D2/LV12" index="3"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Door Frame_030" parent="Node3D2/LV12" index="4"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_147" parent="Node3D2/LV12" index="5"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_148" parent="Node3D2/LV12" index="6"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_149" parent="Node3D2/LV12" index="7"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_150" parent="Node3D2/LV12" index="8"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_225" parent="Node3D2/LV12" index="9"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_151" parent="Node3D2/LV12" index="10"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Chair1_098" parent="Node3D2/LV12" index="11"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Table_085" parent="Node3D2/LV12" index="12"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Computer_082" parent="Node3D2/LV12" index="13"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Keyboard_082" parent="Node3D2/LV12" index="14"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Chair1_105" parent="Node3D2/LV12" index="15"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Table_092" parent="Node3D2/LV12" index="16"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Keyboard_086" parent="Node3D2/LV12" index="17"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Chair1_106" parent="Node3D2/LV12" index="18"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Table_093" parent="Node3D2/LV12" index="19"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Keyboard_087" parent="Node3D2/LV12" index="20"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_154" parent="Node3D2/LV12" index="21"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_274" parent="Node3D2/LV12" index="22"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Door Frame_031" parent="Node3D2/LV12" index="23"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_155" parent="Node3D2/LV12" index="24"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_156" parent="Node3D2/LV12" index="25"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_157" parent="Node3D2/LV12" index="26"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_169" parent="Node3D2/LV12" index="27"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_276" parent="Node3D2/LV12" index="28"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Door Frame_035" parent="Node3D2/LV12" index="29"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_170" parent="Node3D2/LV12" index="30"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_171" parent="Node3D2/LV12" index="31"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_172" parent="Node3D2/LV12" index="32"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_173" parent="Node3D2/LV12" index="33"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_277" parent="Node3D2/LV12" index="34"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Door Frame_036" parent="Node3D2/LV12" index="35"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_174" parent="Node3D2/LV12" index="36"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_175" parent="Node3D2/LV12" index="37"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_176" parent="Node3D2/LV12" index="38"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_177" parent="Node3D2/LV12" index="39"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_278" parent="Node3D2/LV12" index="40"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Door Frame_037" parent="Node3D2/LV12" index="41"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_178" parent="Node3D2/LV12" index="42"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_179" parent="Node3D2/LV12" index="43"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_180" parent="Node3D2/LV12" index="44"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_181" parent="Node3D2/LV12" index="45"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_279" parent="Node3D2/LV12" index="46"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Door Frame_038" parent="Node3D2/LV12" index="47"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_182" parent="Node3D2/LV12" index="48"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_183" parent="Node3D2/LV12" index="49"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_184" parent="Node3D2/LV12" index="50"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_185" parent="Node3D2/LV12" index="51"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_280" parent="Node3D2/LV12" index="52"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Door Frame_039" parent="Node3D2/LV12" index="53"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_186" parent="Node3D2/LV12" index="54"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_187" parent="Node3D2/LV12" index="55"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_188" parent="Node3D2/LV12" index="56"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Computer_086" parent="Node3D2/LV12" index="57"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Computer_087" parent="Node3D2/LV12" index="58"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Chair1_107" parent="Node3D2/LV12" index="59"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Table_094" parent="Node3D2/LV12" index="60"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Computer_088" parent="Node3D2/LV12" index="61"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Keyboard_088" parent="Node3D2/LV12" index="62"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Chair1_108" parent="Node3D2/LV12" index="63"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Table_095" parent="Node3D2/LV12" index="64"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Keyboard_089" parent="Node3D2/LV12" index="65"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Chair1_109" parent="Node3D2/LV12" index="66"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Table_096" parent="Node3D2/LV12" index="67"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Keyboard_090" parent="Node3D2/LV12" index="68"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Computer_089" parent="Node3D2/LV12" index="69"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Computer_090" parent="Node3D2/LV12" index="70"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_281" parent="Node3D2/LV12" index="71"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Window Cross_023" parent="Node3D2/LV12" index="72"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_189" parent="Node3D2/LV12" index="73"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_282" parent="Node3D2/LV12" index="74"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Window Cross_062" parent="Node3D2/LV12" index="75"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_190" parent="Node3D2/LV12" index="76"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_284" parent="Node3D2/LV12" index="77"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Window Cross_063" parent="Node3D2/LV12" index="78"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_191" parent="Node3D2/LV12" index="79"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_286" parent="Node3D2/LV12" index="80"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_290" parent="Node3D2/LV12" index="81"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_292" parent="Node3D2/LV12" index="82"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Window Cross_064" parent="Node3D2/LV12" index="83"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Wall Skirting_192" parent="Node3D2/LV12" index="84"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_293" parent="Node3D2/LV12" index="85"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_294" parent="Node3D2/LV12" index="86"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_295" parent="Node3D2/LV12" index="87"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_300" parent="Node3D2/LV12" index="88"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_301" parent="Node3D2/LV12" index="89"]
+material_overlay = ExtResource("8_2kbe2")
+
+[node name="Cube_302" parent="Node3D2/LV12" index="90"]
+material_overlay = ExtResource("8_2kbe2")
+
 [connection signal="pressed" from="CanvasLayer/Control/BackButton" to="Player/SceneRedirect" method="_to_select"]
 
 [editable path="Player"]
 [editable path="CameraRig"]
+[editable path="Node3D2/LV12"]
