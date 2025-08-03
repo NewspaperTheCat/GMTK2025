@@ -143,7 +143,7 @@ func pass_sequence():
 		jingle = 0
 	elif to_win:
 		result = 1
-		var victory_openers = ["A little birdy told me...", "I got something for you"]
+		var victory_openers = ["A little birdy told me...", "I got something for you", "Did you know"]
 		var victory_responses = ["!!!!!", "No. Way!!", "The whole time!?", "Inconceivable!"]
 		dialogue = [victory_openers.pick_random(), victory_responses.pick_random()]
 		close_up_index = 1

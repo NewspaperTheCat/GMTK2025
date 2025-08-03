@@ -19,7 +19,7 @@ void fragment() {
 	
 	float lum = (col.r * 0.299) + (col.g * 0.587) + (col.b * 0.114);
 	
-	if (lum < .2) {
+	if (lum < .3) {
 		COLOR.xyz = (texture(cross_hatch, hatch_uv).xyz + vec3(1,1,1)) * col / vec3(2,2,2);
 	} else if (lum < .45) {
 		COLOR.xyz = (texture(single_hatch, hatch_uv).xyz  + vec3(1,1,1)) * col / vec3(2,2,2);
