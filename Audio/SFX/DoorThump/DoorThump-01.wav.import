@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dg4cs6u25st8l"
-path="res://.godot/imported/DoorThump-01.wav-0677ea87de3bbcdd0ab7ffa13453af84.sample"
+path="res://.godot/imported/DoorThump-01.wav-9437166fa66025366f11ce4c26d795f8.sample"
 
 [deps]
 
-source_file="res://Audio/SFX/DoorThump/DoorThump-01.wav"
-dest_files=["res://.godot/imported/DoorThump-01.wav-0677ea87de3bbcdd0ab7ffa13453af84.sample"]
+source_file="res://audio/SFX/DoorThump/DoorThump-01.wav"
+dest_files=["res://.godot/imported/DoorThump-01.wav-9437166fa66025366f11ce4c26d795f8.sample"]
 
 [params]
 
