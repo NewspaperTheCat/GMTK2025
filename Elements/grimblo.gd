@@ -96,7 +96,7 @@ func say(message: String, letter_speed: float = .05):
 		label.text = label.text + letter
 		
 		if letter in "aeiouAEIOU!?:":
-			var beep = Global.audio_controller.generate_sfx_3d(self, Global.audio_controller.beep_speech_array, 6, pitch)
+			var beep = Global.audio_controller.generate_sfx_3d(self, Global.audio_controller.beep_speech_array, 9, pitch)
 		
 		var real_speed = letter_speed if letter not in ".,!?;:" else .1
 		await get_tree().create_timer(real_speed).timeout

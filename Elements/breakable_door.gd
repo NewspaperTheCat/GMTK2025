@@ -6,9 +6,13 @@ extends Node3D
 
 var break_margin = 1.75
 
-func _on_grimblo_entered(body: Node3D) -> void:
+func _on_grimblo_entered(body: Grimblo) -> void:
 	if body.velocity.length() > Global.level.crowd_speed * break_margin:
 		break_door()
+	elif body.activeAlignment == body.alignment.ACTIVE:
+		await get_tree().create_timer(.1).timeout
+		Global.audio_controller.generate_sfx_3d(self, Global.audio_controller.door_thump_array, 0, .8, 1.4)
+		
 
 func break_door():
 	Global.audio_controller.generate_sfx_3d(self, Global.audio_controller.door_burst_array, 0, 1, 1.6)

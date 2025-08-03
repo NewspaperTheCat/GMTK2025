@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://5uxal2xu65nh"]
+[gd_scene load_steps=29 format=3 uid="uid://5uxal2xu65nh"]
 
 [ext_resource type="Script" uid="uid://dgw18dh6btfxp" path="res://Navigation/Levels/level.gd" id="1_k43qo"]
 [ext_resource type="PackedScene" uid="uid://bwlm62q1aprja" path="res://Elements/player.tscn" id="2_jcgvk"]
@@ -6,7 +6,7 @@
 [ext_resource type="Theme" uid="uid://cs11afo5dvmke" path="res://UI/button_theme.tres" id="4_d1au5"]
 [ext_resource type="PackedScene" uid="uid://oqpsd56sxbch" path="res://Elements/grimblo.tscn" id="5_3g4fh"]
 [ext_resource type="PackedScene" uid="uid://bt4bydgxxlscj" path="res://Elements/breakable_door.tscn" id="6_v8usx"]
-[ext_resource type="PackedScene" uid="uid://uhjsw0ttwghc" path="res://art/LV7.glb" id="7_h2hff"]
+[ext_resource type="PackedScene" uid="uid://b45on7uhknwle" path="res://art/LV8.glb" id="7_k43qo"]
 [ext_resource type="Material" uid="uid://h7l6uths11rg" path="res://Materials/Shaders/ToonShader/outline.tres" id="8_odmk0"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_d7yol"]
@@ -18,50 +18,62 @@ outline_size = 20
 outline_color = Color(0, 0.52549, 0.619608, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aw6i5"]
-size = Vector3(1.87219, 0.267944, 12.0409)
+size = Vector3(1.87219, 0.313614, 9.04467)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_fq4lb"]
-size = Vector3(1.87219, 1.18498, 5.95128)
+[sub_resource type="BoxShape3D" id="BoxShape3D_k43qo"]
+size = Vector3(1.87219, 7.5663, 0.212081)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_gq2xs"]
-size = Vector3(1.87219, 4.85936, 0.517734)
+[sub_resource type="BoxShape3D" id="BoxShape3D_evuar"]
+size = Vector3(1.87219, 3.20745, 1.72048)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_6xrxe"]
-size = Vector3(1.87219, 0.702998, 1.96345)
+[sub_resource type="BoxShape3D" id="BoxShape3D_d1au5"]
+size = Vector3(1.87219, 3.22661, 1.2746)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_fddr1"]
-size = Vector3(1.87219, 0.372495, 1.63358)
+[sub_resource type="BoxShape3D" id="BoxShape3D_3g4fh"]
+size = Vector3(1.87219, 7.80255, 0.269039)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_u04c8"]
-size = Vector3(1.87219, 0.108578, 4.8493)
+[sub_resource type="BoxShape3D" id="BoxShape3D_v8usx"]
+size = Vector3(1.87219, 5.94963, 0.269039)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_8p04r"]
-size = Vector3(1.87219, 0.108578, 2.60324)
+[sub_resource type="BoxShape3D" id="BoxShape3D_drh0x"]
+size = Vector3(1.87219, 6.14959, 0.21765)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_23pl3"]
-size = Vector3(1.87219, 0.108578, 2.27658)
+[sub_resource type="BoxShape3D" id="BoxShape3D_h2hff"]
+size = Vector3(1.87219, 7.51897, 0.21765)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_wdosj"]
-size = Vector3(1.87219, 1.92909, 6.44614)
+[sub_resource type="BoxShape3D" id="BoxShape3D_gtoki"]
+size = Vector3(1.87219, 0.498709, 0.532867)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_faqko"]
-size = Vector3(1.87219, 0.831841, 3.74267)
+[sub_resource type="BoxShape3D" id="BoxShape3D_odmk0"]
+size = Vector3(1.87219, 0.525203, 0.21765)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_mhg0u"]
-size = Vector3(1.87219, 0.578078, 0.482223)
+[sub_resource type="BoxShape3D" id="BoxShape3D_cys7y"]
+size = Vector3(1.87219, 0.247913, 3.13271)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_g20nm"]
-size = Vector3(1.87219, 0.66941, 0.722937)
+[sub_resource type="BoxShape3D" id="BoxShape3D_3b6bo"]
+size = Vector3(1.87219, 0.16117, 3.51779)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_aqrdp"]
-size = Vector3(1.87219, 1.24345, 0.414446)
+[sub_resource type="BoxShape3D" id="BoxShape3D_h32cs"]
+size = Vector3(1.87219, 0.184101, 2.87884)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_igmll"]
-size = Vector3(1.87219, 12.7515, 0.221728)
+[sub_resource type="BoxShape3D" id="BoxShape3D_jxhn5"]
+size = Vector3(1.87219, 0.184101, 3.1166)
 
-[node name="Level7" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_fig4b"]
+size = Vector3(1.87219, 1.45064, 0.572052)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iac1q"]
+size = Vector3(1.82855, 0.0902681, 0.499771)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a0uif"]
+size = Vector3(1.82855, 0.200407, 6.11697)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jcgvk"]
+size = Vector3(1.87219, 0.48781, 6.06688)
+
+[node name="Level8" type="Node3D"]
 script = ExtResource("1_k43qo")
-level_num = 7
+level_num = 8
 crowd_speed = 3.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -73,7 +85,7 @@ shadow_enabled = true
 [node name="CameraRig" parent="." instance=ExtResource("3_evuar")]
 
 [node name="DrawPlaneCollision" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0176946, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.946557, 0)
 collision_layer = 2
 collision_mask = 0
 
@@ -115,789 +127,824 @@ theme = ExtResource("4_d1au5")
 text = "Menu"
 
 [node name="Grimblo" parent="." instance=ExtResource("5_3g4fh")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.00802, 0.481464, -2.54394)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8.14058, -0.475275, -3.92363)
 activeAlignment = 0
+
+[node name="Grimblo3" parent="." instance=ExtResource("5_3g4fh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.80329, -0.475275, -5.44857)
+start_dir = 4.65
+activeAlignment = 2
+
+[node name="Grimblo8" parent="." instance=ExtResource("5_3g4fh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.38608, -0.475275, 3.08176)
+start_dir = 3.82
+activeAlignment = 2
+
+[node name="Grimblo9" parent="." instance=ExtResource("5_3g4fh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.10467, -0.475275, 4.52218)
+start_dir = 3.83
+activeAlignment = 2
+
+[node name="Grimblo10" parent="." instance=ExtResource("5_3g4fh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.78259, -0.475275, 3.08132)
+start_dir = 1.027
+
+[node name="Grimblo4" parent="." instance=ExtResource("5_3g4fh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.52431, -0.475275, 0.00839567)
+start_dir = 4.14
+activeAlignment = 2
+
+[node name="Grimblo5" parent="." instance=ExtResource("5_3g4fh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.87016, -0.475275, -3.24862)
+start_dir = 2.553
+activeAlignment = 2
+
+[node name="Grimblo6" parent="." instance=ExtResource("5_3g4fh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.23267, -0.475275, -4.52381)
+start_dir = 3.63
+
+[node name="Grimblo7" parent="." instance=ExtResource("5_3g4fh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.39701, -0.475275, 0.417804)
+start_dir = 4.058
+
+[node name="Grimblo2" parent="." instance=ExtResource("5_3g4fh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.7322, -0.475275, 0.1806)
+start_dir = 4.915
+activeAlignment = 3
+
+[node name="Wall" type="StaticBody3D" parent="."]
+transform = Transform3D(-3.78552e-08, -0.866025, -0.5, 1, -4.37114e-08, 0, -2.18557e-08, -0.5, 0.866025, -5.58069, 0.790001, -2.19873)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.920998, 5.52258, -1.17831)
+shape = SubResource("BoxShape3D_aw6i5")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.920998, 1.89623, -5.65985)
+shape = SubResource("BoxShape3D_k43qo")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.920998, 1.61384, -4.82287)
+shape = SubResource("BoxShape3D_evuar")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.920998, 1.66829, 2.8109)
+shape = SubResource("BoxShape3D_d1au5")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.920998, 1.72979, 3.3491)
+shape = SubResource("BoxShape3D_3g4fh")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.920999, -10.4069, 1.31517)
+shape = SubResource("BoxShape3D_v8usx")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.920999, -10.5133, -0.839901)
+shape = SubResource("BoxShape3D_drh0x")
+
+[node name="CollisionShape3D14" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -7.10543e-15, 7.10543e-15, -1.06581e-14, 0.757975, 0.652284, 0, -0.652284, 0.757975, -0.920999, -4.64109, -3.26573)
+shape = SubResource("BoxShape3D_h2hff")
+
+[node name="CollisionShape3D15" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -7.10543e-15, 7.10543e-15, -1.06581e-14, 0.757975, 0.652284, 0, -0.652284, 0.757975, -0.920999, -2.62705, -4.79101)
+shape = SubResource("BoxShape3D_gtoki")
+
+[node name="CollisionShape3D16" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -7.10543e-15, 7.10543e-15, -1.06581e-14, 0.757975, 0.652284, 0, -0.652284, 0.757975, -0.920999, -5.07693, -2.63693)
+shape = SubResource("BoxShape3D_gtoki")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.920999, -15.027, -0.839901)
+shape = SubResource("BoxShape3D_odmk0")
+
+[node name="CollisionShape3D23" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -7.10543e-15, 7.10543e-15, -1.15463e-14, 0.748088, 0.6636, 0, -0.6636, 0.748088, -0.921, -14.3492, 0.340479)
+shape = SubResource("BoxShape3D_cys7y")
+
+[node name="CollisionShape3D17" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.920999, -15.2431, -2.48997)
+shape = SubResource("BoxShape3D_3b6bo")
+
+[node name="CollisionShape3D18" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -7.10543e-15, -7.10543e-15, -1.06581e-14, 0.707107, -0.707107, 0, 0.707107, 0.707107, -0.920999, -14.2532, -4.87234)
+shape = SubResource("BoxShape3D_h32cs")
+
+[node name="CollisionShape3D19" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -1.46419e-14, -1.06581e-14, -1.06581e-14, 0, -1, 0, 1, 0, -0.920999, -12.0714, -5.77201)
+shape = SubResource("BoxShape3D_h32cs")
+
+[node name="CollisionShape3D20" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -1.46419e-14, -1.06581e-14, -1.06581e-14, 0, -1, 0, 1, 0, -0.920999, -11.918, -3.89703)
+shape = SubResource("BoxShape3D_h32cs")
+
+[node name="CollisionShape3D21" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -2.53e-14, -8.47033e-22, -1.06581e-14, -1, 4.37114e-08, 0, -4.37114e-08, -1, -0.920999, -11.6365, -4.82675)
+shape = SubResource("BoxShape3D_h32cs")
+
+[node name="CollisionShape3D22" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -2.4869e-14, -8.47033e-22, -1.06581e-14, -1, 4.37114e-08, 0, -4.37114e-08, -1, -0.920999, -13.3538, -2.42421)
+shape = SubResource("BoxShape3D_jxhn5")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.920999, -11.843, -0.52108)
+shape = SubResource("BoxShape3D_fig4b")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.942819, -7.66056, -0.55722)
+shape = SubResource("BoxShape3D_iac1q")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.942819, -7.66056, 1.01505)
+shape = SubResource("BoxShape3D_iac1q")
+
+[node name="CollisionShape3D13" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -2.78462e-08, 3.36938e-08, -2.18557e-08, 0.34903, 0.937111, -3.78552e-08, -0.937111, 0.34903, -0.942818, -4.77621, 2.33867)
+shape = SubResource("BoxShape3D_a0uif")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.920998, 5.26579, -0.852311)
+shape = SubResource("BoxShape3D_jcgvk")
+
+[node name="LV8" parent="." instance=ExtResource("7_k43qo")]
+transform = Transform3D(-0.1, 0, -0.173205, 0, 0.2, 0, 0.173205, 0, -0.1, 133.944, -0.486473, 82.1405)
+
+[node name="Cube_151" parent="LV8" index="0"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_152" parent="LV8" index="1"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Window Cross_030" parent="LV8" index="2"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Wall Skirting_075" parent="LV8" index="3"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Wall Skirting_076" parent="LV8" index="4"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_153" parent="LV8" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.005, 0)
+
+[node name="Cube_154" parent="LV8" index="6"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Window Cross_033" parent="LV8" index="7"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Table_056" parent="LV8" index="8"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Table_057" parent="LV8" index="9"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Chair1_066" parent="LV8" index="10"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Computer_053" parent="LV8" index="11"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Keyboard_053" parent="LV8" index="12"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Chair1_067" parent="LV8" index="13"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Computer_054" parent="LV8" index="14"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Keyboard_054" parent="LV8" index="15"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Chair1_068" parent="LV8" index="16"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Computer_055" parent="LV8" index="17"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Keyboard_055" parent="LV8" index="18"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Chair1_069" parent="LV8" index="19"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Computer_056" parent="LV8" index="20"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Keyboard_056" parent="LV8" index="21"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_158" parent="LV8" index="23"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Window Cross_034" parent="LV8" index="24"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_159" parent="LV8" index="25"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Window Cross_035" parent="LV8" index="26"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_160" parent="LV8" index="27"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Wall Skirting_077" parent="LV8" index="28"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_155" parent="LV8" index="29"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Window Cross_036" parent="LV8" index="30"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_156" parent="LV8" index="31"]
+transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, -31.6292, -2.64464, 747.967)
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Wall Skirting_078" parent="LV8" index="32"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_161" parent="LV8" index="33"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Window Cross_037" parent="LV8" index="34"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_162" parent="LV8" index="35"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Wall Skirting_079" parent="LV8" index="36"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Wall Skirting_080" parent="LV8" index="37"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_163" parent="LV8" index="38"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Wall Skirting_081" parent="LV8" index="39"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_164" parent="LV8" index="40"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Door Frame_017" parent="LV8" index="41"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_165" parent="LV8" index="42"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Door Frame_018" parent="LV8" index="43"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Wall Skirting_082" parent="LV8" index="44"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Chair1_062" parent="LV8" index="45"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Table_054" parent="LV8" index="46"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_841" parent="LV8" index="47"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_842" parent="LV8" index="48"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_843" parent="LV8" index="49"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_844" parent="LV8" index="50"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_845" parent="LV8" index="51"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Shelf_022" parent="LV8" index="52"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Shelf_023" parent="LV8" index="53"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_846" parent="LV8" index="54"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_847" parent="LV8" index="55"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_848" parent="LV8" index="56"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_849" parent="LV8" index="57"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_850" parent="LV8" index="58"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_851" parent="LV8" index="59"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_852" parent="LV8" index="60"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_853" parent="LV8" index="61"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_854" parent="LV8" index="62"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_855" parent="LV8" index="63"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_856" parent="LV8" index="64"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_857" parent="LV8" index="65"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_858" parent="LV8" index="66"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_859" parent="LV8" index="67"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_860" parent="LV8" index="68"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_861" parent="LV8" index="69"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_862" parent="LV8" index="70"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_863" parent="LV8" index="71"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_864" parent="LV8" index="72"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_865" parent="LV8" index="73"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_866" parent="LV8" index="74"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_867" parent="LV8" index="75"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_868" parent="LV8" index="76"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_869" parent="LV8" index="77"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_870" parent="LV8" index="78"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_871" parent="LV8" index="79"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_872" parent="LV8" index="80"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_873" parent="LV8" index="81"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_874" parent="LV8" index="82"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_875" parent="LV8" index="83"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_876" parent="LV8" index="84"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_877" parent="LV8" index="85"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_878" parent="LV8" index="86"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_879" parent="LV8" index="87"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_880" parent="LV8" index="88"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_881" parent="LV8" index="89"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_882" parent="LV8" index="90"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_883" parent="LV8" index="91"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_884" parent="LV8" index="92"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_885" parent="LV8" index="93"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_886" parent="LV8" index="94"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_887" parent="LV8" index="95"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_888" parent="LV8" index="96"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_889" parent="LV8" index="97"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_890" parent="LV8" index="98"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_891" parent="LV8" index="99"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_892" parent="LV8" index="100"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_893" parent="LV8" index="101"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_894" parent="LV8" index="102"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_895" parent="LV8" index="103"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_896" parent="LV8" index="104"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_897" parent="LV8" index="105"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_898" parent="LV8" index="106"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_899" parent="LV8" index="107"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_900" parent="LV8" index="108"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_901" parent="LV8" index="109"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_902" parent="LV8" index="110"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_903" parent="LV8" index="111"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_904" parent="LV8" index="112"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_905" parent="LV8" index="113"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_906" parent="LV8" index="114"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_907" parent="LV8" index="115"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_908" parent="LV8" index="116"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_909" parent="LV8" index="117"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_910" parent="LV8" index="118"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_911" parent="LV8" index="119"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_912" parent="LV8" index="120"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_913" parent="LV8" index="121"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_914" parent="LV8" index="122"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_915" parent="LV8" index="123"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_916" parent="LV8" index="124"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book Stack_023" parent="LV8" index="125"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book Stack_024" parent="LV8" index="126"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_917" parent="LV8" index="127"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Shelf_024" parent="LV8" index="128"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Shelf_025" parent="LV8" index="129"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_918" parent="LV8" index="130"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_919" parent="LV8" index="131"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_920" parent="LV8" index="132"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_921" parent="LV8" index="133"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_922" parent="LV8" index="134"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_923" parent="LV8" index="135"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_924" parent="LV8" index="136"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_925" parent="LV8" index="137"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_926" parent="LV8" index="138"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_927" parent="LV8" index="139"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_928" parent="LV8" index="140"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_929" parent="LV8" index="141"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_930" parent="LV8" index="142"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_931" parent="LV8" index="143"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_932" parent="LV8" index="144"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_933" parent="LV8" index="145"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_934" parent="LV8" index="146"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_935" parent="LV8" index="147"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_936" parent="LV8" index="148"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_937" parent="LV8" index="149"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_938" parent="LV8" index="150"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_939" parent="LV8" index="151"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_940" parent="LV8" index="152"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_941" parent="LV8" index="153"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_942" parent="LV8" index="154"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_943" parent="LV8" index="155"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_944" parent="LV8" index="156"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_945" parent="LV8" index="157"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_946" parent="LV8" index="158"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_947" parent="LV8" index="159"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_948" parent="LV8" index="160"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_949" parent="LV8" index="161"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_950" parent="LV8" index="162"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_951" parent="LV8" index="163"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_952" parent="LV8" index="164"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_953" parent="LV8" index="165"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_954" parent="LV8" index="166"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_955" parent="LV8" index="167"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_956" parent="LV8" index="168"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_957" parent="LV8" index="169"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_958" parent="LV8" index="170"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_959" parent="LV8" index="171"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_960" parent="LV8" index="172"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_961" parent="LV8" index="173"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_962" parent="LV8" index="174"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_963" parent="LV8" index="175"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_964" parent="LV8" index="176"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_965" parent="LV8" index="177"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_966" parent="LV8" index="178"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_967" parent="LV8" index="179"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_968" parent="LV8" index="180"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_969" parent="LV8" index="181"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_970" parent="LV8" index="182"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_971" parent="LV8" index="183"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_972" parent="LV8" index="184"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_973" parent="LV8" index="185"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_974" parent="LV8" index="186"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_975" parent="LV8" index="187"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_976" parent="LV8" index="188"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_977" parent="LV8" index="189"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_978" parent="LV8" index="190"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_979" parent="LV8" index="191"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_980" parent="LV8" index="192"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_981" parent="LV8" index="193"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_982" parent="LV8" index="194"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_983" parent="LV8" index="195"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_984" parent="LV8" index="196"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_985" parent="LV8" index="197"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_986" parent="LV8" index="198"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_987" parent="LV8" index="199"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_988" parent="LV8" index="200"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_989" parent="LV8" index="201"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book Stack_025" parent="LV8" index="202"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book Stack_026" parent="LV8" index="203"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Couch_020" parent="LV8" index="204"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_166" parent="LV8" index="205"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_167" parent="LV8" index="206"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Chair1_063" parent="LV8" index="207"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Table_055" parent="LV8" index="208"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Computer_033" parent="LV8" index="209"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Keyboard_033" parent="LV8" index="210"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_990" parent="LV8" index="211"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_991" parent="LV8" index="212"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Book_992" parent="LV8" index="213"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_168" parent="LV8" index="214"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_169" parent="LV8" index="215"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_170" parent="LV8" index="216"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Cube_171" parent="LV8" index="217"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Wall Skirting_099" parent="LV8" index="218"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Wall Skirting_100" parent="LV8" index="219"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Wall Skirting_101" parent="LV8" index="220"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="Wall Skirting_102" parent="LV8" index="221"]
+material_overlay = ExtResource("8_odmk0")
+
+[node name="BreakableDoor5" parent="." instance=ExtResource("6_v8usx")]
+transform = Transform3D(-0.6295, 0, -1.05655, 0, 1.22, 0, 1.09033, 0, -0.61, 0.917087, -0.156914, 1.80241)
+
+[node name="BreakableDoor6" parent="." instance=ExtResource("6_v8usx")]
+transform = Transform3D(1.09033, 0, -0.61, 0, 1.22, 0, 0.6295, 0, 1.05655, 7.14037, -0.156915, 4.22005)
 
 [node name="Node3D" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.448838)
-
-[node name="Wall" type="StaticBody3D" parent="Node3D"]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -5.58069, 0.790001, -1.74989)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.0070802, 0.736042, 1.66683)
-shape = SubResource("BoxShape3D_aw6i5")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00708079, -11.8039, 1.66683)
-shape = SubResource("BoxShape3D_aw6i5")
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00708073, -11.1584, 4.72217)
-shape = SubResource("BoxShape3D_fq4lb")
-
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00708073, -9.32123, 1.8879)
-shape = SubResource("BoxShape3D_gq2xs")
-
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00708073, -11.3994, 0.71132)
-shape = SubResource("BoxShape3D_6xrxe")
-
-[node name="CollisionShape3D9" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00708055, -7.2972, 0.664483)
-shape = SubResource("BoxShape3D_6xrxe")
-
-[node name="CollisionShape3D10" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00708055, -7.13195, 2.50676)
-shape = SubResource("BoxShape3D_fddr1")
-
-[node name="CollisionShape3D11" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00708055, -6.90015, 1.59323)
-shape = SubResource("BoxShape3D_u04c8")
-
-[node name="CollisionShape3D12" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00708055, -6.90015, 6.38891)
-shape = SubResource("BoxShape3D_8p04r")
-
-[node name="CollisionShape3D13" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00708055, -6.90015, -3.15287)
-shape = SubResource("BoxShape3D_23pl3")
-
-[node name="CollisionShape3D14" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.0070796, -3.45621, 1.83776)
-shape = SubResource("BoxShape3D_wdosj")
-
-[node name="CollisionShape3D15" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00707942, 0.219263, -0.368807)
-shape = SubResource("BoxShape3D_faqko")
-
-[node name="CollisionShape3D16" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00707942, 0.219263, 5.27198)
-shape = SubResource("BoxShape3D_faqko")
-
-[node name="CollisionShape3D17" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00707942, 0.418458, 2.48594)
-shape = SubResource("BoxShape3D_mhg0u")
-
-[node name="CollisionShape3D18" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00707942, 0.372792, -3.36842)
-shape = SubResource("BoxShape3D_g20nm")
-
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00708073, -10.655, -4.00134)
-shape = SubResource("BoxShape3D_aqrdp")
-
-[node name="CollisionShape3D7" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00708061, -7.92742, -4.00134)
-shape = SubResource("BoxShape3D_aqrdp")
-
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00708061, -5.55404, -4.26157)
-shape = SubResource("BoxShape3D_igmll")
-
-[node name="CollisionShape3D19" type="CollisionShape3D" parent="Node3D/Wall"]
-transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.00708061, -5.55404, 7.66698)
-shape = SubResource("BoxShape3D_igmll")
-
-[node name="BreakableDoor4" parent="Node3D" instance=ExtResource("6_v8usx")]
-transform = Transform3D(-2.75164e-07, 0, -1.22, 0, 1.22, 0, 1.259, 0, -2.6664e-07, 1.31184, 0.827202, -3.18148)
-
-[node name="BreakableDoor5" parent="Node3D" instance=ExtResource("6_v8usx")]
-transform = Transform3D(-2.75164e-07, 0, -1.22, 0, 1.22, 0, 1.259, 0, -2.6664e-07, 1.22935, 0.823779, 2.81568)
-
-[node name="Node3D2" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.81812, 0.476791, 2.38572)
-
-[node name="LV7" parent="Node3D2" instance=ExtResource("7_h2hff")]
-transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 135.795, 0, 0.0900258)
-
-[node name="Shelf_004" parent="Node3D2/LV7" index="0"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book Stack_004" parent="Node3D2/LV7" index="1"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_141" parent="Node3D2/LV7" index="2"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_142" parent="Node3D2/LV7" index="3"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_143" parent="Node3D2/LV7" index="4"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_144" parent="Node3D2/LV7" index="5"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_145" parent="Node3D2/LV7" index="6"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_146" parent="Node3D2/LV7" index="7"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_147" parent="Node3D2/LV7" index="8"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_148" parent="Node3D2/LV7" index="9"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_149" parent="Node3D2/LV7" index="10"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_150" parent="Node3D2/LV7" index="11"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_151" parent="Node3D2/LV7" index="12"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_152" parent="Node3D2/LV7" index="13"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_153" parent="Node3D2/LV7" index="14"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_154" parent="Node3D2/LV7" index="15"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_155" parent="Node3D2/LV7" index="16"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_156" parent="Node3D2/LV7" index="17"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_157" parent="Node3D2/LV7" index="18"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_158" parent="Node3D2/LV7" index="19"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_159" parent="Node3D2/LV7" index="20"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_160" parent="Node3D2/LV7" index="21"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_161" parent="Node3D2/LV7" index="22"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_162" parent="Node3D2/LV7" index="23"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_163" parent="Node3D2/LV7" index="24"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_164" parent="Node3D2/LV7" index="25"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_165" parent="Node3D2/LV7" index="26"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_166" parent="Node3D2/LV7" index="27"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_167" parent="Node3D2/LV7" index="28"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_168" parent="Node3D2/LV7" index="29"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_169" parent="Node3D2/LV7" index="30"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_170" parent="Node3D2/LV7" index="31"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_171" parent="Node3D2/LV7" index="32"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_172" parent="Node3D2/LV7" index="33"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_173" parent="Node3D2/LV7" index="34"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_174" parent="Node3D2/LV7" index="35"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Shelf_003" parent="Node3D2/LV7" index="36"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book Stack_003" parent="Node3D2/LV7" index="37"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_107" parent="Node3D2/LV7" index="38"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_108" parent="Node3D2/LV7" index="39"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_109" parent="Node3D2/LV7" index="40"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_110" parent="Node3D2/LV7" index="41"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_111" parent="Node3D2/LV7" index="42"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_112" parent="Node3D2/LV7" index="43"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_113" parent="Node3D2/LV7" index="44"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_114" parent="Node3D2/LV7" index="45"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_115" parent="Node3D2/LV7" index="46"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_116" parent="Node3D2/LV7" index="47"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_117" parent="Node3D2/LV7" index="48"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_118" parent="Node3D2/LV7" index="49"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_119" parent="Node3D2/LV7" index="50"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_120" parent="Node3D2/LV7" index="51"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_121" parent="Node3D2/LV7" index="52"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_122" parent="Node3D2/LV7" index="53"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_123" parent="Node3D2/LV7" index="54"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_124" parent="Node3D2/LV7" index="55"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_125" parent="Node3D2/LV7" index="56"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_126" parent="Node3D2/LV7" index="57"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_127" parent="Node3D2/LV7" index="58"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_128" parent="Node3D2/LV7" index="59"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_129" parent="Node3D2/LV7" index="60"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_130" parent="Node3D2/LV7" index="61"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_131" parent="Node3D2/LV7" index="62"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_132" parent="Node3D2/LV7" index="63"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_133" parent="Node3D2/LV7" index="64"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_134" parent="Node3D2/LV7" index="65"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_135" parent="Node3D2/LV7" index="66"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_136" parent="Node3D2/LV7" index="67"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_137" parent="Node3D2/LV7" index="68"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_138" parent="Node3D2/LV7" index="69"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_139" parent="Node3D2/LV7" index="70"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_140" parent="Node3D2/LV7" index="71"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_126" parent="Node3D2/LV7" index="72"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_127" parent="Node3D2/LV7" index="73"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_128" parent="Node3D2/LV7" index="74"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_129" parent="Node3D2/LV7" index="75"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_130" parent="Node3D2/LV7" index="76"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Window Cross_029" parent="Node3D2/LV7" index="77"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Door Frame_015" parent="Node3D2/LV7" index="78"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Couch_016" parent="Node3D2/LV7" index="79"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Couch_017" parent="Node3D2/LV7" index="80"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_043" parent="Node3D2/LV7" index="81"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Table_043" parent="Node3D2/LV7" index="82"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_044" parent="Node3D2/LV7" index="83"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Table_044" parent="Node3D2/LV7" index="84"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_045" parent="Node3D2/LV7" index="85"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Table_045" parent="Node3D2/LV7" index="86"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Shelf_021" parent="Node3D2/LV7" index="87"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book Stack_021" parent="Node3D2/LV7" index="88"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_796" parent="Node3D2/LV7" index="89"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_797" parent="Node3D2/LV7" index="90"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_798" parent="Node3D2/LV7" index="91"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_799" parent="Node3D2/LV7" index="92"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_800" parent="Node3D2/LV7" index="93"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_801" parent="Node3D2/LV7" index="94"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_802" parent="Node3D2/LV7" index="95"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_803" parent="Node3D2/LV7" index="96"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_804" parent="Node3D2/LV7" index="97"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_805" parent="Node3D2/LV7" index="98"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_806" parent="Node3D2/LV7" index="99"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_807" parent="Node3D2/LV7" index="100"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_808" parent="Node3D2/LV7" index="101"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_809" parent="Node3D2/LV7" index="102"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_810" parent="Node3D2/LV7" index="103"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_811" parent="Node3D2/LV7" index="104"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_812" parent="Node3D2/LV7" index="105"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_813" parent="Node3D2/LV7" index="106"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_814" parent="Node3D2/LV7" index="107"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_815" parent="Node3D2/LV7" index="108"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_816" parent="Node3D2/LV7" index="109"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_817" parent="Node3D2/LV7" index="110"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_818" parent="Node3D2/LV7" index="111"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_819" parent="Node3D2/LV7" index="112"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_820" parent="Node3D2/LV7" index="113"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_821" parent="Node3D2/LV7" index="114"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_822" parent="Node3D2/LV7" index="115"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_823" parent="Node3D2/LV7" index="116"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_824" parent="Node3D2/LV7" index="117"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_825" parent="Node3D2/LV7" index="118"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_826" parent="Node3D2/LV7" index="119"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_827" parent="Node3D2/LV7" index="120"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_828" parent="Node3D2/LV7" index="121"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_829" parent="Node3D2/LV7" index="122"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_830" parent="Node3D2/LV7" index="123"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Wall Skirting_067" parent="Node3D2/LV7" index="124"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Wall Skirting_068" parent="Node3D2/LV7" index="125"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Wall Skirting_069" parent="Node3D2/LV7" index="126"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Wall Skirting_070" parent="Node3D2/LV7" index="127"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Wall Skirting_071" parent="Node3D2/LV7" index="128"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Wall Skirting_072" parent="Node3D2/LV7" index="129"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Wall Skirting_073" parent="Node3D2/LV7" index="130"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_131" parent="Node3D2/LV7" index="131"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_133" parent="Node3D2/LV7" index="132"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_134" parent="Node3D2/LV7" index="133"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Window Cross_031" parent="Node3D2/LV7" index="134"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_135" parent="Node3D2/LV7" index="135"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Window Cross_032" parent="Node3D2/LV7" index="136"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Door Frame_016" parent="Node3D2/LV7" index="137"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_137" parent="Node3D2/LV7" index="138"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Couch_018" parent="Node3D2/LV7" index="139"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Couch_019" parent="Node3D2/LV7" index="140"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_139" parent="Node3D2/LV7" index="141"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_140" parent="Node3D2/LV7" index="142"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_141" parent="Node3D2/LV7" index="143"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_046" parent="Node3D2/LV7" index="144"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Table_046" parent="Node3D2/LV7" index="145"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_034" parent="Node3D2/LV7" index="146"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_034" parent="Node3D2/LV7" index="147"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Table_047" parent="Node3D2/LV7" index="148"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Table_048" parent="Node3D2/LV7" index="149"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Table_049" parent="Node3D2/LV7" index="150"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_047" parent="Node3D2/LV7" index="151"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_035" parent="Node3D2/LV7" index="152"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_035" parent="Node3D2/LV7" index="153"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_048" parent="Node3D2/LV7" index="154"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_036" parent="Node3D2/LV7" index="155"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_036" parent="Node3D2/LV7" index="156"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_049" parent="Node3D2/LV7" index="157"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_037" parent="Node3D2/LV7" index="158"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_037" parent="Node3D2/LV7" index="159"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_050" parent="Node3D2/LV7" index="160"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_038" parent="Node3D2/LV7" index="161"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_038" parent="Node3D2/LV7" index="162"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_051" parent="Node3D2/LV7" index="163"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_039" parent="Node3D2/LV7" index="164"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_039" parent="Node3D2/LV7" index="165"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_052" parent="Node3D2/LV7" index="166"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_040" parent="Node3D2/LV7" index="167"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_040" parent="Node3D2/LV7" index="168"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_053" parent="Node3D2/LV7" index="169"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_041" parent="Node3D2/LV7" index="170"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_041" parent="Node3D2/LV7" index="171"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_054" parent="Node3D2/LV7" index="172"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Table_050" parent="Node3D2/LV7" index="173"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_042" parent="Node3D2/LV7" index="174"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_042" parent="Node3D2/LV7" index="175"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Table_051" parent="Node3D2/LV7" index="176"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Table_052" parent="Node3D2/LV7" index="177"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Table_053" parent="Node3D2/LV7" index="178"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_055" parent="Node3D2/LV7" index="179"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_043" parent="Node3D2/LV7" index="180"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_043" parent="Node3D2/LV7" index="181"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_056" parent="Node3D2/LV7" index="182"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_044" parent="Node3D2/LV7" index="183"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_044" parent="Node3D2/LV7" index="184"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_057" parent="Node3D2/LV7" index="185"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_045" parent="Node3D2/LV7" index="186"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_045" parent="Node3D2/LV7" index="187"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_058" parent="Node3D2/LV7" index="188"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_046" parent="Node3D2/LV7" index="189"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_046" parent="Node3D2/LV7" index="190"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_059" parent="Node3D2/LV7" index="191"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_047" parent="Node3D2/LV7" index="192"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_047" parent="Node3D2/LV7" index="193"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_060" parent="Node3D2/LV7" index="194"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_048" parent="Node3D2/LV7" index="195"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_048" parent="Node3D2/LV7" index="196"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Chair1_061" parent="Node3D2/LV7" index="197"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_049" parent="Node3D2/LV7" index="198"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_049" parent="Node3D2/LV7" index="199"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_132" parent="Node3D2/LV7" index="200"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book Stack_022" parent="Node3D2/LV7" index="201"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_831" parent="Node3D2/LV7" index="202"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_031" parent="Node3D2/LV7" index="203"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_031" parent="Node3D2/LV7" index="204"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_832" parent="Node3D2/LV7" index="205"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_833" parent="Node3D2/LV7" index="206"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_834" parent="Node3D2/LV7" index="207"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_835" parent="Node3D2/LV7" index="208"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_836" parent="Node3D2/LV7" index="209"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_837" parent="Node3D2/LV7" index="210"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Computer_032" parent="Node3D2/LV7" index="211"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Keyboard_032" parent="Node3D2/LV7" index="212"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_838" parent="Node3D2/LV7" index="213"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_839" parent="Node3D2/LV7" index="214"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Book_840" parent="Node3D2/LV7" index="215"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_136" parent="Node3D2/LV7" index="216"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_138" parent="Node3D2/LV7" index="217"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_142" parent="Node3D2/LV7" index="218"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_143" parent="Node3D2/LV7" index="219"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_144" parent="Node3D2/LV7" index="220"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_145" parent="Node3D2/LV7" index="221"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_146" parent="Node3D2/LV7" index="222"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_147" parent="Node3D2/LV7" index="223"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_148" parent="Node3D2/LV7" index="224"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_149" parent="Node3D2/LV7" index="225"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Cube_150" parent="Node3D2/LV7" index="226"]
-material_overlay = ExtResource("8_odmk0")
-
-[node name="Wall Skirting_074" parent="Node3D2/LV7" index="227"]
-material_overlay = ExtResource("8_odmk0")
 
 [connection signal="pressed" from="CanvasLayer/Control/BackButton" to="Player/SceneRedirect" method="_to_select"]
 
 [editable path="Player"]
 [editable path="CameraRig"]
-[editable path="Node3D2/LV7"]
+[editable path="LV8"]

@@ -161,6 +161,9 @@ func pass_sequence():
 		secret_holder.activeAlignment = Grimblo.alignment.PASSIVE
 		secret_holder.set_color()
 		
+		Global.audio_controller.generate_sfx_3d(chosen_recipient, Global.audio_controller.active_swapped_array, -4)
+		await get_tree().create_timer(.3).timeout
+		
 		Global.camera_rig.return_to_resting()
 		Global.level.sim_timescale = 1
 		Global.level.current_game_state = Global.level.game_state.GOLFING
@@ -168,7 +171,7 @@ func pass_sequence():
 		Global.level_progress = Global.level.level_num
 		scene_redirect._to_select()
 	elif result == 2:
-		scene_redirect._to_select()
+		scene_redirect._to_level(Global.level.level_num)
 
 func play_dialogue(initiator: Grimblo, recipient: Grimblo, transcript: Array[String], close_up_index: int = -1, jingle = -1):
 	var speaker: Grimblo

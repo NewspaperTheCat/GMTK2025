@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cid6qokd0pwe3"]
+[gd_scene load_steps=11 format=3 uid="uid://cid6qokd0pwe3"]
 
 [ext_resource type="Script" uid="uid://b0cnpk0ymgsu6" path="res://Navigation/game_controller.gd" id="1_3iy47"]
 [ext_resource type="PackedScene" uid="uid://gct2ttl1x15w" path="res://Navigation/title.tscn" id="2_alenl"]
@@ -6,6 +6,59 @@
 [ext_resource type="PackedScene" uid="uid://53o2s6enb05h" path="res://shader_layer.tscn" id="4_bqgkb"]
 [ext_resource type="AudioStream" uid="uid://dj5l0o0fcbsyp" path="res://Audio/InTheLoopTheme.wav" id="5_cp2b6"]
 [ext_resource type="Script" uid="uid://dcersbxet1mqd" path="res://audio_controller.gd" id="6_osaii"]
+
+[sub_resource type="Animation" id="Animation_osaii"]
+resource_name = "BGMusic Fade In"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-20.0, -6.0]
+}
+
+[sub_resource type="Animation" id="Animation_rrpbx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-6.0]
+}
+
+[sub_resource type="Animation" id="Animation_04mc1"]
+resource_name = "Quiet"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-20.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_04mc1"]
+_data = {
+&"BGMusic Fade In": SubResource("Animation_osaii"),
+&"Quiet": SubResource("Animation_04mc1"),
+&"RESET": SubResource("Animation_rrpbx")
+}
 
 [node name="GameController" type="Control"]
 layout_mode = 3
@@ -37,3 +90,8 @@ stream = ExtResource("5_cp2b6")
 volume_db = -6.0
 autoplay = true
 script = ExtResource("6_osaii")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AudioController"]
+libraries = {
+&"": SubResource("AnimationLibrary_04mc1")
+}
