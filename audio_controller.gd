@@ -1,5 +1,6 @@
 class_name AudioController extends AudioStreamPlayer
 
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 const AUDIO_STREAM_3D = preload("res://Audio/SFX/AudioStream3D.tscn")
 const AUDIO_STREAM = preload("res://Audio/SFX/AudioStream.tscn")
@@ -26,6 +27,12 @@ var jingles = [DEFEAT_JINGLE, VICTORY_JINGLE]
 var door_burst_folder_path = "res://Audio/SFX/DoorBurst/"
 var door_burst_array = []
 
+const ACTIVE_SWAPPED = preload("res://Audio/SFX/ActiveSwapped.wav")
+var active_swapped_array = [ACTIVE_SWAPPED]
+
+var door_thump_folder_path = "res://Audio/SFX/DoorThump/"
+var door_thump_array = []
+
 func _ready() -> void:
 	Global.audio_controller = self
 	
@@ -33,6 +40,7 @@ func _ready() -> void:
 	read_folder_to_array(mouse_click_folder_path, mouse_click_array)
 	read_folder_to_array(synth_pop_folder_path, synth_pop_array)
 	read_folder_to_array(door_burst_folder_path, door_burst_array)
+	read_folder_to_array(door_thump_folder_path, door_thump_array)
 
 func read_folder_to_array(folder: String, array: Array):
 	# Fill beep_speech_array
@@ -42,7 +50,7 @@ func read_folder_to_array(folder: String, array: Array):
 		if file_name.right(7) != ".import":
 			array.append(load(folder + file_name))
 
-func generate_sfx_3d(source: Node3D, sfx_array: Array, gain: float = 0, pitch_min: float = 1, pitch_max: float = pitch_min):
+func generate_sfx_3d(source: Node3D, sfx_array: Array, gain: float = 0, pitch_min: float = 1, pitch_max: float = pitch_min) -> AudioStreamPlayer3D:
 	var audio : AudioStreamPlayer3D = AUDIO_STREAM_3D.instantiate()
 	audio.pitch_scale = randf_range(pitch_min, pitch_max)
 	audio.volume_db = gain
@@ -61,7 +69,7 @@ func generate_sfx_universal(sfx_array: Array, gain: float = 0, pitch_min: float 
 	return audio
 
 func play_jingle(tone: int):
-	volume_db = -20
+	animation_player.play("Quiet")
 	await generate_sfx_universal([jingles[tone]], -4).finished
-	volume_db = -6
-	
+	animation_player.play("BGMusic Fade In")
+	await animation_player.animation_finished

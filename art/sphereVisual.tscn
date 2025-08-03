@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=4 uid="uid://dbqh1kx84y4er"]
+[gd_scene load_steps=5 format=4 uid="uid://bx16oge8buqnh"]
 
-[ext_resource type="Material" uid="uid://uyv3c465cg68" path="res://Materials/drawMat.tres" id="1_lbldv"]
+[ext_resource type="Material" uid="uid://b1ovq4kvahxwf" path="res://Materials/Shaders/ToonShader/toon_visualizer.tres" id="1_peonr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhxqv"]
 
@@ -42,6 +42,6 @@ shadow_mesh = SubResource("ArrayMesh_6it8f")
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
 
 [node name="Icosphere" type="MeshInstance3D" parent="DrawSphere"]
-material_override = ExtResource("1_lbldv")
+material_override = ExtResource("1_peonr")
 mesh = SubResource("ArrayMesh_r1b1u")
 skeleton = NodePath("")
