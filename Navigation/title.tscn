@@ -80,17 +80,18 @@ script = ExtResource("1_yi8iy")
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.197
-anchor_top = 0.12
-anchor_right = 0.803
-anchor_bottom = 0.39
+anchor_left = 0.110194
+anchor_top = 0.090679
+anchor_right = 0.367236
+anchor_bottom = 0.502654
 offset_left = 0.0559845
 offset_top = 0.239998
 offset_right = -0.0560303
 offset_bottom = 0.279984
 grow_horizontal = 2
-text = "In the Loop"
+text = "In The  Loop"
 label_settings = ExtResource("2_767tf")
+autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
@@ -113,7 +114,7 @@ transform = Transform3D(0.932324, -0.200651, 0.300852, 0, 0.831944, 0.554859, -0
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="BackgroundScene"]
-transform = Transform3D(0.886751, 0.254647, -0.38578, 0.00201258, 0.832443, 0.554108, 0.462242, -0.492132, 0.737657, -0.520511, 1.02901, 3.95388)
+transform = Transform3D(0.969061, 0.135137, -0.206538, 0.00201257, 0.832443, 0.554107, 0.246812, -0.53738, 0.806416, -0.538927, 1.02901, 3.95388)
 environment = ExtResource("4_f6gwl")
 fov = 99.0331
 

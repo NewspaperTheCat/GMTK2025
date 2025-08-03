@@ -1,9 +1,10 @@
-[gd_scene load_steps=34 format=3 uid="uid://c3ljbx7b27y17"]
+[gd_scene load_steps=35 format=3 uid="uid://c3ljbx7b27y17"]
 
 [ext_resource type="Script" uid="uid://dgw18dh6btfxp" path="res://Navigation/Levels/level.gd" id="1_aw6i5"]
 [ext_resource type="PackedScene" uid="uid://bwlm62q1aprja" path="res://Elements/player.tscn" id="2_i8dgc"]
 [ext_resource type="PackedScene" uid="uid://nenh7chlqfv1" path="res://Elements/camera_rig.tscn" id="3_b6jue"]
 [ext_resource type="PackedScene" uid="uid://oqpsd56sxbch" path="res://Elements/grimblo.tscn" id="4_6rn4o"]
+[ext_resource type="Theme" uid="uid://cs11afo5dvmke" path="res://UI/button_theme.tres" id="4_i8dgc"]
 [ext_resource type="Material" uid="uid://h7l6uths11rg" path="res://Materials/Shaders/ToonShader/outline.tres" id="5_7jj7h"]
 [ext_resource type="PackedScene" uid="uid://yl4jlsueuwrx" path="res://art/LV6.glb" id="6_kh18x"]
 [ext_resource type="PackedScene" uid="uid://bt4bydgxxlscj" path="res://Elements/breakable_door.tscn" id="7_tv5i8"]
@@ -128,6 +129,21 @@ offset_bottom = 117.0
 label_settings = SubResource("LabelSettings_4c3cj")
 autowrap_mode = 2
 
+[node name="BackButton" type="Button" parent="CanvasLayer/Control"]
+custom_minimum_size = Vector2(150, 62.5)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 51.0
+offset_top = -98.0
+offset_right = 201.0
+offset_bottom = -16.0
+grow_vertical = 0
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("4_i8dgc")
+text = "Menu"
+
 [node name="Grimblo" parent="." instance=ExtResource("4_6rn4o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.83699, -0.0293326, -2.54394)
 activeAlignment = 0
@@ -177,7 +193,7 @@ start_dir = 3.783
 activeAlignment = 2
 
 [node name="Grimblo21" parent="." instance=ExtResource("4_6rn4o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.92018, 0.638649, 3.93368)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.92018, -0.0197822, 3.93368)
 start_dir = 1.984
 activeAlignment = 2
 
@@ -1192,5 +1208,8 @@ material_overlay = ExtResource("5_7jj7h")
 [node name="Wall Skirting_066" parent="Node3D2/LV6" index="275"]
 material_overlay = ExtResource("5_7jj7h")
 
+[connection signal="pressed" from="CanvasLayer/Control/BackButton" to="Player/SceneRedirect" method="_to_select"]
+
+[editable path="Player"]
 [editable path="CameraRig"]
 [editable path="Node3D2/LV6"]
