@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b7x3aulf16uuv"
-path="res://.godot/imported/DoorBurst-02.wav-35e38934f8d1ce29e3357759a3bda37f.sample"
+path="res://.godot/imported/DoorBurst-02.wav-9b5f1adea8d7b1d9e669038bcd0b693f.sample"
 
 [deps]
 
-source_file="res://Audio/SFX/DoorBurst/DoorBurst-02.wav"
-dest_files=["res://.godot/imported/DoorBurst-02.wav-35e38934f8d1ce29e3357759a3bda37f.sample"]
+source_file="res://audio/SFX/DoorBurst/DoorBurst-02.wav"
+dest_files=["res://.godot/imported/DoorBurst-02.wav-9b5f1adea8d7b1d9e669038bcd0b693f.sample"]
 
 [params]
 
