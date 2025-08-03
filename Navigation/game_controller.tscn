@@ -1,8 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://cid6qokd0pwe3"]
+[gd_scene load_steps=13 format=3 uid="uid://cid6qokd0pwe3"]
 
 [ext_resource type="Script" uid="uid://b0cnpk0ymgsu6" path="res://Navigation/game_controller.gd" id="1_3iy47"]
 [ext_resource type="PackedScene" uid="uid://gct2ttl1x15w" path="res://Navigation/title.tscn" id="2_alenl"]
+[ext_resource type="Script" uid="uid://c4lugabwq1kw0" path="res://advanced_stats.gd" id="3_04mc1"]
 [ext_resource type="PackedScene" uid="uid://dhkf2waclclh" path="res://Navigation/transition_controller.tscn" id="3_alenl"]
+[ext_resource type="LabelSettings" uid="uid://dpmgf7egj0x4s" path="res://UI/advanced_label.tres" id="3_rrpbx"]
 [ext_resource type="PackedScene" uid="uid://53o2s6enb05h" path="res://shader_layer.tscn" id="4_bqgkb"]
 [ext_resource type="AudioStream" uid="uid://dj5l0o0fcbsyp" path="res://Audio/InTheLoopTheme.wav" id="5_cp2b6"]
 [ext_resource type="Script" uid="uid://dcersbxet1mqd" path="res://audio_controller.gd" id="6_osaii"]
@@ -80,6 +82,30 @@ grow_vertical = 2
 [node name="Title" parent="World" instance=ExtResource("2_alenl")]
 layout_mode = 1
 
+[node name="AdvancedStats" type="VBoxContainer" parent="World"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -179.0
+offset_top = 23.0
+offset_right = -22.0
+offset_bottom = 117.0
+grow_horizontal = 0
+script = ExtResource("3_04mc1")
+
+[node name="SpeedrunTimer" type="Label" parent="World/AdvancedStats"]
+layout_mode = 2
+text = "XX:XX.XXX"
+label_settings = ExtResource("3_rrpbx")
+horizontal_alignment = 2
+
+[node name="ParCount" type="Label" parent="World/AdvancedStats"]
+layout_mode = 2
+text = "Par: X"
+label_settings = ExtResource("3_rrpbx")
+horizontal_alignment = 2
+
 [node name="TransitionController" parent="." instance=ExtResource("3_alenl")]
 layout_mode = 1
 
@@ -95,3 +121,5 @@ script = ExtResource("6_osaii")
 libraries = {
 &"": SubResource("AnimationLibrary_04mc1")
 }
+
+[connection signal="scene_changed" from="." to="World/AdvancedStats" method="_on_scene_changed"]

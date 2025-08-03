@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://vu7rv1824jfg"]
+[gd_scene load_steps=7 format=3 uid="uid://vu7rv1824jfg"]
 
 [ext_resource type="Script" uid="uid://c3ca7ynedm1wt" path="res://Navigation/scene_redirector.gd" id="1_ni7ld"]
 [ext_resource type="Theme" uid="uid://cs11afo5dvmke" path="res://UI/button_theme.tres" id="2_4lhgg"]
 [ext_resource type="Script" uid="uid://dkfpqjhm8dtd4" path="res://Navigation/level_lock.gd" id="2_q7rdg"]
+[ext_resource type="Script" uid="uid://b7lydmbfr6pq1" path="res://Navigation/stats_toggle.gd" id="4_gjey3"]
 
 [sub_resource type="Theme" id="Theme_6hpme"]
 Label/font_sizes/font_size = 64
@@ -170,6 +171,25 @@ grow_vertical = 0
 theme = ExtResource("2_4lhgg")
 text = "Title"
 
+[node name="StatsToggle" type="Button" parent="."]
+custom_minimum_size = Vector2(150, 62.5)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -241.0
+offset_top = -238.0
+offset_right = -91.0
+offset_bottom = -156.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_4lhgg")
+toggle_mode = true
+text = "Stats"
+script = ExtResource("4_gjey3")
+
 [connection signal="pressed" from="GridContainer/Button" to="." method="_to_level" binds= [1]]
 [connection signal="pressed" from="GridContainer/Button2" to="." method="_to_level" binds= [2]]
 [connection signal="pressed" from="GridContainer/Button3" to="." method="_to_level" binds= [3]]
@@ -183,3 +203,4 @@ text = "Title"
 [connection signal="pressed" from="GridContainer/Button11" to="." method="_to_level" binds= [11]]
 [connection signal="pressed" from="GridContainer/Button12" to="." method="_to_level" binds= [12]]
 [connection signal="pressed" from="TitleButton" to="." method="_to_title"]
+[connection signal="toggled" from="StatsToggle" to="StatsToggle" method="_on_toggled"]
