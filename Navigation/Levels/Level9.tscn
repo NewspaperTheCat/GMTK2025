@@ -1,0 +1,1133 @@
+[gd_scene load_steps=40 format=3 uid="uid://df6qhqs6pkgdf"]
+
+[ext_resource type="Script" uid="uid://dgw18dh6btfxp" path="res://Navigation/Levels/level.gd" id="1_gs5nh"]
+[ext_resource type="PackedScene" uid="uid://bwlm62q1aprja" path="res://Elements/player.tscn" id="2_nkxh4"]
+[ext_resource type="PackedScene" uid="uid://nenh7chlqfv1" path="res://Elements/camera_rig.tscn" id="3_yn2wm"]
+[ext_resource type="Theme" uid="uid://cs11afo5dvmke" path="res://UI/button_theme.tres" id="4_7x7lj"]
+[ext_resource type="PackedScene" uid="uid://oqpsd56sxbch" path="res://Elements/grimblo.tscn" id="5_istbo"]
+[ext_resource type="PackedScene" uid="uid://hw4ogbv43c5q" path="res://art/LV9.glb" id="7_gs5nh"]
+[ext_resource type="Material" uid="uid://h7l6uths11rg" path="res://Materials/Shaders/ToonShader/outline.tres" id="7_s4mnt"]
+[ext_resource type="PackedScene" uid="uid://bt4bydgxxlscj" path="res://Elements/breakable_door.tscn" id="8_rc5uc"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_d7yol"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4c3cj"]
+font_size = 32
+font_color = Color(0.592157, 0.913725, 1, 1)
+outline_size = 20
+outline_color = Color(0, 0.52549, 0.619608, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aw6i5"]
+size = Vector3(1.87219, 0.267944, 3.68872)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o8r67"]
+size = Vector3(1.87219, 0.444931, 2.45662)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gs5nh"]
+size = Vector3(1.87219, 0.267944, 7.08203)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s4mnt"]
+size = Vector3(1.87219, 0.267944, 6.29797)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rc5uc"]
+size = Vector3(1.87219, 2.66217, 0.211433)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p7epg"]
+size = Vector3(1.87219, 2.46589, 0.211433)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qavrd"]
+size = Vector3(1.87219, 0.722857, 0.211433)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b6eic"]
+size = Vector3(1.87219, 3.59185, 0.211433)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_suy73"]
+size = Vector3(1.87219, 2.84085, 0.21265)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fnf5t"]
+size = Vector3(1.87219, 2.93459, 0.21265)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cnjce"]
+size = Vector3(1.87219, 3.3213, 0.21265)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4adf8"]
+size = Vector3(1.87219, 3.24707, 0.21265)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rihml"]
+size = Vector3(1.87219, 3.22345, 0.21265)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7pppa"]
+size = Vector3(1.87219, 1.60905, 1.93468)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kvh6y"]
+size = Vector3(1.87219, 7.00807, 1.39642)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cbn7l"]
+size = Vector3(1.87219, 2.83599, 0.211433)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nap7t"]
+size = Vector3(1.87219, 3.34272, 0.211433)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_18u7d"]
+size = Vector3(1.87219, 1.55693, 0.580384)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pvkme"]
+size = Vector3(1.87219, 7.49464, 0.211433)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_odjky"]
+size = Vector3(1.87219, 1.6342, 1.31055)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8rkbd"]
+size = Vector3(1.87219, 0.519278, 0.726807)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5esdi"]
+size = Vector3(1.87219, 0.508591, 1.5213)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e7v8u"]
+size = Vector3(1.87219, 0.834991, 2.77632)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nkxh4"]
+size = Vector3(1.87219, 0.267944, 3.25049)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yn2wm"]
+size = Vector3(1.87219, 0.267944, 10.9619)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t3flo"]
+size = Vector3(1.87219, 0.585266, 1.49188)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m6q84"]
+size = Vector3(1.87219, 0.991974, 1.89995)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7x7lj"]
+size = Vector3(1.87219, 1.66176, 0.12146)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_istbo"]
+size = Vector3(1.87219, 1.66176, 0.140015)
+
+[node name="Level9" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0353847, -0.122587, -0.262038)
+script = ExtResource("1_gs5nh")
+level_num = 9
+crowd_speed = 3.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.93925, 0.298709, -0.16906, -0.156225, 0.810625, 0.56434, 0.305618, -0.503645, 0.808047, -0.0164103, 7.98203, 0.00157928)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("2_nkxh4")]
+
+[node name="CameraRig" parent="." instance=ExtResource("3_yn2wm")]
+
+[node name="DrawPlaneCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.47627, 0)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DrawPlaneCollision"]
+shape = SubResource("WorldBoundaryShape3D_d7yol")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+offset_left = 25.0
+offset_top = 45.0
+offset_right = 1120.0
+offset_bottom = 117.0
+label_settings = SubResource("LabelSettings_4c3cj")
+autowrap_mode = 2
+
+[node name="BackButton" type="Button" parent="CanvasLayer/Control"]
+custom_minimum_size = Vector2(150, 62.5)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 51.0
+offset_top = -98.0
+offset_right = 201.0
+offset_bottom = -16.0
+grow_vertical = 0
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("4_7x7lj")
+text = "Menu"
+
+[node name="Grimblo" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.0012182, -1.0168, -0.0184893)
+activeAlignment = 0
+
+[node name="Grimblo2" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.00121875, -1.0168, -6.36431)
+start_dir = 2.725
+activeAlignment = 3
+
+[node name="Grimblo3" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.93487, -1.0168, 2.51846)
+start_dir = 3.65
+
+[node name="Grimblo4" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.64614, -1.0168, 2.51846)
+start_dir = 0.741
+
+[node name="Grimblo5" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.44944, -1.0168, 3.37758)
+start_dir = 1.345
+
+[node name="Grimblo7" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.5084, -1.0168, 1.57747)
+start_dir = 4.45
+activeAlignment = 2
+
+[node name="Grimblo8" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.573848, -1.0168, 1.82933)
+start_dir = 4.985
+activeAlignment = 2
+
+[node name="Grimblo9" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.47794, -1.0168, 3.23773)
+start_dir = 0.969
+activeAlignment = 2
+
+[node name="Grimblo10" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8.6372, -1.0168, -0.697955)
+start_dir = 5.168
+activeAlignment = 2
+
+[node name="Grimblo14" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.79828, -1.0168, -7.51349)
+start_dir = 4.313
+activeAlignment = 2
+
+[node name="Grimblo15" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.4727, -1.0168, -6.04987)
+start_dir = 5.553
+activeAlignment = 2
+
+[node name="Grimblo16" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.81025, -1.0168, -5.08009)
+start_dir = 1.187
+activeAlignment = 2
+
+[node name="Grimblo17" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.4376, -1.0168, -6.48674)
+start_dir = 2.003
+activeAlignment = 2
+
+[node name="Grimblo18" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.40964, -1.0168, -7.30021)
+start_dir = 3.858
+activeAlignment = 2
+
+[node name="Grimblo12" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.70107, -1.0168, -6.17347)
+start_dir = 2.1
+
+[node name="Grimblo19" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9.34161, -1.0168, -3.67297)
+start_dir = 6.042
+
+[node name="Grimblo20" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.4611, -1.0168, -0.838706)
+start_dir = 3.532
+
+[node name="Grimblo13" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.09292, -1.0168, -6.55346)
+start_dir = 3.935
+
+[node name="Grimblo11" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.97786, -1.0168, -3.70946)
+start_dir = 2.725
+activeAlignment = 2
+
+[node name="Grimblo6" parent="." instance=ExtResource("5_istbo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.3066, -1.0168, 1.56412)
+start_dir = 2.725
+
+[node name="Wall" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -5.58069, -0.656941, -2.19873)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -8.47819e-09, 2.58709e-08, -8.47818e-09, 0.806042, 0.591858, -2.58709e-08, -0.591858, 0.806042, -0.196804, 3.7111, -4.42072)
+shape = SubResource("BoxShape3D_aw6i5")
+
+[node name="CollisionShape3D13" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -8.47819e-09, 2.58709e-08, -8.47818e-09, 0.806042, 0.591858, -2.58709e-08, -0.591858, 0.806042, -0.196804, 3.71535, -3.96352)
+shape = SubResource("BoxShape3D_o8r67")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -7.95522e-08, 2.50224e-08, -7.95522e-08, -0.819942, 0.572446, -2.50224e-08, -0.572446, -0.819942, -0.196805, -15.2581, -4.45545)
+shape = SubResource("BoxShape3D_aw6i5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.196804, 4.67635, 0.060607)
+shape = SubResource("BoxShape3D_gs5nh")
+
+[node name="CollisionShape3D15" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.196804, 2.0096, 0.171996)
+shape = SubResource("BoxShape3D_s4mnt")
+
+[node name="CollisionShape3D16" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.196804, -13.542, 0.171996)
+shape = SubResource("BoxShape3D_s4mnt")
+
+[node name="CollisionShape3D17" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.196804, -12.3449, -2.93837)
+shape = SubResource("BoxShape3D_rc5uc")
+
+[node name="CollisionShape3D18" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.196804, 0.893186, -2.93837)
+shape = SubResource("BoxShape3D_p7epg")
+
+[node name="CollisionShape3D24" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.196804, 4.30584, 3.24457)
+shape = SubResource("BoxShape3D_qavrd")
+
+[node name="CollisionShape3D36" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -8.88178e-15, 7.10543e-15, -1.06581e-14, 0.582676, 0.812704, 0, -0.812704, 0.582676, -0.196868, 3.80576, 4.64367)
+shape = SubResource("BoxShape3D_b6eic")
+
+[node name="CollisionShape3D37" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.196868, 1.43194, 6.05996)
+shape = SubResource("BoxShape3D_suy73")
+
+[node name="CollisionShape3D39" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.193052, -12.8285, 6.05868)
+shape = SubResource("BoxShape3D_fnf5t")
+
+[node name="CollisionShape3D40" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 0.572404, -0.819972, 0, 0.819972, 0.572404, -0.193052, -15.1271, 4.617)
+shape = SubResource("BoxShape3D_cnjce")
+
+[node name="CollisionShape3D41" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 0.741508, -0.670945, 0, 0.670945, 0.741508, -0.193052, -10.225, 7.1195)
+shape = SubResource("BoxShape3D_4adf8")
+
+[node name="CollisionShape3D42" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 0.738456, 0.674303, 0, -0.674303, 0.738456, -0.194548, -1.14719, 7.11397)
+shape = SubResource("BoxShape3D_rihml")
+
+[node name="CollisionShape3D43" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 0.803857, 0.594823, 0, -0.594823, 0.803857, -0.174391, -2.44301, 7.12935)
+shape = SubResource("BoxShape3D_7pppa")
+
+[node name="CollisionShape3D44" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -1.41845e-07, -6.84178e-08, -6.84178e-08, -0.782608, 0.622515, -1.41845e-07, -0.622515, -0.782608, -0.0725021, -8.78573, 7.0395)
+shape = SubResource("BoxShape3D_7pppa")
+
+[node name="CollisionShape3D38" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.196868, -5.73238, 7.36421)
+shape = SubResource("BoxShape3D_kvh6y")
+
+[node name="CollisionShape3D28" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.196804, -15.8313, 3.24457)
+shape = SubResource("BoxShape3D_qavrd")
+
+[node name="CollisionShape3D25" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.196804, 1.38804, 3.24457)
+shape = SubResource("BoxShape3D_cbn7l")
+
+[node name="CollisionShape3D29" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 0.632029, -0.774945, 0, 0.774944, 0.632029, -0.217638, -0.995621, 2.02211)
+shape = SubResource("BoxShape3D_nap7t")
+
+[node name="CollisionShape3D30" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 0.632029, -0.774945, 0, 0.774944, 0.632029, -0.230865, -1.3019, 2.18241)
+shape = SubResource("BoxShape3D_18u7d")
+
+[node name="CollisionShape3D34" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 0.666532, 0.745476, 0, -0.745476, 0.666533, -0.217638, -10.517, 2.08303)
+shape = SubResource("BoxShape3D_nap7t")
+
+[node name="CollisionShape3D35" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 0.666532, 0.745476, 0, -0.745476, 0.666533, -0.227617, -10.392, 2.2874)
+shape = SubResource("BoxShape3D_18u7d")
+
+[node name="CollisionShape3D27" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.196804, -12.8567, 3.24457)
+shape = SubResource("BoxShape3D_cbn7l")
+
+[node name="CollisionShape3D26" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.196804, -5.73439, 0.894321)
+shape = SubResource("BoxShape3D_pvkme")
+
+[node name="CollisionShape3D31" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.196804, -3.74466, 1.44388)
+shape = SubResource("BoxShape3D_odjky")
+
+[node name="CollisionShape3D32" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.196804, -7.23412, 1.44388)
+shape = SubResource("BoxShape3D_odjky")
+
+[node name="CollisionShape3D33" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.196804, -5.56796, 1.15201)
+shape = SubResource("BoxShape3D_8rkbd")
+
+[node name="CollisionShape3D14" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.196804, 4.45735, -0.13791)
+shape = SubResource("BoxShape3D_5esdi")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.196805, -16.1756, 0.060607)
+shape = SubResource("BoxShape3D_gs5nh")
+
+[node name="CollisionShape3D23" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -0.196805, -15.892, -1.4353)
+shape = SubResource("BoxShape3D_e7v8u")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -0.196804, 1.30195, -5.789)
+shape = SubResource("BoxShape3D_nkxh4")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -0.196805, -12.6743, -5.789)
+shape = SubResource("BoxShape3D_nkxh4")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -0.196805, -5.62162, -6.46318)
+shape = SubResource("BoxShape3D_yn2wm")
+
+[node name="CollisionShape3D19" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -0.196805, -3.81306, -6.06807)
+shape = SubResource("BoxShape3D_t3flo")
+
+[node name="CollisionShape3D20" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -0.196805, -7.41713, -6.06807)
+shape = SubResource("BoxShape3D_t3flo")
+
+[node name="CollisionShape3D21" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -0.196804, -10.121, -2.73669)
+shape = SubResource("BoxShape3D_m6q84")
+
+[node name="CollisionShape3D22" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -0.196804, -1.25052, -2.78369)
+shape = SubResource("BoxShape3D_m6q84")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -0.196805, -5.62162, -2.22749)
+shape = SubResource("BoxShape3D_yn2wm")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -0.196804, -0.286782, -2.9244)
+shape = SubResource("BoxShape3D_7x7lj")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -0.196804, -0.286782, -5.71886)
+shape = SubResource("BoxShape3D_istbo")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -0.196805, -11.0331, -2.9244)
+shape = SubResource("BoxShape3D_7x7lj")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -0.196805, -11.0424, -5.71886)
+shape = SubResource("BoxShape3D_istbo")
+
+[node name="BreakableDoor4" parent="." instance=ExtResource("8_rc5uc")]
+transform = Transform3D(1.65099e-07, 0, 1.22, 0, 1.22, 0, -1.259, 0, 1.59984e-07, 5.47266, -0.695296, -6.54714)
+
+[node name="BreakableDoor5" parent="." instance=ExtResource("8_rc5uc")]
+transform = Transform3D(-2.75164e-07, 0, -1.22, 0, 1.22, 0, 1.259, 0, -2.6664e-07, -5.30025, -0.695296, -6.54714)
+
+[node name="BreakableDoor6" parent="." instance=ExtResource("8_rc5uc")]
+transform = Transform3D(1.259, 0, -2.13312e-07, 0, 1.22, 0, 2.20131e-07, 0, 1.22, -8.96703, -0.695296, 1.10429)
+
+[node name="BreakableDoor7" parent="." instance=ExtResource("8_rc5uc")]
+transform = Transform3D(1.259, 0, -2.13312e-07, 0, 1.22, 0, 2.20131e-07, 0, 1.22, 9.27487, -0.695296, 1.10481)
+
+[node name="Node3D2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.177122, -0.564446, -1.66778)
+
+[node name="LV9" parent="Node3D2" instance=ExtResource("7_gs5nh")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 190.364, -0.47679, 3.4634)
+
+[node name="Cube_172" parent="Node3D2/LV9" index="0"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_173" parent="Node3D2/LV9" index="1"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Door Frame_019" parent="Node3D2/LV9" index="2"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_083" parent="Node3D2/LV9" index="3"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_174" parent="Node3D2/LV9" index="4"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_084" parent="Node3D2/LV9" index="5"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_175" parent="Node3D2/LV9" index="6"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Window Cross_038" parent="Node3D2/LV9" index="7"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_176" parent="Node3D2/LV9" index="8"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Window Cross_039" parent="Node3D2/LV9" index="9"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Window Cross_040" parent="Node3D2/LV9" index="10"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_177" parent="Node3D2/LV9" index="11"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_085" parent="Node3D2/LV9" index="12"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_178" parent="Node3D2/LV9" index="13"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Window Cross_041" parent="Node3D2/LV9" index="14"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Window Cross_042" parent="Node3D2/LV9" index="15"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_086" parent="Node3D2/LV9" index="16"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_179" parent="Node3D2/LV9" index="17"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_087" parent="Node3D2/LV9" index="18"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_180" parent="Node3D2/LV9" index="19"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Window Cross_043" parent="Node3D2/LV9" index="20"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Window Cross_044" parent="Node3D2/LV9" index="21"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_181" parent="Node3D2/LV9" index="22"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Door Frame_020" parent="Node3D2/LV9" index="23"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_088" parent="Node3D2/LV9" index="24"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_089" parent="Node3D2/LV9" index="25"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_182" parent="Node3D2/LV9" index="26"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_090" parent="Node3D2/LV9" index="27"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_183" parent="Node3D2/LV9" index="28"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Window Cross_045" parent="Node3D2/LV9" index="29"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Window Cross_046" parent="Node3D2/LV9" index="30"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_184" parent="Node3D2/LV9" index="31"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_091" parent="Node3D2/LV9" index="32"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_185" parent="Node3D2/LV9" index="33"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_092" parent="Node3D2/LV9" index="34"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_186" parent="Node3D2/LV9" index="35"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_093" parent="Node3D2/LV9" index="36"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_187" parent="Node3D2/LV9" index="37"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_094" parent="Node3D2/LV9" index="38"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_188" parent="Node3D2/LV9" index="39"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_095" parent="Node3D2/LV9" index="40"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_189" parent="Node3D2/LV9" index="41"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_096" parent="Node3D2/LV9" index="42"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_190" parent="Node3D2/LV9" index="43"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_097" parent="Node3D2/LV9" index="44"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_191" parent="Node3D2/LV9" index="45"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_098" parent="Node3D2/LV9" index="46"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_192" parent="Node3D2/LV9" index="47"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Door Frame_021" parent="Node3D2/LV9" index="48"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_103" parent="Node3D2/LV9" index="49"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_104" parent="Node3D2/LV9" index="50"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_193" parent="Node3D2/LV9" index="51"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Door Frame_022" parent="Node3D2/LV9" index="52"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_105" parent="Node3D2/LV9" index="53"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Wall Skirting_106" parent="Node3D2/LV9" index="54"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_194" parent="Node3D2/LV9" index="55"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_195" parent="Node3D2/LV9" index="56"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_196" parent="Node3D2/LV9" index="57"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_197" parent="Node3D2/LV9" index="58"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_198" parent="Node3D2/LV9" index="59"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_199" parent="Node3D2/LV9" index="60"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_200" parent="Node3D2/LV9" index="61"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_201" parent="Node3D2/LV9" index="62"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_202" parent="Node3D2/LV9" index="63"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Couch_021" parent="Node3D2/LV9" index="64"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Couch_022" parent="Node3D2/LV9" index="65"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Chair1_064" parent="Node3D2/LV9" index="66"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Table_058" parent="Node3D2/LV9" index="67"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book Stack_027" parent="Node3D2/LV9" index="68"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_993" parent="Node3D2/LV9" index="69"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Computer_050" parent="Node3D2/LV9" index="70"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Keyboard_050" parent="Node3D2/LV9" index="71"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_994" parent="Node3D2/LV9" index="72"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Chair1_065" parent="Node3D2/LV9" index="73"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Table_059" parent="Node3D2/LV9" index="74"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_995" parent="Node3D2/LV9" index="75"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Computer_051" parent="Node3D2/LV9" index="76"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Keyboard_051" parent="Node3D2/LV9" index="77"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_996" parent="Node3D2/LV9" index="78"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Shelf_026" parent="Node3D2/LV9" index="79"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Shelf_027" parent="Node3D2/LV9" index="80"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_997" parent="Node3D2/LV9" index="81"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_998" parent="Node3D2/LV9" index="82"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_999" parent="Node3D2/LV9" index="83"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1000" parent="Node3D2/LV9" index="84"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1001" parent="Node3D2/LV9" index="85"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1002" parent="Node3D2/LV9" index="86"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1003" parent="Node3D2/LV9" index="87"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1004" parent="Node3D2/LV9" index="88"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1005" parent="Node3D2/LV9" index="89"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1006" parent="Node3D2/LV9" index="90"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1007" parent="Node3D2/LV9" index="91"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1008" parent="Node3D2/LV9" index="92"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1009" parent="Node3D2/LV9" index="93"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1010" parent="Node3D2/LV9" index="94"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1011" parent="Node3D2/LV9" index="95"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1012" parent="Node3D2/LV9" index="96"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1013" parent="Node3D2/LV9" index="97"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1014" parent="Node3D2/LV9" index="98"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1015" parent="Node3D2/LV9" index="99"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1016" parent="Node3D2/LV9" index="100"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1017" parent="Node3D2/LV9" index="101"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1018" parent="Node3D2/LV9" index="102"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1019" parent="Node3D2/LV9" index="103"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1020" parent="Node3D2/LV9" index="104"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1021" parent="Node3D2/LV9" index="105"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1022" parent="Node3D2/LV9" index="106"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1023" parent="Node3D2/LV9" index="107"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1024" parent="Node3D2/LV9" index="108"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1025" parent="Node3D2/LV9" index="109"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1026" parent="Node3D2/LV9" index="110"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1027" parent="Node3D2/LV9" index="111"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1028" parent="Node3D2/LV9" index="112"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1029" parent="Node3D2/LV9" index="113"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1030" parent="Node3D2/LV9" index="114"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1031" parent="Node3D2/LV9" index="115"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1032" parent="Node3D2/LV9" index="116"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1033" parent="Node3D2/LV9" index="117"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1034" parent="Node3D2/LV9" index="118"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1035" parent="Node3D2/LV9" index="119"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1036" parent="Node3D2/LV9" index="120"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1037" parent="Node3D2/LV9" index="121"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1038" parent="Node3D2/LV9" index="122"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1039" parent="Node3D2/LV9" index="123"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1040" parent="Node3D2/LV9" index="124"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1041" parent="Node3D2/LV9" index="125"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1042" parent="Node3D2/LV9" index="126"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book Stack_028" parent="Node3D2/LV9" index="127"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1043" parent="Node3D2/LV9" index="128"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_203" parent="Node3D2/LV9" index="129"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Table_060" parent="Node3D2/LV9" index="130"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Table_061" parent="Node3D2/LV9" index="131"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Chair1_070" parent="Node3D2/LV9" index="132"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Computer_052" parent="Node3D2/LV9" index="133"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Keyboard_052" parent="Node3D2/LV9" index="134"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Chair1_071" parent="Node3D2/LV9" index="135"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Computer_057" parent="Node3D2/LV9" index="136"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Keyboard_057" parent="Node3D2/LV9" index="137"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Chair1_072" parent="Node3D2/LV9" index="138"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Computer_058" parent="Node3D2/LV9" index="139"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Keyboard_058" parent="Node3D2/LV9" index="140"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Chair1_073" parent="Node3D2/LV9" index="141"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Computer_059" parent="Node3D2/LV9" index="142"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Keyboard_059" parent="Node3D2/LV9" index="143"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Shelf_028" parent="Node3D2/LV9" index="144"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1159" parent="Node3D2/LV9" index="145"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1160" parent="Node3D2/LV9" index="146"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1161" parent="Node3D2/LV9" index="147"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1162" parent="Node3D2/LV9" index="148"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1163" parent="Node3D2/LV9" index="149"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1164" parent="Node3D2/LV9" index="150"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1165" parent="Node3D2/LV9" index="151"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1166" parent="Node3D2/LV9" index="152"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1167" parent="Node3D2/LV9" index="153"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1168" parent="Node3D2/LV9" index="154"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1169" parent="Node3D2/LV9" index="155"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1170" parent="Node3D2/LV9" index="156"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1171" parent="Node3D2/LV9" index="157"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1172" parent="Node3D2/LV9" index="158"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1173" parent="Node3D2/LV9" index="159"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1174" parent="Node3D2/LV9" index="160"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1175" parent="Node3D2/LV9" index="161"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1176" parent="Node3D2/LV9" index="162"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1177" parent="Node3D2/LV9" index="163"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1178" parent="Node3D2/LV9" index="164"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1179" parent="Node3D2/LV9" index="165"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1180" parent="Node3D2/LV9" index="166"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1181" parent="Node3D2/LV9" index="167"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1182" parent="Node3D2/LV9" index="168"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1183" parent="Node3D2/LV9" index="169"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1184" parent="Node3D2/LV9" index="170"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1185" parent="Node3D2/LV9" index="171"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1186" parent="Node3D2/LV9" index="172"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1187" parent="Node3D2/LV9" index="173"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1188" parent="Node3D2/LV9" index="174"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1189" parent="Node3D2/LV9" index="175"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1190" parent="Node3D2/LV9" index="176"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1191" parent="Node3D2/LV9" index="177"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book Stack_029" parent="Node3D2/LV9" index="178"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Shelf_032" parent="Node3D2/LV9" index="179"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1192" parent="Node3D2/LV9" index="180"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1193" parent="Node3D2/LV9" index="181"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1194" parent="Node3D2/LV9" index="182"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1195" parent="Node3D2/LV9" index="183"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1196" parent="Node3D2/LV9" index="184"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1197" parent="Node3D2/LV9" index="185"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1198" parent="Node3D2/LV9" index="186"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1199" parent="Node3D2/LV9" index="187"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1200" parent="Node3D2/LV9" index="188"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1201" parent="Node3D2/LV9" index="189"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1202" parent="Node3D2/LV9" index="190"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1203" parent="Node3D2/LV9" index="191"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1204" parent="Node3D2/LV9" index="192"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1205" parent="Node3D2/LV9" index="193"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1206" parent="Node3D2/LV9" index="194"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1207" parent="Node3D2/LV9" index="195"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1208" parent="Node3D2/LV9" index="196"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1209" parent="Node3D2/LV9" index="197"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1210" parent="Node3D2/LV9" index="198"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1211" parent="Node3D2/LV9" index="199"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1212" parent="Node3D2/LV9" index="200"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1213" parent="Node3D2/LV9" index="201"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1214" parent="Node3D2/LV9" index="202"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1215" parent="Node3D2/LV9" index="203"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1216" parent="Node3D2/LV9" index="204"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1217" parent="Node3D2/LV9" index="205"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1218" parent="Node3D2/LV9" index="206"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1219" parent="Node3D2/LV9" index="207"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1220" parent="Node3D2/LV9" index="208"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1221" parent="Node3D2/LV9" index="209"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1222" parent="Node3D2/LV9" index="210"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1223" parent="Node3D2/LV9" index="211"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1224" parent="Node3D2/LV9" index="212"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book_1225" parent="Node3D2/LV9" index="213"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Book Stack_032" parent="Node3D2/LV9" index="214"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_204" parent="Node3D2/LV9" index="215"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Couch_023" parent="Node3D2/LV9" index="216"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Cube_205" parent="Node3D2/LV9" index="217"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Chair1_074" parent="Node3D2/LV9" index="218"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Table_062" parent="Node3D2/LV9" index="219"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Chair1_075" parent="Node3D2/LV9" index="220"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Table_063" parent="Node3D2/LV9" index="221"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Computer_060" parent="Node3D2/LV9" index="222"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Keyboard_060" parent="Node3D2/LV9" index="223"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Computer_061" parent="Node3D2/LV9" index="224"]
+material_overlay = ExtResource("7_s4mnt")
+
+[node name="Keyboard_061" parent="Node3D2/LV9" index="225"]
+material_overlay = ExtResource("7_s4mnt")
+
+[connection signal="pressed" from="CanvasLayer/Control/BackButton" to="Player/SceneRedirect" method="_to_select"]
+
+[editable path="Player"]
+[editable path="CameraRig"]
+[editable path="Node3D2/LV9"]
