@@ -4,6 +4,7 @@ class_name GameController extends Node
 @onready var transition_controller: TransitionController = $TransitionController
 
 var current_scene
+signal scene_changed
 
 func _ready() -> void:
 	Global.game_controller = self
@@ -36,5 +37,8 @@ func change_scene(
 		var new = load(new_scene).instantiate()
 		world.add_child(new)
 		current_scene = new
+		if "Level" not in new_scene:
+			Global.level = null
+		scene_changed.emit()
 	
 	if transition: transition_controller.transition(transition_in)

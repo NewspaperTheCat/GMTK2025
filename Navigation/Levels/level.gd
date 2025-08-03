@@ -2,6 +2,7 @@ class_name Level extends Node3D
 
 @export var level_num : int
 @export var crowd_speed : float
+@export var par : int = -1
 
 @onready var tutorial_label: Label = $CanvasLayer/Control/Label
 var tutorial_text : String
