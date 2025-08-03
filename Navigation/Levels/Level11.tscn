@@ -1,0 +1,2873 @@
+[gd_scene load_steps=50 format=3 uid="uid://bhvitn215c8qn"]
+
+[ext_resource type="Script" uid="uid://dgw18dh6btfxp" path="res://Navigation/Levels/level.gd" id="1_s1xj7"]
+[ext_resource type="PackedScene" uid="uid://bwlm62q1aprja" path="res://Elements/player.tscn" id="2_xybrp"]
+[ext_resource type="PackedScene" uid="uid://nenh7chlqfv1" path="res://Elements/camera_rig.tscn" id="3_bsskf"]
+[ext_resource type="Theme" uid="uid://cs11afo5dvmke" path="res://UI/button_theme.tres" id="4_cl0hy"]
+[ext_resource type="PackedScene" uid="uid://oqpsd56sxbch" path="res://Elements/grimblo.tscn" id="5_8eg2d"]
+[ext_resource type="PackedScene" uid="uid://bt4bydgxxlscj" path="res://Elements/breakable_door.tscn" id="6_du7l7"]
+[ext_resource type="PackedScene" uid="uid://c2qmrekc52n7o" path="res://art/LV11.glb" id="7_r7215"]
+[ext_resource type="Material" uid="uid://h7l6uths11rg" path="res://Materials/Shaders/ToonShader/outline.tres" id="8_iei4n"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_d7yol"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4c3cj"]
+font_size = 32
+font_color = Color(0.592157, 0.913725, 1, 1)
+outline_size = 20
+outline_color = Color(0, 0.52549, 0.619608, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r7215"]
+size = Vector3(1.87219, 0.267944, 20.0176)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s1xj7"]
+size = Vector3(1.87219, 3.41012, 0.0963292)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xybrp"]
+size = Vector3(1.87219, 5.8701, 0.0963292)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bsskf"]
+size = Vector3(1.87219, 5.12108, 0.731636)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cl0hy"]
+size = Vector3(1.87219, 2.35888, 0.0963292)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_du7l7"]
+size = Vector3(1.87219, 1.60357, 0.590273)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8eg2d"]
+size = Vector3(1.87219, 1.11767, 2.23146)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rrq2e"]
+size = Vector3(1.87219, 10.3569, 1.12256)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iei4n"]
+size = Vector3(1.87219, 5.60686, 1.06421)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tf5pq"]
+size = Vector3(1.87219, 0.427421, 1.56366)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gsias"]
+size = Vector3(1.87219, 0.680995, 1.56366)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5er12"]
+size = Vector3(1.87219, 1.07157, 1.63486)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xed57"]
+size = Vector3(1.87219, 5.74015, 0.701305)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v5j3q"]
+size = Vector3(1.87219, 4.27144, 1.13495)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jpgi6"]
+size = Vector3(1.87219, 0.529659, 1.5723)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o64xs"]
+size = Vector3(1.87219, 1.6779, 0.992388)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bfesp"]
+size = Vector3(1.87219, 1.6779, 0.852442)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_folxj"]
+size = Vector3(1.87219, 3.52104, 0.116675)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hcqax"]
+size = Vector3(1.87219, 3.52104, 0.116675)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pxga2"]
+size = Vector3(1.87219, 2.72737, 0.932797)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tcq5b"]
+size = Vector3(1.87219, 0.552724, 0.438678)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g5857"]
+size = Vector3(1.87219, 0.552724, 1.58064)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_phfrn"]
+size = Vector3(1.87219, 0.792963, 1.56034)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t3fw7"]
+size = Vector3(1.87219, 1.63586, 2.2646)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i8nn3"]
+size = Vector3(1.87219, 0.977111, 4.01854)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qb3xu"]
+size = Vector3(1.87219, 0.462847, 1.65195)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p0trk"]
+size = Vector3(1.87219, 0.479349, 0.484838)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vng1s"]
+size = Vector3(1.87219, 4.52178, 0.623442)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ocqb6"]
+size = Vector3(1.87219, 5.88939, 2.23563)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6ryum"]
+size = Vector3(1.87219, 1.71869, 1.69074)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_frx3p"]
+size = Vector3(1.87219, 0.578716, 0.424431)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c7r34"]
+size = Vector3(1.87219, 1.55538, 0.424431)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u481g"]
+size = Vector3(1.87219, 1.6975, 0.88809)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g28ga"]
+size = Vector3(1.87219, 0.0840138, 1.59824)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wy4pm"]
+size = Vector3(1.87219, 0.0840138, 2.52749)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q5pkg"]
+size = Vector3(1.87219, 0.0840138, 2.82419)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5khhl"]
+size = Vector3(1.87219, 0.0840138, 1.21756)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dxu2h"]
+size = Vector3(1.87219, 0.0840138, 2.58544)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hbh50"]
+size = Vector3(1.87219, 20.2195, 0.319353)
+
+[node name="Level11" type="Node3D"]
+script = ExtResource("1_s1xj7")
+level_num = 11
+crowd_speed = 3.0
+par = 6
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.93925, 0.298709, -0.16906, -0.156225, 0.810625, 0.56434, 0.305618, -0.503645, 0.808047, -0.0164103, 7.98203, 0.00157928)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("2_xybrp")]
+
+[node name="CameraRig" parent="." instance=ExtResource("3_bsskf")]
+
+[node name="Camera3D" parent="CameraRig/PathFollow" index="0"]
+transform = Transform3D(1.00001, 0, 0, 0, 0.505685, 0.862748, 0, -0.86275, 0.505687, 0, 0, 0)
+
+[node name="DrawPlaneCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.49353, 0)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DrawPlaneCollision"]
+shape = SubResource("WorldBoundaryShape3D_d7yol")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+offset_left = 25.0
+offset_top = 45.0
+offset_right = 1120.0
+offset_bottom = 117.0
+label_settings = SubResource("LabelSettings_4c3cj")
+autowrap_mode = 2
+
+[node name="BackButton" type="Button" parent="CanvasLayer/Control"]
+custom_minimum_size = Vector2(150, 62.5)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 51.0
+offset_top = -98.0
+offset_right = 201.0
+offset_bottom = -16.0
+grow_vertical = 0
+scale = Vector2(0.75, 0.75)
+theme = ExtResource("4_cl0hy")
+text = "Menu"
+
+[node name="Grimblo" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.19007, -2.04314, 4.91034)
+activeAlignment = 0
+
+[node name="Grimblo2" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.15652, -2.04314, 3.8968)
+start_dir = 3.66
+
+[node name="Grimblo3" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8.24294, -2.04314, 3.92771)
+start_dir = 1.265
+activeAlignment = 2
+
+[node name="Grimblo4" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.84521, -2.04314, 5.34383)
+start_dir = 2.65
+activeAlignment = 2
+
+[node name="Grimblo5" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.104179, -2.04314, 5.22429)
+start_dir = 5.229
+activeAlignment = 2
+
+[node name="Grimblo6" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.37361, -2.04314, 3.74594)
+start_dir = 1.99
+activeAlignment = 2
+
+[node name="Grimblo7" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.77048, -2.04314, 5.02034)
+start_dir = 0.605
+activeAlignment = 2
+
+[node name="Grimblo8" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.65524, -2.04314, -1.74766)
+start_dir = 2.175
+activeAlignment = 2
+
+[node name="Grimblo9" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.05647, -2.04314, 0.290334)
+start_dir = 4.39
+activeAlignment = 2
+
+[node name="Grimblo10" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.47302, -2.04314, -5.37952)
+start_dir = 5.24
+activeAlignment = 2
+
+[node name="Grimblo11" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.72565, -2.04314, -5.45219)
+start_dir = 2.2
+activeAlignment = 2
+
+[node name="Grimblo12" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.02364, -2.04314, -10.4207)
+start_dir = 4.304
+activeAlignment = 2
+
+[node name="Grimblo13" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.70763, -2.04314, -10.1424)
+start_dir = 1.894
+activeAlignment = 2
+
+[node name="Grimblo14" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.4592, -2.04314, -9.74241)
+start_dir = 4.635
+activeAlignment = 2
+
+[node name="Grimblo15" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.4592, -2.04314, -9.74241)
+start_dir = 2.88
+activeAlignment = 2
+
+[node name="Grimblo16" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.31408, -2.04314, -10.6973)
+start_dir = 1.715
+activeAlignment = 2
+
+[node name="Grimblo17" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.27161, -2.04314, -8.74551)
+start_dir = 4.934
+activeAlignment = 2
+
+[node name="Grimblo18" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.07989, -2.04314, -3.71776)
+activeAlignment = 2
+
+[node name="Grimblo19" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.92607, -2.04314, 4.58073)
+start_dir = 0.43
+activeAlignment = 2
+
+[node name="Grimblo20" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.38646, -2.04314, -9.57023)
+start_dir = 6.125
+activeAlignment = 2
+
+[node name="Grimblo21" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.95181, -2.04314, -8.01698)
+start_dir = 0.516
+activeAlignment = 2
+
+[node name="Grimblo22" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.51337, -2.04314, -6.37252)
+start_dir = 3.81
+activeAlignment = 2
+
+[node name="Grimblo23" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.821763, -2.04314, -5.99246)
+start_dir = 1.155
+activeAlignment = 2
+
+[node name="Grimblo24" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0247731, -2.04314, -9.08771)
+start_dir = 6.09
+activeAlignment = 2
+
+[node name="Grimblo25" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.19615, -2.04314, -5.01638)
+start_dir = 4.115
+activeAlignment = 2
+
+[node name="Grimblo26" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.29162, -2.04314, -1.41596)
+start_dir = 5.235
+activeAlignment = 2
+
+[node name="Grimblo27" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.35761, -2.04314, 0.338807)
+start_dir = 2.32
+activeAlignment = 2
+
+[node name="Grimblo28" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.09144, -2.04314, 0.972878)
+start_dir = 1.32
+activeAlignment = 2
+
+[node name="Grimblo29" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.988066, -2.04314, 0.0222504)
+start_dir = 3.42
+activeAlignment = 2
+
+[node name="Grimblo30" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.68583, -2.04314, -5.32431)
+start_dir = 4.285
+activeAlignment = 2
+
+[node name="Grimblo31" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.49058, -2.04314, -9.15213)
+start_dir = 1.506
+activeAlignment = 2
+
+[node name="Grimblo34" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.51386, -2.04314, -6.38683)
+start_dir = 6.068
+
+[node name="Grimblo36" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.40705, -2.04314, -5.69714)
+start_dir = 4.98
+
+[node name="Grimblo37" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0289842, -2.04314, -5.06521)
+start_dir = 5.815
+
+[node name="Grimblo38" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.215199, -2.04314, 0.837972)
+start_dir = 3.41
+
+[node name="Grimblo40" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.56689, -2.04314, 0.114213)
+start_dir = 4.925
+
+[node name="Grimblo42" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.56572, -2.04314, -2.2423)
+start_dir = 0.25
+
+[node name="Grimblo43" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8.80568, -2.04314, 0.930882)
+start_dir = 0.845
+
+[node name="Grimblo44" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.8773, -2.04314, 0.639501)
+start_dir = 1.162
+
+[node name="Grimblo45" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.19051, -2.04314, -5.25038)
+start_dir = 5.845
+
+[node name="Grimblo46" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.750751, -2.04314, 3.98847)
+start_dir = 1.033
+
+[node name="Grimblo47" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.00138, -2.04314, 4.96287)
+start_dir = 0.155
+
+[node name="Grimblo48" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.81297, -2.04314, -11.3096)
+start_dir = 1.735
+
+[node name="Grimblo49" parent="." instance=ExtResource("5_8eg2d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.60878, -2.04314, -9.40557)
+start_dir = 3.99
+activeAlignment = 3
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.448838)
+
+[node name="Wall" type="StaticBody3D" parent="Node3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -5.58069, 0.790001, -1.74989)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46429, 4.23396, -0.497126)
+shape = SubResource("BoxShape3D_r7215")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46429, 2.66288, 4.34134)
+shape = SubResource("BoxShape3D_s1xj7")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46429, -3.12932, 4.34134)
+shape = SubResource("BoxShape3D_xybrp")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46429, -9.72766, 4.659)
+shape = SubResource("BoxShape3D_bsskf")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46429, -14.5198, 4.34134)
+shape = SubResource("BoxShape3D_cl0hy")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46429, -14.8674, 4.65632)
+shape = SubResource("BoxShape3D_du7l7")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46429, -15.1405, 8.3784)
+shape = SubResource("BoxShape3D_8eg2d")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46429, -10.5209, 8.93285)
+shape = SubResource("BoxShape3D_rrq2e")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46429, 0.212642, 8.96203)
+shape = SubResource("BoxShape3D_iei4n")
+
+[node name="CollisionShape3D13" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46429, 4.0389, 5.16237)
+shape = SubResource("BoxShape3D_tf5pq")
+
+[node name="CollisionShape3D14" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46429, 4.0389, 1.69797)
+shape = SubResource("BoxShape3D_tf5pq")
+
+[node name="CollisionShape3D18" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46429, 3.91211, -1.37296)
+shape = SubResource("BoxShape3D_gsias")
+
+[node name="CollisionShape3D19" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, 3.91211, -4.74621)
+shape = SubResource("BoxShape3D_gsias")
+
+[node name="CollisionShape3D20" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, 3.71682, -9.14726)
+shape = SubResource("BoxShape3D_5er12")
+
+[node name="CollisionShape3D21" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, 1.38253, -10.1692)
+shape = SubResource("BoxShape3D_xed57")
+
+[node name="CollisionShape3D22" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -4.25848, -9.95235)
+shape = SubResource("BoxShape3D_v5j3q")
+
+[node name="CollisionShape3D23" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -7.43263, -5.63016)
+shape = SubResource("BoxShape3D_jpgi6")
+
+[node name="CollisionShape3D30" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -8.62435, -4.97131)
+shape = SubResource("BoxShape3D_o64xs")
+
+[node name="CollisionShape3D31" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -9.73382, -5.87031)
+shape = SubResource("BoxShape3D_bfesp")
+
+[node name="CollisionShape3D32" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -9.4875, -5.43206)
+shape = SubResource("BoxShape3D_folxj")
+
+[node name="CollisionShape3D33" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -14.1354, -5.43206)
+shape = SubResource("BoxShape3D_hcqax")
+
+[node name="CollisionShape3D34" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -14.3508, -5.84012)
+shape = SubResource("BoxShape3D_pxga2")
+
+[node name="CollisionShape3D38" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46431, -13.3343, -5.20791)
+shape = SubResource("BoxShape3D_tcq5b")
+
+[node name="CollisionShape3D39" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -15.5146, -2.79417)
+shape = SubResource("BoxShape3D_g5857")
+
+[node name="CollisionShape3D40" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -15.3945, 0.277082)
+shape = SubResource("BoxShape3D_phfrn")
+
+[node name="CollisionShape3D41" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -15.3945, 3.64216)
+shape = SubResource("BoxShape3D_phfrn")
+
+[node name="CollisionShape3D42" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46431, -13.0878, -0.543216)
+shape = SubResource("BoxShape3D_t3fw7")
+
+[node name="CollisionShape3D43" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46431, -8.2086, -0.180905)
+shape = SubResource("BoxShape3D_i8nn3")
+
+[node name="CollisionShape3D35" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -15.4831, -6.1997)
+shape = SubResource("BoxShape3D_qb3xu")
+
+[node name="CollisionShape3D36" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -15.4748, -8.69659)
+shape = SubResource("BoxShape3D_p0trk")
+
+[node name="CollisionShape3D37" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -11.5544, -10.2618)
+shape = SubResource("BoxShape3D_vng1s")
+
+[node name="CollisionShape3D24" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -4.77264, -0.574847)
+shape = SubResource("BoxShape3D_ocqb6")
+
+[node name="CollisionShape3D25" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, 0.615031, -0.577132)
+shape = SubResource("BoxShape3D_6ryum")
+
+[node name="CollisionShape3D15" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, 1.91415, 4.09305)
+shape = SubResource("BoxShape3D_frx3p")
+
+[node name="CollisionShape3D16" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -4.60137, 4.09305)
+shape = SubResource("BoxShape3D_c7r34")
+
+[node name="CollisionShape3D17" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -2.80591, 3.86123)
+shape = SubResource("BoxShape3D_u481g")
+
+[node name="CollisionShape3D26" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -3.7283, 5.12874)
+shape = SubResource("BoxShape3D_g28ga")
+
+[node name="CollisionShape3D27" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -3.7283, 8.30303)
+shape = SubResource("BoxShape3D_wy4pm")
+
+[node name="CollisionShape3D28" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -7.69213, -5.64108)
+shape = SubResource("BoxShape3D_q5pkg")
+
+[node name="CollisionShape3D44" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -7.69213, -0.564327)
+shape = SubResource("BoxShape3D_5khhl")
+
+[node name="CollisionShape3D45" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -7.69213, 3.71789)
+shape = SubResource("BoxShape3D_5khhl")
+
+[node name="CollisionShape3D29" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.4643, -7.69213, -9.42644)
+shape = SubResource("BoxShape3D_dxu2h")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46429, -15.7177, -0.497126)
+shape = SubResource("BoxShape3D_r7215")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46429, -5.74189, 9.46131)
+shape = SubResource("BoxShape3D_hbh50")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="Node3D/Wall"]
+transform = Transform3D(1, -3.55271e-15, 0, -1.06581e-14, 1, 0, 0, 0, 1, -2.46429, -5.74189, -10.5722)
+shape = SubResource("BoxShape3D_hbh50")
+
+[node name="BreakableDoor4" parent="Node3D" instance=ExtResource("6_du7l7")]
+transform = Transform3D(-2.75164e-07, 0, -1.22, 0, 1.22, 0, 1.259, 0, -2.6664e-07, 2.13869, -1.68747, -9.34827)
+
+[node name="BreakableDoor5" parent="Node3D" instance=ExtResource("6_du7l7")]
+transform = Transform3D(-2.75164e-07, 0, -1.22, 0, 1.22, 0, 1.259, 0, -2.6664e-07, 2.13869, -1.68747, -5.42501)
+
+[node name="BreakableDoor6" parent="Node3D" instance=ExtResource("6_du7l7")]
+transform = Transform3D(-2.75164e-07, 0, -1.22, 0, 1.22, 0, 1.259, 0, -2.6664e-07, 2.13869, -1.68747, 0.818935)
+
+[node name="BreakableDoor7" parent="Node3D" instance=ExtResource("6_du7l7")]
+transform = Transform3D(-2.75164e-07, 0, -1.22, 0, 1.22, 0, 1.259, 0, -2.6664e-07, -1.88761, -1.68747, 4.74292)
+
+[node name="BreakableDoor8" parent="Node3D" instance=ExtResource("6_du7l7")]
+transform = Transform3D(1.259, 0, -2.13312e-07, 0, 1.22, 0, 2.20131e-07, 0, 1.22, -5.96037, -1.68747, 2.63246)
+
+[node name="BreakableDoor9" parent="Node3D" instance=ExtResource("6_du7l7")]
+transform = Transform3D(1.259, 0, -2.13312e-07, 0, 1.22, 0, 2.20131e-07, 0, 1.22, 1.02006, -1.68747, 2.63246)
+
+[node name="BreakableDoor10" parent="Node3D" instance=ExtResource("6_du7l7")]
+transform = Transform3D(1.259, 0, -2.13312e-07, 0, 1.22, 0, 2.20131e-07, 0, 1.22, 7.22785, -1.68747, 2.63246)
+
+[node name="BreakableDoor11" parent="Node3D" instance=ExtResource("6_du7l7")]
+transform = Transform3D(1.259, 0, -2.13312e-07, 0, 1.22, 0, 2.20131e-07, 0, 1.22, 6.23087, -1.68747, -7.14556)
+
+[node name="Node3D2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.61365, -1.56442, 6.52675)
+
+[node name="LV11" parent="Node3D2" instance=ExtResource("7_r7215")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 265.602, -0.476791, -5.06757)
+
+[node name="Window Cross_017" parent="Node3D2/LV11" index="0"]
+transform = Transform3D(-2.10754, 0, 4.63454e-05, 0, 2.10754, 0, -4.63454e-05, 0, -2.10754, 16.5942, 2.52488, 1250.04)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Window Cross_022" parent="Node3D2/LV11" index="1"]
+transform = Transform3D(-2.10754, 0, 4.63454e-05, 0, 2.10754, 0, -4.63454e-05, 0, -2.10754, -8.11943, 2.52488, 1250.04)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_044" parent="Node3D2/LV11" index="2"]
+transform = Transform3D(1.14227e-05, 0, -0.151638, 0, 0.577987, 0, 6.60834, 0, 2.62111e-07, 3.68999, -2.33444, 1272.9)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_045" parent="Node3D2/LV11" index="3"]
+transform = Transform3D(1.14227e-05, 0, -0.151638, 0, 0.577987, 0, 6.60834, 0, 2.62111e-07, 3.36883, -2.33444, 1272.9)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_112" parent="Node3D2/LV11" index="4"]
+transform = Transform3D(1.04938e-05, 0, -0.151638, 0, 0.577987, 0, 6.07092, 0, 2.62111e-07, 3.71898, -2.33444, 1255.54)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_113" parent="Node3D2/LV11" index="5"]
+transform = Transform3D(1.04938e-05, 0, -0.151638, 0, 0.577987, 0, 6.07092, 0, 2.62111e-07, 3.36882, -2.33444, 1255.54)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_114" parent="Node3D2/LV11" index="6"]
+transform = Transform3D(3.04024e-05, 0, 0.129906, 0, 0.577987, 0, 15.002, 0, -2.63262e-07, 28.6015, -2.33444, 1334.42)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_132" parent="Node3D2/LV11" index="7"]
+transform = Transform3D(-24.8456, 0, -1.48229e-07, 0, 0.577987, 0, 2.42872e-05, 0, -0.151638, 3.8373, -2.33444, 1249.81)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_133" parent="Node3D2/LV11" index="8"]
+transform = Transform3D(-2.36333e-06, 0, 0.151638, 0, 0.577987, 0, -6.60834, 0, -5.42298e-08, 3.3922, -2.33444, 1286.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_134" parent="Node3D2/LV11" index="9"]
+transform = Transform3D(-2.36333e-06, 0, 0.151638, 0, 0.577987, 0, -6.60834, 0, -5.42298e-08, 3.71337, -2.33444, 1286.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_135" parent="Node3D2/LV11" index="10"]
+transform = Transform3D(-2.17113e-06, 0, 0.151638, 0, 0.577987, 0, -6.07092, 0, -5.42298e-08, 3.36322, -2.33444, 1303.47)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_136" parent="Node3D2/LV11" index="11"]
+transform = Transform3D(-2.17113e-06, 0, 0.151638, 0, 0.577987, 0, -6.07092, 0, -5.42298e-08, 3.71337, -2.33444, 1303.47)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_137" parent="Node3D2/LV11" index="12"]
+transform = Transform3D(-8.94188e-06, 0, -0.129906, 0, 0.577987, 0, -15.002, 0, 7.743e-08, 28.6758, -2.44133, 1304.42)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_027" parent="Node3D2/LV11" index="13"]
+transform = Transform3D(2.82099e-06, 0, -1.63201, 0, 1.63201, 0, 1.63201, 0, 2.82099e-06, -17.6383, -0.920887, 1303.48)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_064" parent="Node3D2/LV11" index="14"]
+transform = Transform3D(2.82099e-06, 0, -1.63201, 0, 1.63201, 0, 1.63201, 0, 2.82099e-06, -17.6383, -0.920887, 1293.86)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_065" parent="Node3D2/LV11" index="15"]
+transform = Transform3D(2.82099e-06, 0, -1.63201, 0, 1.63201, 0, 1.63201, 0, 2.82099e-06, -17.6383, -0.920887, 1262.68)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Shelf_033" parent="Node3D2/LV11" index="16"]
+transform = Transform3D(3.70342e-06, 0, -2.14252, 0, 2.14252, 0, 2.14252, 0, 3.70342e-06, 4.69554, -2.18607, 1254.14)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Shelf_034" parent="Node3D2/LV11" index="17"]
+transform = Transform3D(-7.66225e-07, 0, 2.14252, 0, 2.14252, 0, -2.14252, 0, -7.66225e-07, 3.25051, -2.18607, 1304.88)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Keyboard_070" parent="Node3D2/LV11" index="18"]
+transform = Transform3D(3.02673e-06, 0, -1.75104, 0, 1.75104, 0, 1.75104, 0, 3.02673e-06, -16.686, 0.420048, 1302.74)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Keyboard_071" parent="Node3D2/LV11" index="19"]
+transform = Transform3D(3.02673e-06, 0, -1.75104, 0, 1.75104, 0, 1.75104, 0, 3.02673e-06, -16.686, 0.420048, 1293.13)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Keyboard_072" parent="Node3D2/LV11" index="20"]
+transform = Transform3D(3.02673e-06, 0, -1.75104, 0, 1.75104, 0, 1.75104, 0, 3.02673e-06, -16.686, 0.420048, 1261.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Door Frame_023" parent="Node3D2/LV11" index="21"]
+transform = Transform3D(-4.39199e-06, 0, 2.16722, 0, 2.16722, 0, -2.16722, 0, -4.39199e-06, 3.44399, 1.57888, 1264.32)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Door Frame_024" parent="Node3D2/LV11" index="22"]
+transform = Transform3D(3.74611e-06, 0, -2.16722, 0, 2.16722, 0, 2.16722, 0, 3.74611e-06, 3.64553, 1.57888, 1294.69)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_070" parent="Node3D2/LV11" index="23"]
+transform = Transform3D(-2.41106, 0, 5.30199e-05, 0, 2.41106, 0, -5.30199e-05, 0, -2.41106, 2.03612, -1.37386, 1250.97)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_077" parent="Node3D2/LV11" index="24"]
+transform = Transform3D(-2.41106, 0, 5.30199e-05, 0, 2.41106, 0, -5.30199e-05, 0, -2.41106, -2.10277, 1.45935, 1250.97)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_078" parent="Node3D2/LV11" index="25"]
+transform = Transform3D(-2.41106, 0, 5.30199e-05, 0, 2.41106, 0, -5.30199e-05, 0, -2.41106, -2.10277, -1.37386, 1250.97)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_209" parent="Node3D2/LV11" index="26"]
+transform = Transform3D(-2.41106, 0, 5.30199e-05, 0, 2.41106, 0, -5.30199e-05, 0, -2.41106, -14.7958, 1.45935, 1250.97)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_210" parent="Node3D2/LV11" index="27"]
+transform = Transform3D(-2.41106, 0, 5.30199e-05, 0, 2.41106, 0, -5.30199e-05, 0, -2.41106, -14.7958, -1.37386, 1250.97)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_211" parent="Node3D2/LV11" index="28"]
+transform = Transform3D(-2.41106, 0, 5.30199e-05, 0, 2.41106, 0, -5.30199e-05, 0, -2.41106, -18.9347, 1.45935, 1250.97)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_212" parent="Node3D2/LV11" index="29"]
+transform = Transform3D(-20, 0, 4.39805e-06, 0, 4, 0, -0.000439805, 0, -0.2, 16.2956, 1.48147, 1249.69)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_213" parent="Node3D2/LV11" index="30"]
+transform = Transform3D(-2.41106, 0, 5.30199e-05, 0, 2.41106, 0, -5.30199e-05, 0, -2.41106, -18.9347, -1.37386, 1250.97)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_214" parent="Node3D2/LV11" index="31"]
+transform = Transform3D(-20, 0, 4.39805e-06, 0, 4, 0, -0.000439805, 0, -0.2, -8.41798, 1.48147, 1249.69)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_216" parent="Node3D2/LV11" index="32"]
+transform = Transform3D(2.5928e-05, 0, -0.2, 0, 4, 0, 15, 0, 3.45707e-07, 3.53124, 1.45963, 1264.53)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_217" parent="Node3D2/LV11" index="33"]
+transform = Transform3D(1.72853e-06, 0, -1, 0, 1, 0, 1, 0, 1.72853e-06, 97.0833, -0.236969, 1264.52)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_218" parent="Node3D2/LV11" index="34"]
+transform = Transform3D(-4.88616e-05, 0, -2.41106, 0, 2.41106, 0, 2.41106, 0, -4.88616e-05, 4.75449, 1.45935, 1268.77)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_219" parent="Node3D2/LV11" index="35"]
+transform = Transform3D(-4.88616e-05, 0, -2.41106, 0, 2.41106, 0, 2.41106, 0, -4.88616e-05, 4.75449, -1.37386, 1268.77)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_220" parent="Node3D2/LV11" index="36"]
+transform = Transform3D(-4.88616e-05, 0, -2.41106, 0, 2.41106, 0, 2.41106, 0, -4.88616e-05, 4.75449, 1.45935, 1272.91)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_221" parent="Node3D2/LV11" index="37"]
+transform = Transform3D(-4.88616e-05, 0, -2.41106, 0, 2.41106, 0, 2.41106, 0, -4.88616e-05, 4.75449, -1.37386, 1272.91)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_222" parent="Node3D2/LV11" index="38"]
+transform = Transform3D(-4.88616e-05, 0, -2.41106, 0, 2.41106, 0, 2.41106, 0, -4.88616e-05, 4.53315, 1.45935, 1285.51)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_223" parent="Node3D2/LV11" index="39"]
+transform = Transform3D(-4.88616e-05, 0, -2.41106, 0, 2.41106, 0, 2.41106, 0, -4.88616e-05, 4.53315, -1.37386, 1285.51)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_224" parent="Node3D2/LV11" index="40"]
+transform = Transform3D(-4.88616e-05, 0, -2.41106, 0, 2.41106, 0, 2.41106, 0, -4.88616e-05, 4.53315, 1.45935, 1289.65)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_226" parent="Node3D2/LV11" index="41"]
+transform = Transform3D(-4.88616e-05, 0, -2.41106, 0, 2.41106, 0, 2.41106, 0, -4.88616e-05, 4.53315, -1.37386, 1289.65)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_227" parent="Node3D2/LV11" index="42"]
+transform = Transform3D(-3.57628e-07, 0, 1, 0, 1, 0, -1, 0, -3.57628e-07, -89.1373, -0.236969, 1294.49)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_228" parent="Node3D2/LV11" index="43"]
+transform = Transform3D(-5.36442e-06, 0, 0.2, 0, 4, 0, -15, 0, -7.15256e-08, 3.53387, 1.45963, 1294.48)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Couch_024" parent="Node3D2/LV11" index="44"]
+transform = Transform3D(2.31593, 0, 0, 0, 2.31593, 0, 0, 0, 2.31593, -24.8913, -1.25467, 1287.28)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Couch_025" parent="Node3D2/LV11" index="45"]
+transform = Transform3D(2.31593, 0, 0, 0, 2.31593, 0, 0, 0, 2.31593, -12.9845, -1.25467, 1286.99)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Couch_026" parent="Node3D2/LV11" index="46"]
+transform = Transform3D(-4.69336e-06, 0, 2.31593, 0, 2.31593, 0, -2.31593, 0, -4.69336e-06, 25.9263, -1.25467, 1296.93)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Couch_027" parent="Node3D2/LV11" index="47"]
+transform = Transform3D(-4.69336e-06, 0, 2.31593, 0, 2.31593, 0, -2.31593, 0, -4.69336e-06, 25.9263, -1.25467, 1285.96)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Computer_070" parent="Node3D2/LV11" index="48"]
+transform = Transform3D(3.02673e-06, 0, -1.75104, 0, 1.75104, 0, 1.75104, 0, 3.02673e-06, -18.1994, 1.19254, 1303.28)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Computer_071" parent="Node3D2/LV11" index="49"]
+transform = Transform3D(3.02673e-06, 0, -1.75104, 0, 1.75104, 0, 1.75104, 0, 3.02673e-06, -18.1994, 1.19254, 1293.67)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Computer_072" parent="Node3D2/LV11" index="50"]
+transform = Transform3D(3.02673e-06, 0, -1.75104, 0, 1.75104, 0, 1.75104, 0, 3.02673e-06, -18.1994, 1.19254, 1262.48)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_027" parent="Node3D2/LV11" index="51"]
+transform = Transform3D(4.24794e-06, 0, -2.45754, 0, 2.45754, 0, 2.45754, 0, 4.24794e-06, -16.3302, -1.14166, 1303.26)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_076" parent="Node3D2/LV11" index="52"]
+transform = Transform3D(4.24794e-06, 0, -2.45754, 0, 2.45754, 0, 2.45754, 0, 4.24794e-06, -16.3302, -1.14166, 1293.65)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_077" parent="Node3D2/LV11" index="53"]
+transform = Transform3D(4.24794e-06, 0, -2.45754, 0, 2.45754, 0, 2.45754, 0, 4.24794e-06, -16.3302, -1.14166, 1262.47)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_604" parent="Node3D2/LV11" index="54"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, -1.86441, 1256.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_605" parent="Node3D2/LV11" index="55"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, -1.86441, 1256.61)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_606" parent="Node3D2/LV11" index="56"]
+transform = Transform3D(0, -1.2478e-06, -2.20363, 2.20348, 0.0259708, -1.47058e-08, 0.0259708, -2.20348, 1.24771e-06, 5.76155, -1.56597, 1253.47)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_607" parent="Node3D2/LV11" index="57"]
+transform = Transform3D(0, -1.2478e-06, -2.20363, 2.20348, 0.0259708, -1.47058e-08, 0.0259708, -2.20348, 1.24771e-06, 5.76155, -1.90081, 1253.47)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_608" parent="Node3D2/LV11" index="58"]
+transform = Transform3D(0, -1.2478e-06, -2.20363, 2.20348, 0.0259708, -1.47058e-08, 0.0259708, -2.20348, 1.24771e-06, 5.76155, -2.21116, 1253.47)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1402" parent="Node3D2/LV11" index="59"]
+transform = Transform3D(0, -1.2478e-06, -2.20363, 2.20348, 0.0259708, -1.47058e-08, 0.0259708, -2.20348, 1.24771e-06, 5.76155, -1.56597, 1252.26)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1403" parent="Node3D2/LV11" index="60"]
+transform = Transform3D(0, -1.2478e-06, -2.20363, 2.20348, 0.0259708, -1.47058e-08, 0.0259708, -2.20348, 1.24771e-06, 5.76155, -1.90081, 1252.26)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1404" parent="Node3D2/LV11" index="61"]
+transform = Transform3D(0, -1.2478e-06, -2.20363, 2.20348, 0.0259708, -1.47058e-08, 0.0259708, -2.20348, 1.24771e-06, 5.76155, -2.21116, 1252.26)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1405" parent="Node3D2/LV11" index="62"]
+transform = Transform3D(3.02098e-06, -2.2329e-06, -2.20363, 1.29575, 1.78242, -2.9738e-08, 1.78242, -1.29575, 3.75649e-06, 5.78826, -1.84815, 1250.89)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1406" parent="Node3D2/LV11" index="63"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, -0.403902, 1252.54)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1407" parent="Node3D2/LV11" index="64"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, -0.403902, 1252.16)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1408" parent="Node3D2/LV11" index="65"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, -0.403902, 1251.79)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1409" parent="Node3D2/LV11" index="66"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, -0.403902, 1251.42)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1410" parent="Node3D2/LV11" index="67"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, -0.403902, 1251.03)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1411" parent="Node3D2/LV11" index="68"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, -0.403902, 1250.65)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1412" parent="Node3D2/LV11" index="69"]
+transform = Transform3D(0, -1.2478e-06, -2.20363, 2.20348, 0.0259708, -1.47058e-08, 0.0259708, -2.20348, 1.24771e-06, 5.76155, -0.123954, 1256.89)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1413" parent="Node3D2/LV11" index="70"]
+transform = Transform3D(0, -1.2478e-06, -2.20363, 2.20348, 0.0259708, -1.47058e-08, 0.0259708, -2.20348, 1.24771e-06, 5.76155, -0.458798, 1256.89)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1414" parent="Node3D2/LV11" index="71"]
+transform = Transform3D(0, -1.2478e-06, -2.20363, 2.20348, 0.0259708, -1.47058e-08, 0.0259708, -2.20348, 1.24771e-06, 5.76155, -0.769143, 1256.89)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1415" parent="Node3D2/LV11" index="72"]
+transform = Transform3D(2.36424e-06, -2.29857e-06, -2.20363, 1.43743, 1.67027, -2.00028e-07, 1.67027, -1.43743, 3.29136e-06, 5.78826, 1.01339, 1255.49)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1416" parent="Node3D2/LV11" index="73"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, 1.10245, 1254.85)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1417" parent="Node3D2/LV11" index="74"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, 1.10245, 1254.47)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1418" parent="Node3D2/LV11" index="75"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, 1.10245, 1254.08)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1419" parent="Node3D2/LV11" index="76"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, 1.10245, 1253.7)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1420" parent="Node3D2/LV11" index="77"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, 1.10245, 1253.31)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1421" parent="Node3D2/LV11" index="78"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, 1.10245, 1252.93)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1422" parent="Node3D2/LV11" index="79"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, 1.10245, 1252.54)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1423" parent="Node3D2/LV11" index="80"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, 1.10245, 1252.16)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1424" parent="Node3D2/LV11" index="81"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, 1.10245, 1251.79)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1425" parent="Node3D2/LV11" index="82"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, 1.10245, 1251.42)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1426" parent="Node3D2/LV11" index="83"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, 1.10245, 1251.03)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1427" parent="Node3D2/LV11" index="84"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, 1.10245, 1250.65)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1428" parent="Node3D2/LV11" index="85"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, 2.57846, 1251.79)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1429" parent="Node3D2/LV11" index="86"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, 2.57846, 1251.42)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1430" parent="Node3D2/LV11" index="87"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, 2.57846, 1251.03)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1431" parent="Node3D2/LV11" index="88"]
+transform = Transform3D(3.80906e-06, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, 3.80906e-06, 5.78826, 2.57846, 1250.65)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1432" parent="Node3D2/LV11" index="89"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, -1.86441, 1302.03)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1433" parent="Node3D2/LV11" index="90"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, -1.86441, 1302.4)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1434" parent="Node3D2/LV11" index="91"]
+transform = Transform3D(1.11022e-16, 1.83886e-06, 2.20363, 2.20348, 0.0259707, -2.16716e-08, -0.0259707, 2.20348, -1.83873e-06, 2.1845, -1.56597, 1305.54)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1435" parent="Node3D2/LV11" index="92"]
+transform = Transform3D(1.11022e-16, 1.83886e-06, 2.20363, 2.20348, 0.0259707, -2.16716e-08, -0.0259707, 2.20348, -1.83873e-06, 2.1845, -1.90081, 1305.54)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1436" parent="Node3D2/LV11" index="93"]
+transform = Transform3D(1.11022e-16, 1.83886e-06, 2.20363, 2.20348, 0.0259707, -2.16716e-08, -0.0259707, 2.20348, -1.83873e-06, 2.1845, -2.21116, 1305.54)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1437" parent="Node3D2/LV11" index="94"]
+transform = Transform3D(1.11022e-16, 1.83886e-06, 2.20363, 2.20348, 0.0259707, -2.16716e-08, -0.0259707, 2.20348, -1.83873e-06, 2.1845, -1.56597, 1306.75)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1438" parent="Node3D2/LV11" index="95"]
+transform = Transform3D(1.11022e-16, 1.83886e-06, 2.20363, 2.20348, 0.0259707, -2.16716e-08, -0.0259707, 2.20348, -1.83873e-06, 2.1845, -1.90081, 1306.75)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1439" parent="Node3D2/LV11" index="96"]
+transform = Transform3D(1.11022e-16, 1.83886e-06, 2.20363, 2.20348, 0.0259707, -2.16716e-08, -0.0259707, 2.20348, -1.83873e-06, 2.1845, -2.21116, 1306.75)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1440" parent="Node3D2/LV11" index="97"]
+transform = Transform3D(-7.88081e-07, 5.25387e-07, 2.20363, 1.29575, 1.78242, 3.84339e-08, -1.78242, 1.29575, -9.46375e-07, 2.1578, -1.84815, 1308.12)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1441" parent="Node3D2/LV11" index="98"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, -0.403902, 1306.47)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1442" parent="Node3D2/LV11" index="99"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, -0.403902, 1306.85)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1443" parent="Node3D2/LV11" index="100"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, -0.403902, 1307.22)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1444" parent="Node3D2/LV11" index="101"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, -0.403902, 1307.59)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1445" parent="Node3D2/LV11" index="102"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, -0.403902, 1307.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1446" parent="Node3D2/LV11" index="103"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, -0.403902, 1308.36)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1447" parent="Node3D2/LV11" index="104"]
+transform = Transform3D(1.11022e-16, 1.83886e-06, 2.20363, 2.20348, 0.0259707, -2.16716e-08, -0.0259707, 2.20348, -1.83873e-06, 2.1845, -0.123954, 1302.12)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1448" parent="Node3D2/LV11" index="105"]
+transform = Transform3D(1.11022e-16, 1.83886e-06, 2.20363, 2.20348, 0.0259707, -2.16716e-08, -0.0259707, 2.20348, -1.83873e-06, 2.1845, -0.458798, 1302.12)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1449" parent="Node3D2/LV11" index="106"]
+transform = Transform3D(1.11022e-16, 1.83886e-06, 2.20363, 2.20348, 0.0259707, -2.16716e-08, -0.0259707, 2.20348, -1.83873e-06, 2.1845, -0.769143, 1302.12)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1450" parent="Node3D2/LV11" index="107"]
+transform = Transform3D(-5.25387e-07, 4.59714e-07, 2.20363, 1.43743, 1.67027, -5.7346e-09, -1.67027, 1.43743, -6.98094e-07, 2.1578, 1.01339, 1303.52)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1451" parent="Node3D2/LV11" index="108"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, 1.10245, 1304.17)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1452" parent="Node3D2/LV11" index="109"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, 1.10245, 1304.54)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1453" parent="Node3D2/LV11" index="110"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, 1.10245, 1304.93)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1454" parent="Node3D2/LV11" index="111"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, 1.10245, 1305.31)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1455" parent="Node3D2/LV11" index="112"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, 1.10245, 1305.7)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1456" parent="Node3D2/LV11" index="113"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, 1.10245, 1306.08)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1457" parent="Node3D2/LV11" index="114"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, 1.10245, 1306.47)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1458" parent="Node3D2/LV11" index="115"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, 1.10245, 1306.85)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1459" parent="Node3D2/LV11" index="116"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, 1.10245, 1307.22)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1460" parent="Node3D2/LV11" index="117"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, 1.10245, 1307.59)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1461" parent="Node3D2/LV11" index="118"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, 1.10245, 1307.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1462" parent="Node3D2/LV11" index="119"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, 1.10245, 1308.36)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1463" parent="Node3D2/LV11" index="120"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, 2.57846, 1307.22)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1464" parent="Node3D2/LV11" index="121"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, 2.57846, 1307.59)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1465" parent="Node3D2/LV11" index="122"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, 2.57846, 1307.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1466" parent="Node3D2/LV11" index="123"]
+transform = Transform3D(-7.88081e-07, 0, 2.20363, 0, 2.20363, 0, -2.20363, 0, -7.88081e-07, 2.1578, 2.57846, 1308.36)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book Stack_033" parent="Node3D2/LV11" index="124"]
+transform = Transform3D(3.12002e-06, 1.82001e-06, -2.18105, -1.10759, 1.87889, -1.65431e-08, 1.87889, 1.10759, 3.61202e-06, 5.68124, 2.57841, 1256.34)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book Stack_034" parent="Node3D2/LV11" index="125"]
+transform = Transform3D(-1.04001e-06, -3.90002e-07, 2.18105, -1.10759, 1.87889, -1.92166e-07, -1.87889, -1.10759, -1.09398e-06, 2.26481, 2.57841, 1302.67)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_229" parent="Node3D2/LV11" index="126"]
+transform = Transform3D(-3.57628e-07, 0, 1, 0, 1, 0, -1, 0, -3.57628e-07, -247.139, -0.236969, 1294.49)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_078" parent="Node3D2/LV11" index="127"]
+transform = Transform3D(-8.78884e-07, 0, 2.45754, 0, 2.45754, 0, -2.45754, 0, -8.78884e-07, 25.428, -1.14166, 1319.43)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Shelf_035" parent="Node3D2/LV11" index="128"]
+transform = Transform3D(2.14252, 0, -7.10543e-15, 0, 2.14252, 0, 7.10543e-15, 0, 2.14252, 7.75303, -2.18607, 1349.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_066" parent="Node3D2/LV11" index="129"]
+transform = Transform3D(-5.83653e-07, 0, 1.63201, 0, 1.63201, 0, -1.63201, 0, -5.83653e-07, 26.7362, -0.920887, 1319.22)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_087" parent="Node3D2/LV11" index="130"]
+transform = Transform3D(-8.78884e-07, 0, 2.45754, 0, 2.45754, 0, -2.45754, 0, -8.78884e-07, 25.428, -1.14166, 1329.43)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_074" parent="Node3D2/LV11" index="131"]
+transform = Transform3D(-5.83653e-07, 0, 1.63201, 0, 1.63201, 0, -1.63201, 0, -5.83653e-07, 26.7362, -0.920887, 1329.22)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_088" parent="Node3D2/LV11" index="132"]
+transform = Transform3D(-8.78884e-07, 0, 2.45754, 0, 2.45754, 0, -2.45754, 0, -8.78884e-07, 25.428, -1.14166, 1339.43)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_075" parent="Node3D2/LV11" index="133"]
+transform = Transform3D(-5.83653e-07, 0, 1.63201, 0, 1.63201, 0, -1.63201, 0, -5.83653e-07, 26.7362, -0.920887, 1339.22)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Window Cross_024" parent="Node3D2/LV11" index="134"]
+transform = Transform3D(1.5175, 0, -7.10543e-15, 0, 1.5175, 0, 7.10543e-15, 0, 1.53623, -1.20964, 2.0244, 1349.47)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_253" parent="Node3D2/LV11" index="135"]
+transform = Transform3D(20, 0, 0, 0, 4, 0, 5.68434e-14, 0, 0.2, -0.877495, 1.48147, 1349.33)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Computer_073" parent="Node3D2/LV11" index="136"]
+transform = Transform3D(-6.2622e-07, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -6.2622e-07, 27.2973, 1.19254, 1319.41)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Keyboard_073" parent="Node3D2/LV11" index="137"]
+transform = Transform3D(-6.2622e-07, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -6.2622e-07, 25.7838, 0.420048, 1319.95)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Computer_074" parent="Node3D2/LV11" index="138"]
+transform = Transform3D(-6.2622e-07, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -6.2622e-07, 27.2973, 1.19254, 1329.51)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Keyboard_074" parent="Node3D2/LV11" index="139"]
+transform = Transform3D(-6.2622e-07, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -6.2622e-07, 25.7838, 0.420048, 1330.05)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Computer_075" parent="Node3D2/LV11" index="140"]
+transform = Transform3D(-6.2622e-07, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -6.2622e-07, 27.2973, 1.19254, 1339.45)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Keyboard_075" parent="Node3D2/LV11" index="141"]
+transform = Transform3D(-6.2622e-07, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -6.2622e-07, 25.7838, 0.420048, 1339.99)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book Stack_035" parent="Node3D2/LV11" index="142"]
+transform = Transform3D(1.87889, 1.10759, -7.10543e-15, -1.10759, 1.87889, 0, 7.10543e-15, 3.55271e-15, 2.18105, 9.95917, 2.57841, 1348.03)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1467" parent="Node3D2/LV11" index="143"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 4.2674, 2.57846, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1468" parent="Node3D2/LV11" index="144"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 4.64466, 2.57846, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1469" parent="Node3D2/LV11" index="145"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 5.03369, 2.57846, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1470" parent="Node3D2/LV11" index="146"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 5.41098, 2.57846, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1471" parent="Node3D2/LV11" index="147"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 4.2674, 1.10245, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1472" parent="Node3D2/LV11" index="148"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 4.64466, 1.10245, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1473" parent="Node3D2/LV11" index="149"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 5.03369, 1.10245, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1474" parent="Node3D2/LV11" index="150"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 5.41098, 1.10245, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1475" parent="Node3D2/LV11" index="151"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 5.78046, 1.10245, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1476" parent="Node3D2/LV11" index="152"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 6.15772, 1.10245, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1477" parent="Node3D2/LV11" index="153"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 6.54679, 1.10245, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1478" parent="Node3D2/LV11" index="154"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 7.3191, 1.10245, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1479" parent="Node3D2/LV11" index="155"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 7.69635, 1.10245, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1480" parent="Node3D2/LV11" index="156"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 8.08542, 1.10245, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1481" parent="Node3D2/LV11" index="157"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 8.46268, 1.10245, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1482" parent="Node3D2/LV11" index="158"]
+transform = Transform3D(1.67027, -1.43743, -7.10543e-15, 1.43743, 1.67027, 0, 0, 0, 2.20363, 9.10733, 1.01339, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1483" parent="Node3D2/LV11" index="159"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, 10.5045, -0.769143, 1347.95)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1484" parent="Node3D2/LV11" index="160"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, 10.5045, -0.458798, 1347.95)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1485" parent="Node3D2/LV11" index="161"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, 10.5045, -0.123954, 1347.95)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1486" parent="Node3D2/LV11" index="162"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 4.2674, -0.403902, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1487" parent="Node3D2/LV11" index="163"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 4.64466, -0.403902, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1488" parent="Node3D2/LV11" index="164"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 5.03369, -0.403902, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1489" parent="Node3D2/LV11" index="165"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 5.41098, -0.403902, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1490" parent="Node3D2/LV11" index="166"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 5.78046, -0.403902, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1491" parent="Node3D2/LV11" index="167"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 6.15772, -0.403902, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1492" parent="Node3D2/LV11" index="168"]
+transform = Transform3D(1.78242, -1.29575, -7.10543e-15, 1.29575, 1.78242, 0, 7.10543e-15, 0, 2.20363, 4.50772, -1.84815, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1493" parent="Node3D2/LV11" index="169"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, 5.87564, -2.21116, 1347.95)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1494" parent="Node3D2/LV11" index="170"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, 5.87564, -1.90081, 1347.95)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1495" parent="Node3D2/LV11" index="171"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, 5.87564, -1.56597, 1347.95)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1496" parent="Node3D2/LV11" index="172"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, 7.08857, -2.21116, 1347.95)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1497" parent="Node3D2/LV11" index="173"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, 7.08857, -1.90081, 1347.95)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1498" parent="Node3D2/LV11" index="174"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, 7.08857, -1.56597, 1347.95)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1499" parent="Node3D2/LV11" index="175"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 10.2256, -1.86441, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1500" parent="Node3D2/LV11" index="176"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 10.5951, -1.86441, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1501" parent="Node3D2/LV11" index="177"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, 10.9724, -1.86441, 1347.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Shelf_038" parent="Node3D2/LV11" index="178"]
+transform = Transform3D(2.14252, 0, -7.10543e-15, 0, 2.14252, 0, 7.10543e-15, 0, 2.14252, -9.54053, -2.18607, 1349.18)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book Stack_036" parent="Node3D2/LV11" index="179"]
+transform = Transform3D(1.87889, 1.10759, -7.10543e-15, -1.10759, 1.87889, 0, 7.10543e-15, 3.55271e-15, 2.18105, -12.8061, 2.57841, 1348.19)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1502" parent="Node3D2/LV11" index="180"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -7.43353, 2.57846, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1503" parent="Node3D2/LV11" index="181"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -7.05627, 2.57846, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1504" parent="Node3D2/LV11" index="182"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -6.66721, 2.57846, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1505" parent="Node3D2/LV11" index="183"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -6.28996, 2.57846, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1506" parent="Node3D2/LV11" index="184"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -13.0262, 1.10245, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1507" parent="Node3D2/LV11" index="185"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -12.6489, 1.10245, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1508" parent="Node3D2/LV11" index="186"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -12.2599, 1.10245, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1509" parent="Node3D2/LV11" index="187"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -11.8826, 1.10245, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1510" parent="Node3D2/LV11" index="188"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -11.5131, 1.10245, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1511" parent="Node3D2/LV11" index="189"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -11.1358, 1.10245, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1512" parent="Node3D2/LV11" index="190"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -10.7468, 1.10245, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1513" parent="Node3D2/LV11" index="191"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -10.3695, 1.10245, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1514" parent="Node3D2/LV11" index="192"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -9.97448, 1.10245, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1515" parent="Node3D2/LV11" index="193"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -10.7299, -0.403775, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1516" parent="Node3D2/LV11" index="194"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -10.3408, -0.403775, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1517" parent="Node3D2/LV11" index="195"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -9.96357, -0.403775, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1518" parent="Node3D2/LV11" index="196"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, -8.97808, 0.691168, 1348.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1519" parent="Node3D2/LV11" index="197"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, -8.97808, 1.00151, 1348.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1520" parent="Node3D2/LV11" index="198"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, -8.97808, 1.33636, 1348.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1521" parent="Node3D2/LV11" index="199"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -13.0262, -0.403902, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1522" parent="Node3D2/LV11" index="200"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -12.6489, -0.403902, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1523" parent="Node3D2/LV11" index="201"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -12.2599, -0.403902, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1524" parent="Node3D2/LV11" index="202"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -11.8826, -0.403902, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1525" parent="Node3D2/LV11" index="203"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -11.5131, -0.403902, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1526" parent="Node3D2/LV11" index="204"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -11.1358, -0.403902, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1527" parent="Node3D2/LV11" index="205"]
+transform = Transform3D(1.95984, 1.00749, -7.10543e-15, -1.00749, 1.95984, 0, -7.10543e-15, 7.10543e-15, 2.20363, -6.5046, -0.373734, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1528" parent="Node3D2/LV11" index="206"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, -12.6001, -2.21116, 1348.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1529" parent="Node3D2/LV11" index="207"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, -12.6001, -1.90081, 1348.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1530" parent="Node3D2/LV11" index="208"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, -12.6001, -1.56597, 1348.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1531" parent="Node3D2/LV11" index="209"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, -7.84032, -2.21116, 1348.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1532" parent="Node3D2/LV11" index="210"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, -7.84032, -1.90081, 1348.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1533" parent="Node3D2/LV11" index="211"]
+transform = Transform3D(0.0259708, -2.20348, -7.10543e-15, 2.20348, 0.0259708, 0, 1.11022e-16, -7.10543e-15, 2.20363, -7.84032, -1.56597, 1348.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1534" parent="Node3D2/LV11" index="212"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -7.06797, -1.86441, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1535" parent="Node3D2/LV11" index="213"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -6.69848, -1.86441, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1536" parent="Node3D2/LV11" index="214"]
+transform = Transform3D(2.20363, 0, -7.10543e-15, 0, 2.20363, 0, 7.10543e-15, 0, 2.20363, -6.32122, -1.86441, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1537" parent="Node3D2/LV11" index="215"]
+transform = Transform3D(1.78242, -1.29575, -7.10543e-15, 1.29575, 1.78242, 0, 7.10543e-15, 0, 2.20363, -11.5881, -1.88239, 1348.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_138" parent="Node3D2/LV11" index="216"]
+transform = Transform3D(19.963, 0, 0, 0, 0.577987, 0, 5.68434e-14, 0, 0.151638, -0.583324, -2.00869, 1349.43)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_140" parent="Node3D2/LV11" index="217"]
+transform = Transform3D(-6.60834, 0, -1.48229e-07, 0, 0.577987, 0, 6.45981e-06, 0, -0.151638, 5.36004, -2.33444, 1289.71)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_141" parent="Node3D2/LV11" index="218"]
+transform = Transform3D(-6.60834, 0, -1.48229e-07, 0, 0.577987, 0, 6.45981e-06, 0, -0.151638, 5.36004, -2.33444, 1289.39)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_142" parent="Node3D2/LV11" index="219"]
+transform = Transform3D(-6.07092, 0, -1.48229e-07, 0, 0.577987, 0, 5.93447e-06, 0, -0.151638, 22.7208, -2.33444, 1309.62)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_143" parent="Node3D2/LV11" index="220"]
+transform = Transform3D(-6.07092, 0, -1.48229e-07, 0, 0.577987, 0, 5.93447e-06, 0, -0.151638, 22.7208, -2.33444, 1309.27)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_255" parent="Node3D2/LV11" index="221"]
+transform = Transform3D(-15, 0, -1.95505e-07, 0, 4, 0, 1.46629e-05, 0, -0.2, 13.7282, 1.45963, 1309.45)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Door Frame_027" parent="Node3D2/LV11" index="222"]
+transform = Transform3D(2.16722, 0, 0, 0, 2.16722, 0, 0, 0, 2.16722, 13.9663, 1.57888, 1309.38)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_256" parent="Node3D2/LV11" index="223"]
+transform = Transform3D(-4.88616e-05, 0, -2.41106, 0, 2.41106, 0, 2.41106, 0, -4.88616e-05, 4.75449, 1.45935, 1277.16)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_257" parent="Node3D2/LV11" index="224"]
+transform = Transform3D(-4.88616e-05, 0, -2.41106, 0, 2.41106, 0, 2.41106, 0, -4.88616e-05, 4.75449, -1.37386, 1277.16)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_258" parent="Node3D2/LV11" index="225"]
+transform = Transform3D(-4.88616e-05, 0, -2.41106, 0, 2.41106, 0, 2.41106, 0, -4.88616e-05, 4.75449, 1.45935, 1281.3)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_259" parent="Node3D2/LV11" index="226"]
+transform = Transform3D(-4.88616e-05, 0, -2.41106, 0, 2.41106, 0, 2.41106, 0, -4.88616e-05, 4.75449, -1.37386, 1281.3)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_089" parent="Node3D2/LV11" index="227"]
+transform = Transform3D(-2.45754, 0, -4.00384e-06, 0, 2.45754, 0, 4.00384e-06, 0, -2.45754, 22.3003, -1.57249, 1253.85)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_076" parent="Node3D2/LV11" index="228"]
+transform = Transform3D(-1.63201, 0, -2.65888e-06, 0, 1.63201, 0, 2.65888e-06, 0, -1.63201, 22.0884, -1.35172, 1252.55)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1538" parent="Node3D2/LV11" index="229"]
+transform = Transform3D(2.62694e-07, -7.88081e-07, 2.20363, -2.20363, -9.39466e-14, 2.62694e-07, 8.47033e-22, -2.20363, -7.88081e-07, 19.2428, -0.0224257, 1251.72)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1539" parent="Node3D2/LV11" index="230"]
+transform = Transform3D(2.62694e-07, -7.88081e-07, 2.20363, -2.20363, -9.39466e-14, 2.62694e-07, 8.47033e-22, -2.20363, -7.88081e-07, 19.2428, 0.309492, 1251.72)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1540" parent="Node3D2/LV11" index="231"]
+transform = Transform3D(2.62694e-07, -7.88081e-07, 2.20363, -2.20363, -9.39466e-14, 2.62694e-07, 8.47033e-22, -2.20363, -7.88081e-07, 19.2428, 0.61035, 1251.72)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1541" parent="Node3D2/LV11" index="232"]
+transform = Transform3D(-0.0140021, 1.18804, 1.8559, 2.20348, 0.0259705, -3.2118e-07, -0.0218725, 1.85577, -1.18812, 20.871, 0.00886822, 1252.93)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1542" parent="Node3D2/LV11" index="233"]
+transform = Transform3D(0.0116654, -0.989751, 1.96882, 2.20348, 0.0259706, -7.61817e-08, -0.0232032, 1.96869, 0.98982, 25.3418, -0.0248384, 1251.72)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1543" parent="Node3D2/LV11" index="234"]
+transform = Transform3D(0.0116654, -0.989751, 1.96882, 2.20348, 0.0259706, -7.61817e-08, -0.0232032, 1.96869, 0.98982, 25.3418, 0.261859, 1251.72)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1544" parent="Node3D2/LV11" index="235"]
+transform = Transform3D(0.00756794, 0.993009, -1.9672, 2.20286, 0.0481469, 0.0327783, 0.0577518, -1.96663, -0.992497, 23.1894, -0.00138474, 1252.76)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_090" parent="Node3D2/LV11" index="236"]
+transform = Transform3D(-4.98034e-06, 0, 2.45754, 0, 2.45754, 0, -2.45754, 0, -4.98034e-06, 25.2859, -1.57249, 1262.17)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_077" parent="Node3D2/LV11" index="237"]
+transform = Transform3D(-3.30736e-06, 0, 1.63201, 0, 1.63201, 0, -1.63201, 0, -3.30736e-06, 26.5941, -1.35172, 1261.96)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1545" parent="Node3D2/LV11" index="238"]
+transform = Transform3D(0, 2.20363, -7.10543e-15, -2.20363, 0, 0, 0, 7.10543e-15, 2.20363, 27.4232, -0.0224257, 1259.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1546" parent="Node3D2/LV11" index="239"]
+transform = Transform3D(0, 2.20363, -7.10543e-15, -2.20363, 0, 0, 0, 7.10543e-15, 2.20363, 27.4232, 0.309492, 1259.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1547" parent="Node3D2/LV11" index="240"]
+transform = Transform3D(0, 2.20363, -7.10543e-15, -2.20363, 0, 0, 0, 7.10543e-15, 2.20363, 27.4232, 0.61035, 1259.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1548" parent="Node3D2/LV11" index="241"]
+transform = Transform3D(0.0218727, -1.85577, 1.18812, 2.20348, 0.0259708, -5.95215e-08, -0.0140025, 1.18804, 1.8559, 27.0347, 0.00886822, 1264.72)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1549" parent="Node3D2/LV11" index="242"]
+transform = Transform3D(0.0232032, -1.96868, -0.989821, 2.20348, 0.0259706, -9.03038e-08, 0.0116655, -0.989753, 1.96882, 27.4163, -0.0248384, 1261.8)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1550" parent="Node3D2/LV11" index="243"]
+transform = Transform3D(0.0232032, -1.96868, -0.989821, 2.20348, 0.0259706, -9.03038e-08, 0.0116655, -0.989753, 1.96882, 27.4163, 0.261859, 1261.8)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1551" parent="Node3D2/LV11" index="244"]
+transform = Transform3D(-0.0577516, 1.96663, 0.992497, 2.20286, 0.0481467, 0.0327784, 0.00756811, 0.993009, -1.9672, 26.3778, -0.00138474, 1263.06)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_091" parent="Node3D2/LV11" index="245"]
+transform = Transform3D(-4.98034e-06, 0, 2.45754, 0, 2.45754, 0, -2.45754, 0, -4.98034e-06, 25.2859, -1.57249, 1274.26)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_078" parent="Node3D2/LV11" index="246"]
+transform = Transform3D(-3.30736e-06, 0, 1.63201, 0, 1.63201, 0, -1.63201, 0, -3.30736e-06, 26.5941, -1.35172, 1274.04)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1552" parent="Node3D2/LV11" index="247"]
+transform = Transform3D(0, 2.20363, -7.10543e-15, -2.20363, 0, 0, 0, 7.10543e-15, 2.20363, 27.4232, -0.0224257, 1276.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1553" parent="Node3D2/LV11" index="248"]
+transform = Transform3D(0, 2.20363, -7.10543e-15, -2.20363, 0, 0, 0, 7.10543e-15, 2.20363, 27.4232, 0.309492, 1276.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1554" parent="Node3D2/LV11" index="249"]
+transform = Transform3D(0, 2.20363, -7.10543e-15, -2.20363, 0, 0, 0, 7.10543e-15, 2.20363, 27.4232, 0.61035, 1276.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1555" parent="Node3D2/LV11" index="250"]
+transform = Transform3D(0.0242552, -2.05792, -0.787653, 2.20348, 0.0259708, 1.07649e-08, 0.00928284, -0.787598, 2.05806, 26.2115, 0.00886822, 1272.83)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1556" parent="Node3D2/LV11" index="251"]
+transform = Transform3D(-0.0577516, 1.96663, 0.992497, 2.20286, 0.0481467, 0.0327784, 0.00756811, 0.993009, -1.9672, 26.3778, -0.00138474, 1275.14)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_092" parent="Node3D2/LV11" index="252"]
+transform = Transform3D(-1.75777e-06, 0, 2.45754, 0, 2.45754, 0, -2.45754, 0, -1.75777e-06, -0.448227, -1.49009, 1314.4)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_079" parent="Node3D2/LV11" index="253"]
+transform = Transform3D(-1.1673e-06, 0, 1.63201, 0, 1.63201, 0, -1.63201, 0, -1.1673e-06, 0.85994, -1.26932, 1314.18)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Computer_076" parent="Node3D2/LV11" index="254"]
+transform = Transform3D(-1.25244e-06, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -1.25244e-06, 1.42104, 0.844106, 1314.38)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Keyboard_076" parent="Node3D2/LV11" index="255"]
+transform = Transform3D(-1.25244e-06, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -1.25244e-06, -0.092423, 0.0716162, 1314.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_093" parent="Node3D2/LV11" index="256"]
+transform = Transform3D(-7.10543e-15, 0, -2.45754, 0, 2.45754, 0, 2.45754, 0, -7.10543e-15, -16.6244, -1.58076, 1314.38)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_080" parent="Node3D2/LV11" index="257"]
+transform = Transform3D(-7.10543e-15, 0, -1.63201, 0, 1.63201, 0, 1.63201, 0, -7.10543e-15, -17.9326, -1.35999, 1314.59)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Computer_077" parent="Node3D2/LV11" index="258"]
+transform = Transform3D(-7.10543e-15, 0, -1.75104, 0, 1.75104, 0, 1.75104, 0, -7.10543e-15, -18.4937, 0.753431, 1314.39)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Keyboard_077" parent="Node3D2/LV11" index="259"]
+transform = Transform3D(-7.10543e-15, 0, -1.75104, 0, 1.75104, 0, 1.75104, 0, -7.10543e-15, -16.9802, -0.0190592, 1313.85)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_260" parent="Node3D2/LV11" index="260"]
+transform = Transform3D(-3.26163e-06, 0, 1.60945, 0, 1.60945, 0, -1.60945, 0, -3.26163e-06, 2.16117, 1.82483, 1337.61)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_261" parent="Node3D2/LV11" index="261"]
+transform = Transform3D(2.78198e-06, 0, -1.60945, 0, 1.60945, 0, 1.60945, 0, 2.78198e-06, -66.7232, 1.82483, 1306.74)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_144" parent="Node3D2/LV11" index="262"]
+transform = Transform3D(1.14227e-05, 0, -0.151638, 0, 0.577987, 0, 6.60834, 0, 2.62111e-07, 3.36883, -2.33444, 1340.52)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_145" parent="Node3D2/LV11" index="263"]
+transform = Transform3D(1.04938e-05, 0, -0.151638, 0, 0.577987, 0, 6.07092, 0, 2.62111e-07, 3.36883, -2.33444, 1319.47)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Door Frame_028" parent="Node3D2/LV11" index="264"]
+transform = Transform3D(-4.39199e-06, 0, 2.16722, 0, 2.16722, 0, -2.16722, 0, -4.39199e-06, 3.44399, 1.57888, 1330.33)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_262" parent="Node3D2/LV11" index="265"]
+transform = Transform3D(2.5928e-05, 0, -0.2, 0, 4, 0, 15, 0, 3.45707e-07, 3.53124, 1.45963, 1330.53)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_263" parent="Node3D2/LV11" index="266"]
+transform = Transform3D(-15, 0, -1.95505e-07, 0, 4, 0, 1.46629e-05, 0, -0.2, -5.91989, 1.45963, 1289.6)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Door Frame_029" parent="Node3D2/LV11" index="267"]
+transform = Transform3D(2.16722, 0, 0, 0, 2.16722, 0, 0, 0, 2.16722, -5.68179, 1.57888, 1289.53)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_146" parent="Node3D2/LV11" index="268"]
+transform = Transform3D(-6.60834, 0, -1.48229e-07, 0, 0.577987, 0, 6.45981e-06, 0, -0.151638, -13.9352, -2.33444, 1289.74)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Window Cross_058" parent="Node3D2/LV11" index="269"]
+transform = Transform3D(2.10754, 0, -2.75695e-05, 0, 2.10754, 0, 2.75695e-05, 0, 2.10754, -58.4853, 2.52488, 1348.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Window Cross_059" parent="Node3D2/LV11" index="270"]
+transform = Transform3D(2.10754, 0, -2.75695e-05, 0, 2.10754, 0, 2.75695e-05, 0, 2.10754, -33.7717, 2.52488, 1348.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_152" parent="Node3D2/LV11" index="271"]
+transform = Transform3D(-2.05663e-05, 0, -0.129906, 0, 0.577987, 0, -15.002, 0, 1.78089e-07, -70.4927, -2.33444, 1264.61)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_153" parent="Node3D2/LV11" index="272"]
+transform = Transform3D(24.8456, 0, 0, 0, 0.577987, 0, 1.13687e-13, 0, 0.151638, -45.7284, -2.33444, 1349.21)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_158" parent="Node3D2/LV11" index="273"]
+transform = Transform3D(1.60954e-05, 0, 0.129906, 0, 0.577987, 0, 15.002, 0, -1.39374e-07, -70.5669, -2.44133, 1294.61)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_081" parent="Node3D2/LV11" index="274"]
+transform = Transform3D(-3.30736e-06, 0, 1.63201, 0, 1.63201, 0, -1.63201, 0, -3.30736e-06, -24.2528, -0.920887, 1295.55)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_082" parent="Node3D2/LV11" index="275"]
+transform = Transform3D(-3.30736e-06, 0, 1.63201, 0, 1.63201, 0, -1.63201, 0, -3.30736e-06, -24.2528, -0.920887, 1305.16)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_083" parent="Node3D2/LV11" index="276"]
+transform = Transform3D(-3.30736e-06, 0, 1.63201, 0, 1.63201, 0, -1.63201, 0, -3.30736e-06, -24.2528, -0.920887, 1314.49)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Shelf_040" parent="Node3D2/LV11" index="277"]
+transform = Transform3D(-2.14252, 0, -2.09437e-06, 0, 2.14252, 0, 2.09437e-06, 0, -2.14252, -46.4516, -2.18607, 1289.91)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Keyboard_078" parent="Node3D2/LV11" index="278"]
+transform = Transform3D(-3.54858e-06, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -3.54858e-06, -25.2052, 0.420048, 1296.29)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Keyboard_079" parent="Node3D2/LV11" index="279"]
+transform = Transform3D(-3.54858e-06, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -3.54858e-06, -25.2052, 0.420048, 1305.9)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Keyboard_080" parent="Node3D2/LV11" index="280"]
+transform = Transform3D(-3.54858e-06, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -3.54858e-06, -25.2052, 0.420048, 1315.22)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_264" parent="Node3D2/LV11" index="281"]
+transform = Transform3D(2.41106, 0, -3.154e-05, 0, 2.41106, 0, 3.154e-05, 0, 2.41106, -43.9273, -1.37386, 1348.05)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_265" parent="Node3D2/LV11" index="282"]
+transform = Transform3D(2.41106, 0, -3.154e-05, 0, 2.41106, 0, 3.154e-05, 0, 2.41106, -39.7884, 1.45935, 1348.05)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_266" parent="Node3D2/LV11" index="283"]
+transform = Transform3D(2.41106, 0, -3.154e-05, 0, 2.41106, 0, 3.154e-05, 0, 2.41106, -39.7884, -1.37386, 1348.05)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_267" parent="Node3D2/LV11" index="284"]
+transform = Transform3D(2.41106, 0, -3.154e-05, 0, 2.41106, 0, 3.154e-05, 0, 2.41106, -27.0953, 1.45935, 1348.05)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_268" parent="Node3D2/LV11" index="285"]
+transform = Transform3D(2.41106, 0, -3.154e-05, 0, 2.41106, 0, 3.154e-05, 0, 2.41106, -27.0953, -1.37386, 1348.05)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_269" parent="Node3D2/LV11" index="286"]
+transform = Transform3D(2.41106, 0, -3.154e-05, 0, 2.41106, 0, 3.154e-05, 0, 2.41106, -22.9564, 1.45935, 1348.05)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_270" parent="Node3D2/LV11" index="287"]
+transform = Transform3D(20, 0, -2.61627e-06, 0, 4, 0, 0.000261627, 0, 0.2, -58.1867, 1.48147, 1349.34)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_271" parent="Node3D2/LV11" index="288"]
+transform = Transform3D(2.41106, 0, -3.154e-05, 0, 2.41106, 0, 3.154e-05, 0, 2.41106, -22.9564, -1.37386, 1348.05)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_272" parent="Node3D2/LV11" index="289"]
+transform = Transform3D(20, 0, -2.61627e-06, 0, 4, 0, 0.000261627, 0, 0.2, -33.4732, 1.48147, 1349.34)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_273" parent="Node3D2/LV11" index="290"]
+transform = Transform3D(2.05636e-05, 0, -0.2, 0, 4, 0, 15, 0, 2.74181e-07, -70.6926, 1.45963, 1264.65)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_275" parent="Node3D2/LV11" index="291"]
+transform = Transform3D(-2.02656e-06, 0, 1, 0, 1, 0, -1, 0, -2.02656e-06, -138.974, -0.236969, 1334.5)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_283" parent="Node3D2/LV11" index="292"]
+transform = Transform3D(-1.60933e-05, 0, 0.2, 0, 4, 0, -15, 0, -2.14577e-07, -70.6861, 1.45963, 1294.54)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_285" parent="Node3D2/LV11" index="293"]
+transform = Transform3D(5.96046e-07, 0, -1, 0, 1, 0, 1, 0, 5.96046e-07, 47.2461, -0.236969, 1304.54)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Couch_031" parent="Node3D2/LV11" index="294"]
+transform = Transform3D(-2.31593, 0, -3.07374e-06, 0, 2.31593, 0, 3.07374e-06, 0, -2.31593, -21.1096, -1.25467, 1333.06)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Couch_032" parent="Node3D2/LV11" index="295"]
+transform = Transform3D(2.31593, 0, 0, 0, 2.31593, 0, 0, 0, 2.31593, -21.1096, -1.25467, 1329.54)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Couch_033" parent="Node3D2/LV11" index="296"]
+transform = Transform3D(3.17492e-06, 0, -2.31593, 0, 2.31593, 0, 2.31593, 0, 3.17492e-06, -67.8174, -1.25467, 1300.3)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Couch_034" parent="Node3D2/LV11" index="297"]
+transform = Transform3D(3.17492e-06, 0, -2.31593, 0, 2.31593, 0, 2.31593, 0, 3.17492e-06, -67.8174, -1.25467, 1313.06)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Computer_078" parent="Node3D2/LV11" index="298"]
+transform = Transform3D(-3.54858e-06, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -3.54858e-06, -23.6917, 1.19254, 1295.75)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Computer_079" parent="Node3D2/LV11" index="299"]
+transform = Transform3D(-3.54858e-06, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -3.54858e-06, -23.6917, 1.19254, 1305.36)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Computer_080" parent="Node3D2/LV11" index="300"]
+transform = Transform3D(-3.54858e-06, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -3.54858e-06, -23.6917, 1.19254, 1314.68)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_094" parent="Node3D2/LV11" index="301"]
+transform = Transform3D(-4.98034e-06, 0, 2.45754, 0, 2.45754, 0, -2.45754, 0, -4.98034e-06, -25.561, -1.14166, 1295.76)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_095" parent="Node3D2/LV11" index="302"]
+transform = Transform3D(-4.98034e-06, 0, 2.45754, 0, 2.45754, 0, -2.45754, 0, -4.98034e-06, -25.561, -1.14166, 1305.37)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_096" parent="Node3D2/LV11" index="303"]
+transform = Transform3D(-4.98034e-06, 0, 2.45754, 0, 2.45754, 0, -2.45754, 0, -4.98034e-06, -25.561, -1.14166, 1314.7)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1592" parent="Node3D2/LV11" index="304"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -49.2936, -1.86441, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1593" parent="Node3D2/LV11" index="305"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -48.9241, -1.86441, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1594" parent="Node3D2/LV11" index="306"]
+transform = Transform3D(-0.0259709, 2.20348, -2.07048e-06, 2.20348, 0.0259709, 2.04622e-06, 2.07048e-06, -2.04622e-06, -2.20363, -45.7871, -1.56597, 1290.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1595" parent="Node3D2/LV11" index="307"]
+transform = Transform3D(-0.0259709, 2.20348, -2.07048e-06, 2.20348, 0.0259709, 2.04622e-06, 2.07048e-06, -2.04622e-06, -2.20363, -45.7871, -1.90081, 1290.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1596" parent="Node3D2/LV11" index="308"]
+transform = Transform3D(-0.0259709, 2.20348, -2.07048e-06, 2.20348, 0.0259709, 2.04622e-06, 2.07048e-06, -2.04622e-06, -2.20363, -45.7871, -2.21116, 1290.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1597" parent="Node3D2/LV11" index="309"]
+transform = Transform3D(-0.0259709, 2.20348, -2.07048e-06, 2.20348, 0.0259709, 2.04622e-06, 2.07048e-06, -2.04622e-06, -2.20363, -44.5742, -1.56597, 1290.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1598" parent="Node3D2/LV11" index="310"]
+transform = Transform3D(-0.0259709, 2.20348, -2.07048e-06, 2.20348, 0.0259709, 2.04622e-06, 2.07048e-06, -2.04622e-06, -2.20363, -44.5742, -1.90081, 1290.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1599" parent="Node3D2/LV11" index="311"]
+transform = Transform3D(-0.0259709, 2.20348, -2.07048e-06, 2.20348, 0.0259709, 2.04622e-06, 2.07048e-06, -2.04622e-06, -2.20363, -44.5742, -2.21116, 1290.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1600" parent="Node3D2/LV11" index="312"]
+transform = Transform3D(-1.78242, 1.29575, -1.97064e-06, 1.29575, 1.78242, 6.40596e-07, 1.97064e-06, -6.40596e-07, -2.20363, -43.2062, -1.84815, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1601" parent="Node3D2/LV11" index="313"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -44.8563, -0.403902, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1603" parent="Node3D2/LV11" index="314"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -44.1096, -0.403902, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1604" parent="Node3D2/LV11" index="315"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -43.7323, -0.403902, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1605" parent="Node3D2/LV11" index="316"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -43.3432, -0.403902, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1606" parent="Node3D2/LV11" index="317"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -42.966, -0.403902, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1607" parent="Node3D2/LV11" index="318"]
+transform = Transform3D(-0.0259709, 2.20348, -2.07048e-06, 2.20348, 0.0259709, 2.04622e-06, 2.07048e-06, -2.04622e-06, -2.20363, -49.2031, -0.123954, 1290.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1608" parent="Node3D2/LV11" index="319"]
+transform = Transform3D(-0.0259709, 2.20348, -2.07048e-06, 2.20348, 0.0259709, 2.04622e-06, 2.07048e-06, -2.04622e-06, -2.20363, -49.2031, -0.458798, 1290.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1609" parent="Node3D2/LV11" index="320"]
+transform = Transform3D(-0.0259709, 2.20348, -2.07048e-06, 2.20348, 0.0259709, 2.04622e-06, 2.07048e-06, -2.04622e-06, -2.20363, -49.2031, -0.769143, 1290.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1610" parent="Node3D2/LV11" index="321"]
+transform = Transform3D(-1.67027, 1.43743, -1.92045e-06, 1.43743, 1.67027, 7.12594e-07, 1.92045e-06, -7.12594e-07, -2.20363, -47.8059, 1.01339, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1611" parent="Node3D2/LV11" index="322"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -47.1612, 1.10245, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1612" parent="Node3D2/LV11" index="323"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -46.784, 1.10245, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1613" parent="Node3D2/LV11" index="324"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -46.395, 1.10245, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1614" parent="Node3D2/LV11" index="325"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -46.0176, 1.10245, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1615" parent="Node3D2/LV11" index="326"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -45.6226, 1.10245, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1616" parent="Node3D2/LV11" index="327"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -45.2453, 1.10245, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1617" parent="Node3D2/LV11" index="328"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -44.8563, 1.10245, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1619" parent="Node3D2/LV11" index="329"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -44.1096, 1.10245, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1620" parent="Node3D2/LV11" index="330"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -43.7323, 1.10245, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1621" parent="Node3D2/LV11" index="331"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -43.3432, 1.10245, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1622" parent="Node3D2/LV11" index="332"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -42.966, 1.10245, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1623" parent="Node3D2/LV11" index="333"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -44.1096, 2.57846, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1624" parent="Node3D2/LV11" index="334"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -43.7323, 2.57846, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1625" parent="Node3D2/LV11" index="335"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -43.3432, 2.57846, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1626" parent="Node3D2/LV11" index="336"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -42.966, 2.57846, 1291.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book Stack_040" parent="Node3D2/LV11" index="337"]
+transform = Transform3D(-1.87889, -1.10759, -1.98435e-06, -1.10759, 1.87889, -5.41346e-07, 1.98435e-06, 5.41346e-07, -2.18105, -48.6577, 2.57841, 1290.9)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_287" parent="Node3D2/LV11" index="338"]
+transform = Transform3D(5.96046e-07, 0, -1, 0, 1, 0, 1, 0, 5.96046e-07, 205.248, -0.236969, 1304.54)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_097" parent="Node3D2/LV11" index="339"]
+transform = Transform3D(-2.63665e-06, 0, 2.45754, 0, 2.45754, 0, -2.45754, 0, -2.63665e-06, -49.004, -1.14166, 1279.45)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Shelf_041" parent="Node3D2/LV11" index="340"]
+transform = Transform3D(-2.14252, 0, -2.09437e-06, 0, 2.14252, 0, 2.09437e-06, 0, -2.14252, -49.6442, -2.18607, 1250.01)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_084" parent="Node3D2/LV11" index="341"]
+transform = Transform3D(-1.75096e-06, 0, 1.63201, 0, 1.63201, 0, -1.63201, 0, -1.75096e-06, -47.6958, -0.920887, 1279.24)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_099" parent="Node3D2/LV11" index="342"]
+transform = Transform3D(-2.63665e-06, 0, 2.45754, 0, 2.45754, 0, -2.45754, 0, -2.63665e-06, -48.9587, -1.14166, 1259.41)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_086" parent="Node3D2/LV11" index="343"]
+transform = Transform3D(-1.75096e-06, 0, 1.63201, 0, 1.63201, 0, -1.63201, 0, -1.75096e-06, -47.6506, -0.920887, 1259.2)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_288" parent="Node3D2/LV11" index="344"]
+transform = Transform3D(2.74181e-05, 0, -0.2, 0, 4, 0, 20, 0, 2.74181e-07, -70.6573, 1.48147, 1329.41)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Window Cross_060" parent="Node3D2/LV11" index="345"]
+transform = Transform3D(2.96351e-06, 0, -2.16171, 0, 2.16171, 0, 2.16171, 0, 2.96351e-06, -70.3007, 2.52488, 1328.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Window Cross_061" parent="Node3D2/LV11" index="346"]
+transform = Transform3D(-1.5175, 0, -2.50284e-06, 0, 1.5175, 0, 2.47232e-06, 0, -1.53623, -40.6815, 2.0244, 1249.28)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_289" parent="Node3D2/LV11" index="347"]
+transform = Transform3D(-20, 0, -3.25841e-07, 0, 4, 0, 3.25841e-05, 0, -0.2, -41.0137, 1.48147, 1249.43)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Computer_081" parent="Node3D2/LV11" index="348"]
+transform = Transform3D(-1.87866e-06, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -1.87866e-06, -47.1347, 1.19254, 1279.43)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Keyboard_081" parent="Node3D2/LV11" index="349"]
+transform = Transform3D(-1.87866e-06, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -1.87866e-06, -48.6482, 0.420048, 1279.97)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Computer_083" parent="Node3D2/LV11" index="350"]
+transform = Transform3D(-1.87866e-06, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -1.87866e-06, -47.0895, 1.19254, 1259.43)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Keyboard_083" parent="Node3D2/LV11" index="351"]
+transform = Transform3D(-1.87866e-06, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -1.87866e-06, -48.6029, 0.420048, 1259.97)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book Stack_041" parent="Node3D2/LV11" index="352"]
+transform = Transform3D(-1.87889, -1.10759, -1.98435e-06, -1.10759, 1.87889, -5.41346e-07, 1.98435e-06, 5.41346e-07, -2.18105, -51.8503, 2.57841, 1251)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1627" parent="Node3D2/LV11" index="353"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -46.1585, 2.57846, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1628" parent="Node3D2/LV11" index="354"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -46.5358, 2.57846, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1629" parent="Node3D2/LV11" index="355"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -46.9248, 2.57846, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1630" parent="Node3D2/LV11" index="356"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -47.3021, 2.57846, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1631" parent="Node3D2/LV11" index="357"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -46.1585, 1.10245, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1632" parent="Node3D2/LV11" index="358"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -46.5358, 1.10245, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1633" parent="Node3D2/LV11" index="359"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -46.9248, 1.10245, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1634" parent="Node3D2/LV11" index="360"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -47.3021, 1.10245, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1635" parent="Node3D2/LV11" index="361"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -47.6716, 1.10245, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1636" parent="Node3D2/LV11" index="362"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -48.0489, 1.10245, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1637" parent="Node3D2/LV11" index="363"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -48.4379, 1.10245, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1638" parent="Node3D2/LV11" index="364"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -49.2102, 1.10245, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1639" parent="Node3D2/LV11" index="365"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -49.5875, 1.10245, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1640" parent="Node3D2/LV11" index="366"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -49.9766, 1.10245, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1641" parent="Node3D2/LV11" index="367"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -50.3538, 1.10245, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1642" parent="Node3D2/LV11" index="368"]
+transform = Transform3D(-1.67027, 1.43743, -1.92045e-06, 1.43743, 1.67027, 7.12594e-07, 1.92045e-06, -7.12594e-07, -2.20363, -50.9985, 1.01339, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1643" parent="Node3D2/LV11" index="369"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -52.3957, -0.769143, 1251.08)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1644" parent="Node3D2/LV11" index="370"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -52.3957, -0.458798, 1251.08)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1645" parent="Node3D2/LV11" index="371"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -52.3957, -0.123954, 1251.08)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1646" parent="Node3D2/LV11" index="372"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -46.1585, -0.403902, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1647" parent="Node3D2/LV11" index="373"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -46.5358, -0.403902, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1648" parent="Node3D2/LV11" index="374"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -46.9248, -0.403902, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1649" parent="Node3D2/LV11" index="375"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -47.3021, -0.403902, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1650" parent="Node3D2/LV11" index="376"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -47.6716, -0.403902, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1651" parent="Node3D2/LV11" index="377"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -48.0489, -0.403902, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1652" parent="Node3D2/LV11" index="378"]
+transform = Transform3D(-1.78242, 1.29575, -1.97064e-06, 1.29575, 1.78242, 6.40596e-07, 1.97064e-06, -6.40597e-07, -2.20363, -46.3989, -1.84815, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1653" parent="Node3D2/LV11" index="379"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -47.7668, -2.21116, 1251.08)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1654" parent="Node3D2/LV11" index="380"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -47.7668, -1.90081, 1251.08)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1655" parent="Node3D2/LV11" index="381"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -47.7668, -1.56597, 1251.08)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1656" parent="Node3D2/LV11" index="382"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -48.9797, -2.21116, 1251.08)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1657" parent="Node3D2/LV11" index="383"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -48.9797, -1.90081, 1251.08)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1658" parent="Node3D2/LV11" index="384"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -48.9797, -1.56597, 1251.08)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1659" parent="Node3D2/LV11" index="385"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -52.1167, -1.86441, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1660" parent="Node3D2/LV11" index="386"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -52.4862, -1.86441, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1661" parent="Node3D2/LV11" index="387"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -52.8635, -1.86441, 1251.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Shelf_042" parent="Node3D2/LV11" index="388"]
+transform = Transform3D(-2.14252, 0, -2.09437e-06, 0, 2.14252, 0, 2.09437e-06, 0, -2.14252, -32.3506, -2.18607, 1249.85)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book Stack_042" parent="Node3D2/LV11" index="389"]
+transform = Transform3D(-1.87889, -1.10759, -1.98435e-06, -1.10759, 1.87889, -5.41346e-07, 1.98435e-06, 5.41346e-07, -2.18105, -29.0851, 2.57841, 1250.83)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1662" parent="Node3D2/LV11" index="390"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -34.4576, 2.57846, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1663" parent="Node3D2/LV11" index="391"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -34.8349, 2.57846, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1664" parent="Node3D2/LV11" index="392"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -35.2239, 2.57846, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1665" parent="Node3D2/LV11" index="393"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -35.6012, 2.57846, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1666" parent="Node3D2/LV11" index="394"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -28.865, 1.10245, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1667" parent="Node3D2/LV11" index="395"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -29.2422, 1.10245, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1668" parent="Node3D2/LV11" index="396"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -29.6313, 1.10245, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1669" parent="Node3D2/LV11" index="397"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -30.0085, 1.10245, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1670" parent="Node3D2/LV11" index="398"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -30.378, 1.10245, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1671" parent="Node3D2/LV11" index="399"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -30.7553, 1.10245, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1672" parent="Node3D2/LV11" index="400"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -31.1444, 1.10245, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1673" parent="Node3D2/LV11" index="401"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -31.5216, 1.10245, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1674" parent="Node3D2/LV11" index="402"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -31.9167, 1.10245, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1675" parent="Node3D2/LV11" index="403"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -31.1613, -0.403775, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1676" parent="Node3D2/LV11" index="404"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -31.5503, -0.403775, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1677" parent="Node3D2/LV11" index="405"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -31.9276, -0.403775, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1678" parent="Node3D2/LV11" index="406"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -32.9131, 0.691168, 1250.91)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1679" parent="Node3D2/LV11" index="407"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -32.9131, 1.00151, 1250.91)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1680" parent="Node3D2/LV11" index="408"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -32.9131, 1.33636, 1250.91)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1681" parent="Node3D2/LV11" index="409"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -28.865, -0.403902, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1682" parent="Node3D2/LV11" index="410"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -29.2422, -0.403902, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1683" parent="Node3D2/LV11" index="411"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -29.6313, -0.403902, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1684" parent="Node3D2/LV11" index="412"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -30.0085, -0.403902, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1685" parent="Node3D2/LV11" index="413"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -30.378, -0.403902, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1686" parent="Node3D2/LV11" index="414"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -30.7553, -0.403902, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1687" parent="Node3D2/LV11" index="415"]
+transform = Transform3D(-1.95984, -1.00749, -2.03963e-06, -1.00749, 1.95984, -4.93556e-07, 2.03963e-06, 4.93556e-07, -2.20363, -35.3865, -0.373734, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1688" parent="Node3D2/LV11" index="416"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -29.291, -2.21116, 1250.91)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1689" parent="Node3D2/LV11" index="417"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -29.291, -1.90081, 1250.91)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1690" parent="Node3D2/LV11" index="418"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -29.291, -1.56597, 1250.91)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1691" parent="Node3D2/LV11" index="419"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -34.0508, -2.21116, 1250.91)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1692" parent="Node3D2/LV11" index="420"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -34.0508, -1.90081, 1250.91)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1693" parent="Node3D2/LV11" index="421"]
+transform = Transform3D(-0.0259709, 2.20348, -1.00732e-06, 2.20348, 0.0259709, 9.95521e-07, 1.00732e-06, -9.95521e-07, -2.20363, -34.0508, -1.56597, 1250.91)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1694" parent="Node3D2/LV11" index="422"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -34.8232, -1.86441, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1695" parent="Node3D2/LV11" index="423"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -35.1927, -1.86441, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1696" parent="Node3D2/LV11" index="424"]
+transform = Transform3D(-2.20363, 0, -2.15411e-06, 0, 2.20363, 0, 2.15411e-06, 0, -2.20363, -35.5699, -1.86441, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1697" parent="Node3D2/LV11" index="425"]
+transform = Transform3D(-1.78242, 1.29575, -1.97064e-06, 1.29575, 1.78242, 6.40596e-07, 1.97064e-06, -6.40597e-07, -2.20363, -30.3031, -1.88239, 1250.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_159" parent="Node3D2/LV11" index="426"]
+transform = Transform3D(-19.963, 0, -1.48229e-07, 0, 0.577987, 0, 1.95143e-05, 0, -0.151638, -41.3078, -2.00869, 1249.6)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_160" parent="Node3D2/LV11" index="427"]
+transform = Transform3D(-2.1418e-05, 0, 0.151638, 0, 0.577987, 0, -19.963, 0, -1.62689e-07, -70.5385, -2.33444, 1329.5)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_161" parent="Node3D2/LV11" index="428"]
+transform = Transform3D(6.60834, 0, 0, 0, 0.577987, 0, 2.84217e-14, 0, 0.151638, -47.2512, -2.33444, 1289.44)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_162" parent="Node3D2/LV11" index="429"]
+transform = Transform3D(6.60834, 0, 0, 0, 0.577987, 0, 2.84217e-14, 0, 0.151638, -47.2512, -2.33444, 1289.76)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_163" parent="Node3D2/LV11" index="430"]
+transform = Transform3D(6.07092, 0, 0, 0, 0.577987, 0, 0, 0, 0.151638, -64.6119, -2.33444, 1289.41)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_164" parent="Node3D2/LV11" index="431"]
+transform = Transform3D(6.07092, 0, 0, 0, 0.577987, 0, 0, 0, 0.151638, -64.6119, -2.33444, 1289.76)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_291" parent="Node3D2/LV11" index="432"]
+transform = Transform3D(15, 0, 0, 0, 4, 0, 5.68434e-14, 0, 0.2, -55.6193, 1.45963, 1289.58)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Door Frame_032" parent="Node3D2/LV11" index="433"]
+transform = Transform3D(-2.16722, 0, -3.53085e-06, 0, 2.16722, 0, 3.53085e-06, 0, -2.16722, -55.8574, 1.57888, 1289.65)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_100" parent="Node3D2/LV11" index="434"]
+transform = Transform3D(2.45754, 0, -7.10543e-15, 0, 2.45754, 0, 7.10543e-15, 0, 2.45754, -64.1914, -1.57249, 1345.17)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_087" parent="Node3D2/LV11" index="435"]
+transform = Transform3D(1.63201, 0, -7.10543e-15, 0, 1.63201, 0, 7.10543e-15, 0, 1.63201, -63.9795, -1.35172, 1346.48)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1698" parent="Node3D2/LV11" index="436"]
+transform = Transform3D(4.23516e-22, 1.44482e-06, -2.20363, -2.20363, -1.31347e-07, -8.61177e-14, -1.31347e-07, 2.20363, 1.44482e-06, -61.1339, -0.0224257, 1347.31)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1699" parent="Node3D2/LV11" index="437"]
+transform = Transform3D(4.23516e-22, 1.44482e-06, -2.20363, -2.20363, -1.31347e-07, -8.61177e-14, -1.31347e-07, 2.20363, 1.44482e-06, -61.1339, 0.309492, 1347.31)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1700" parent="Node3D2/LV11" index="438"]
+transform = Transform3D(4.23516e-22, 1.44482e-06, -2.20363, -2.20363, -1.31347e-07, -8.61177e-14, -1.31347e-07, 2.20363, 1.44482e-06, -61.1339, 0.61035, 1347.31)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1701" parent="Node3D2/LV11" index="439"]
+transform = Transform3D(0.0140021, -1.18804, -1.8559, 2.20348, 0.0259705, -3.32219e-07, 0.0218725, -1.85577, 1.18812, -62.7621, 0.00886822, 1346.1)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1702" parent="Node3D2/LV11" index="440"]
+transform = Transform3D(-0.0116652, 0.98975, -1.96882, 2.20348, 0.0259704, 1.10564e-07, 0.0232031, -1.96869, -0.989819, -67.2329, -0.0248384, 1347.3)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1703" parent="Node3D2/LV11" index="441"]
+transform = Transform3D(-0.0116652, 0.98975, -1.96882, 2.20348, 0.0259704, 1.10564e-07, 0.0232031, -1.96869, -0.989819, -67.2329, 0.261859, 1347.3)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1704" parent="Node3D2/LV11" index="442"]
+transform = Transform3D(-0.00756847, -0.993008, 1.9672, 2.20286, 0.0481465, 0.0327786, -0.0577515, 1.96663, 0.992496, -65.0805, -0.00138474, 1346.26)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_101" parent="Node3D2/LV11" index="443"]
+transform = Transform3D(3.36906e-06, 0, -2.45754, 0, 2.45754, 0, 2.45754, 0, 3.36906e-06, -68.0821, -1.57249, 1336.86)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_088" parent="Node3D2/LV11" index="444"]
+transform = Transform3D(2.23733e-06, 0, -1.63201, 0, 1.63201, 0, 1.63201, 0, 2.23733e-06, -69.3903, -1.35172, 1337.07)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1705" parent="Node3D2/LV11" index="445"]
+transform = Transform3D(0, -2.20363, -1.07705e-06, -2.20363, 5.26423e-13, -1.07705e-06, 1.07705e-06, 1.07705e-06, -2.20363, -70.2194, -0.0224257, 1339.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1706" parent="Node3D2/LV11" index="446"]
+transform = Transform3D(0, -2.20363, -1.07705e-06, -2.20363, 5.26423e-13, -1.07705e-06, 1.07705e-06, 1.07705e-06, -2.20363, -70.2194, 0.309492, 1339.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1707" parent="Node3D2/LV11" index="447"]
+transform = Transform3D(0, -2.20363, -1.07705e-06, -2.20363, 5.26423e-13, -1.07705e-06, 1.07705e-06, 1.07705e-06, -2.20363, -70.2194, 0.61035, 1339.92)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1708" parent="Node3D2/LV11" index="448"]
+transform = Transform3D(-0.0218727, 1.85577, -1.18812, 2.20348, 0.0259708, -8.15865e-08, 0.0140025, -1.18804, -1.8559, -69.8309, 0.00886822, 1334.31)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1709" parent="Node3D2/LV11" index="449"]
+transform = Transform3D(-0.0232032, 1.96869, 0.989821, 2.20348, 0.0259706, -1.2904e-07, -0.0116655, 0.989752, -1.96882, -70.2125, -0.0248384, 1337.23)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1710" parent="Node3D2/LV11" index="450"]
+transform = Transform3D(-0.0232032, 1.96869, 0.989821, 2.20348, 0.0259706, -1.2904e-07, -0.0116655, 0.989752, -1.96882, -70.2125, 0.261859, 1337.23)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1711" parent="Node3D2/LV11" index="451"]
+transform = Transform3D(0.0577516, -1.96663, -0.992496, 2.20286, 0.0481467, 0.0327784, -0.00756817, -0.993009, 1.9672, -69.174, -0.00138474, 1335.97)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_102" parent="Node3D2/LV11" index="452"]
+transform = Transform3D(3.36906e-06, 0, -2.45754, 0, 2.45754, 0, 2.45754, 0, 3.36906e-06, -68.0821, -1.57249, 1324.77)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_089" parent="Node3D2/LV11" index="453"]
+transform = Transform3D(2.23733e-06, 0, -1.63201, 0, 1.63201, 0, 1.63201, 0, 2.23733e-06, -69.3903, -1.35172, 1324.98)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1712" parent="Node3D2/LV11" index="454"]
+transform = Transform3D(0, -2.20363, -1.07705e-06, -2.20363, 5.26423e-13, -1.07705e-06, 1.07705e-06, 1.07705e-06, -2.20363, -70.2194, -0.0224257, 1322.05)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1713" parent="Node3D2/LV11" index="455"]
+transform = Transform3D(0, -2.20363, -1.07705e-06, -2.20363, 5.26423e-13, -1.07705e-06, 1.07705e-06, 1.07705e-06, -2.20363, -70.2194, 0.309492, 1322.05)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1714" parent="Node3D2/LV11" index="456"]
+transform = Transform3D(0, -2.20363, -1.07705e-06, -2.20363, 5.26423e-13, -1.07705e-06, 1.07705e-06, 1.07705e-06, -2.20363, -70.2194, 0.61035, 1322.05)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1715" parent="Node3D2/LV11" index="457"]
+transform = Transform3D(-0.0242548, 2.05792, 0.787652, 2.20348, 0.0259705, -1.07238e-07, -0.00928281, 0.787598, -2.05806, -69.0077, 0.00886822, 1326.2)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1716" parent="Node3D2/LV11" index="458"]
+transform = Transform3D(0.0577516, -1.96663, -0.992496, 2.20286, 0.0481467, 0.0327784, -0.00756817, -0.993009, 1.9672, -69.174, -0.00138474, 1323.88)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_103" parent="Node3D2/LV11" index="459"]
+transform = Transform3D(5.12683e-06, 0, -2.45754, 0, 2.45754, 0, 2.45754, 0, 5.12683e-06, -41.4429, -1.49009, 1284.63)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_090" parent="Node3D2/LV11" index="460"]
+transform = Transform3D(3.40464e-06, 0, -1.63201, 0, 1.63201, 0, 1.63201, 0, 3.40464e-06, -42.7511, -1.26932, 1284.84)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Computer_084" parent="Node3D2/LV11" index="461"]
+transform = Transform3D(3.65295e-06, 0, -1.75104, 0, 1.75104, 0, 1.75104, 0, 3.65295e-06, -43.3122, 0.844106, 1284.65)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Keyboard_084" parent="Node3D2/LV11" index="462"]
+transform = Transform3D(3.65295e-06, 0, -1.75104, 0, 1.75104, 0, 1.75104, 0, 3.65295e-06, -41.7987, 0.0716162, 1284.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Chair1_104" parent="Node3D2/LV11" index="463"]
+transform = Transform3D(-8.78884e-07, 0, 2.45754, 0, 2.45754, 0, -2.45754, 0, -8.78884e-07, -25.2667, -1.58076, 1262.79)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Table_091" parent="Node3D2/LV11" index="464"]
+transform = Transform3D(-5.83653e-07, 0, 1.63201, 0, 1.63201, 0, -1.63201, 0, -5.83653e-07, -23.9585, -1.35999, 1262.57)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Computer_085" parent="Node3D2/LV11" index="465"]
+transform = Transform3D(-6.2622e-07, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -6.2622e-07, -23.3974, 0.753431, 1262.77)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Keyboard_085" parent="Node3D2/LV11" index="466"]
+transform = Transform3D(-6.2622e-07, 0, 1.75104, 0, 1.75104, 0, -1.75104, 0, -6.2622e-07, -24.9109, -0.0190592, 1263.31)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_296" parent="Node3D2/LV11" index="467"]
+transform = Transform3D(2.2064e-06, 0, -1.60945, 0, 1.60945, 0, 1.60945, 0, 2.2064e-06, -44.0523, 1.82483, 1261.42)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_297" parent="Node3D2/LV11" index="468"]
+transform = Transform3D(-1.60945, 0, -2.62212e-06, 0, 1.60945, 0, 2.62212e-06, 0, -1.60945, -61.6736, 1.82483, 1251.12)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_165" parent="Node3D2/LV11" index="469"]
+transform = Transform3D(-1.33922e-05, 0, 0.151638, 0, 0.577987, 0, -6.60834, 0, -3.07302e-07, -45.26, -2.33444, 1258.51)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_166" parent="Node3D2/LV11" index="470"]
+transform = Transform3D(-1.23031e-05, 0, 0.151638, 0, 0.577987, 0, -6.07092, 0, -3.07302e-07, -45.26, -2.33444, 1279.55)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Door Frame_033" parent="Node3D2/LV11" index="471"]
+transform = Transform3D(2.97105e-06, 0, -2.16722, 0, 2.16722, 0, 2.16722, 0, 2.97105e-06, -45.3351, 1.57888, 1268.7)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_298" parent="Node3D2/LV11" index="472"]
+transform = Transform3D(-3.03984e-05, 0, 0.2, 0, 4, 0, -15, 0, -4.05312e-07, -45.4224, 1.45963, 1268.49)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Cube_299" parent="Node3D2/LV11" index="473"]
+transform = Transform3D(15, 0, 0, 0, 4, 0, 5.68434e-14, 0, 0.2, -35.9712, 1.45963, 1289.58)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Door Frame_034" parent="Node3D2/LV11" index="474"]
+transform = Transform3D(-2.16722, 0, -3.53085e-06, 0, 2.16722, 0, 3.53085e-06, 0, -2.16722, -36.2094, 1.57888, 1289.65)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_167" parent="Node3D2/LV11" index="475"]
+transform = Transform3D(6.60834, 0, 0, 0, 0.577987, 0, 2.84217e-14, 0, 0.151638, -27.9559, -2.33444, 1289.44)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Wall Skirting_168" parent="Node3D2/LV11" index="476"]
+transform = Transform3D(6.60834, 0, 0, 0, 0.577987, 0, 2.84217e-14, 0, 0.151638, -27.9559, -2.33444, 1289.76)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Shelf_043" parent="Node3D2/LV11" index="477"]
+transform = Transform3D(-7.10543e-15, 0, -2.14252, 0, 2.14252, 0, 2.14252, 0, -7.10543e-15, -69.6866, -1.91361, 1262.71)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Shelf_044" parent="Node3D2/LV11" index="478"]
+transform = Transform3D(-7.10543e-15, 0, -2.14252, 0, 2.14252, 0, 2.14252, 0, -7.10543e-15, -69.6985, -1.9045, 1270.29)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1717" parent="Node3D2/LV11" index="479"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7367, -1.59194, 1265.93)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1718" parent="Node3D2/LV11" index="480"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7367, -1.59194, 1265.55)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1719" parent="Node3D2/LV11" index="481"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7367, -1.59194, 1265.18)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1720" parent="Node3D2/LV11" index="482"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.7634, -1.2935, 1264.41)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1721" parent="Node3D2/LV11" index="483"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.7634, -1.62835, 1264.41)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1722" parent="Node3D2/LV11" index="484"]
+transform = Transform3D(7.10543e-15, -7.10543e-15, -2.20363, -1.00749, 1.95984, 0, 1.95984, 1.00749, -7.10543e-15, -68.7367, -0.101273, 1265.75)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1723" parent="Node3D2/LV11" index="485"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.7634, 1.60882, 1263.27)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1724" parent="Node3D2/LV11" index="486"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.7634, 1.27398, 1263.27)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1725" parent="Node3D2/LV11" index="487"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.7634, 0.963631, 1263.27)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1726" parent="Node3D2/LV11" index="488"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7367, 2.85092, 1265.96)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1727" parent="Node3D2/LV11" index="489"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7367, 2.85092, 1265.58)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1728" parent="Node3D2/LV11" index="490"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7367, 2.85092, 1265.19)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1729" parent="Node3D2/LV11" index="491"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7367, 2.85092, 1264.82)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1730" parent="Node3D2/LV11" index="492"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, -1.48685, 1273.51)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1731" parent="Node3D2/LV11" index="493"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, -1.48685, 1273.14)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1732" parent="Node3D2/LV11" index="494"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, -1.48685, 1272.77)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1733" parent="Node3D2/LV11" index="495"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.6325, -1.18841, 1269.63)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1734" parent="Node3D2/LV11" index="496"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.6325, -1.52326, 1269.63)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1735" parent="Node3D2/LV11" index="497"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.6325, -1.18841, 1268.42)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1736" parent="Node3D2/LV11" index="498"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.6325, -1.52326, 1268.42)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1737" parent="Node3D2/LV11" index="499"]
+transform = Transform3D(-7.10543e-15, 6.56734e-08, -2.20363, 1.29575, 1.78242, 5.31204e-08, 1.78242, -1.29575, -3.86164e-08, -68.6058, -1.4706, 1267.05)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1738" parent="Node3D2/LV11" index="500"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, -0.0263453, 1268.7)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1739" parent="Node3D2/LV11" index="501"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, -0.0263453, 1268.32)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1740" parent="Node3D2/LV11" index="502"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, -0.0263453, 1267.95)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1741" parent="Node3D2/LV11" index="503"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, -0.0263453, 1267.58)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1742" parent="Node3D2/LV11" index="504"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, -0.0263453, 1267.19)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1743" parent="Node3D2/LV11" index="505"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, -0.0263453, 1266.81)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1744" parent="Node3D2/LV11" index="506"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.6325, 0.253603, 1273.05)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1745" parent="Node3D2/LV11" index="507"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.6325, -0.0812416, 1273.05)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1746" parent="Node3D2/LV11" index="508"]
+transform = Transform3D(1.31347e-07, -6.56734e-08, -2.20363, 1.43743, 1.67027, 3.58997e-08, 1.67027, -1.43743, 1.42394e-07, -68.6058, 1.39095, 1271.65)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1747" parent="Node3D2/LV11" index="509"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, 1.48, 1271)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1748" parent="Node3D2/LV11" index="510"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, 1.48, 1270.63)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1749" parent="Node3D2/LV11" index="511"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, 1.48, 1270.24)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1750" parent="Node3D2/LV11" index="512"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, 1.48, 1269.86)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1751" parent="Node3D2/LV11" index="513"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, 1.48, 1269.47)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1752" parent="Node3D2/LV11" index="514"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, 1.48, 1269.09)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1753" parent="Node3D2/LV11" index="515"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, 1.48, 1268.7)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1754" parent="Node3D2/LV11" index="516"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, 1.48, 1268.32)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1755" parent="Node3D2/LV11" index="517"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, 1.48, 1267.95)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1756" parent="Node3D2/LV11" index="518"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, 1.48, 1267.58)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1757" parent="Node3D2/LV11" index="519"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, 1.48, 1267.19)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1758" parent="Node3D2/LV11" index="520"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, 1.48, 1266.81)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1759" parent="Node3D2/LV11" index="521"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.6325, -0.391588, 1273.05)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1760" parent="Node3D2/LV11" index="522"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, 2.95601, 1267.95)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1761" parent="Node3D2/LV11" index="523"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, 2.95601, 1267.58)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1762" parent="Node3D2/LV11" index="524"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, 2.95601, 1267.19)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book Stack_043" parent="Node3D2/LV11" index="525"]
+transform = Transform3D(-2.60002e-07, -6.50004e-08, -2.18105, -1.10759, 1.87889, 7.60392e-08, 1.87889, 1.10759, -2.5699e-07, -68.7127, 2.95596, 1272.5)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1763" parent="Node3D2/LV11" index="526"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.6058, 2.95601, 1266.81)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Shelf_045" parent="Node3D2/LV11" index="527"]
+transform = Transform3D(-7.10543e-15, 0, -2.14252, 0, 2.14252, 0, 2.14252, 0, -7.10543e-15, -69.7177, -1.92113, 1277.83)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1764" parent="Node3D2/LV11" index="528"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, 2.94233, 1279.94)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1765" parent="Node3D2/LV11" index="529"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, 2.94233, 1280.32)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1766" parent="Node3D2/LV11" index="530"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, 2.94233, 1280.71)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1767" parent="Node3D2/LV11" index="531"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, 2.94233, 1281.08)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1768" parent="Node3D2/LV11" index="532"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, 1.46632, 1274.35)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1769" parent="Node3D2/LV11" index="533"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, 1.46632, 1274.72)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1770" parent="Node3D2/LV11" index="534"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, 1.46632, 1275.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1771" parent="Node3D2/LV11" index="535"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, 1.46632, 1275.49)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1772" parent="Node3D2/LV11" index="536"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, 1.46632, 1275.86)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1773" parent="Node3D2/LV11" index="537"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, 1.46632, 1276.24)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1774" parent="Node3D2/LV11" index="538"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, 1.46632, 1276.63)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1775" parent="Node3D2/LV11" index="539"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, 1.46632, 1277)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1776" parent="Node3D2/LV11" index="540"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, 1.46632, 1277.4)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1777" parent="Node3D2/LV11" index="541"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, -0.0399017, 1276.64)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1778" parent="Node3D2/LV11" index="542"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, -0.0399017, 1277.03)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1779" parent="Node3D2/LV11" index="543"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, -0.0399017, 1277.41)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1780" parent="Node3D2/LV11" index="544"]
+transform = Transform3D(-7.10543e-15, 6.56734e-08, -2.20363, 1.29575, 1.78242, 5.31204e-08, 1.78242, -1.29575, -3.86164e-08, -68.7525, -1.51852, 1275.78)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1781" parent="Node3D2/LV11" index="545"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.7793, 1.05504, 1278.39)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1782" parent="Node3D2/LV11" index="546"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.7793, 1.36539, 1278.39)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1783" parent="Node3D2/LV11" index="547"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.7793, 1.70023, 1278.39)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1784" parent="Node3D2/LV11" index="548"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, -0.0400295, 1274.35)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1785" parent="Node3D2/LV11" index="549"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, -0.0400295, 1274.72)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1786" parent="Node3D2/LV11" index="550"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, -0.0400295, 1275.11)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1787" parent="Node3D2/LV11" index="551"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, -0.0400295, 1275.49)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1788" parent="Node3D2/LV11" index="552"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, -0.0400295, 1275.86)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1789" parent="Node3D2/LV11" index="553"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, -0.0400295, 1276.24)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1790" parent="Node3D2/LV11" index="554"]
+transform = Transform3D(7.10543e-15, -7.10543e-15, -2.20363, -1.00749, 1.95984, 0, 1.95984, 1.00749, -7.10543e-15, -68.7525, -0.0098629, 1280.87)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1791" parent="Node3D2/LV11" index="555"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.7793, -1.53694, 1274.77)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1792" parent="Node3D2/LV11" index="556"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.7793, -1.2021, 1274.77)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1793" parent="Node3D2/LV11" index="557"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.7793, -1.53694, 1279.53)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1794" parent="Node3D2/LV11" index="558"]
+transform = Transform3D(-2.62694e-07, -1.31347e-07, -2.20363, 2.20348, 0.0259708, -2.64223e-07, 0.0259708, -2.20348, 1.28242e-07, -68.7793, -1.2021, 1279.53)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1795" parent="Node3D2/LV11" index="559"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, -1.50053, 1280.3)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1796" parent="Node3D2/LV11" index="560"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, -1.50053, 1280.67)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book_1797" parent="Node3D2/LV11" index="561"]
+transform = Transform3D(-7.10543e-15, 0, -2.20363, 0, 2.20363, 0, 2.20363, 0, -7.10543e-15, -68.7525, -1.50053, 1281.05)
+material_overlay = ExtResource("8_iei4n")
+
+[node name="Book Stack_044" parent="Node3D2/LV11" index="562"]
+transform = Transform3D(-2.60002e-07, -6.50004e-08, -2.18105, -1.10759, 1.87889, 7.60392e-08, 1.87889, 1.10759, -2.5699e-07, -68.8596, 2.94228, 1274.57)
+material_overlay = ExtResource("8_iei4n")
+
+[connection signal="pressed" from="CanvasLayer/Control/BackButton" to="Player/SceneRedirect" method="_to_select"]
+
+[editable path="Player"]
+[editable path="CameraRig"]
+[editable path="Node3D2/LV11"]

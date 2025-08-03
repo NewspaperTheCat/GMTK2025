@@ -1,8 +1,9 @@
-[gd_scene load_steps=24 format=4 uid="uid://oqpsd56sxbch"]
+[gd_scene load_steps=26 format=4 uid="uid://oqpsd56sxbch"]
 
 [ext_resource type="Script" uid="uid://bbpn22lvaguf4" path="res://Elements/grimblo.gd" id="1_frpx3"]
 [ext_resource type="Animation" uid="uid://c0hunubavdg4p" path="res://Elements/Walking.res" id="2_frpx3"]
 [ext_resource type="Material" uid="uid://b03uwmho7ft7q" path="res://Materials/Grimblo.tres" id="2_hv2v0"]
+[ext_resource type="Shader" uid="uid://bvsurc2j4dqpg" path="res://Materials/Shaders/ToonShader/cel-shader-base.gdshader" id="4_60w84"]
 [ext_resource type="PackedScene" uid="uid://pwefcngg5hft" path="res://art/Pointer.glb" id="4_k2h1b"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dwyiq"]
@@ -145,6 +146,15 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_cpkly")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b4ycx"]
+render_priority = 0
+shader = ExtResource("4_60w84")
+shader_parameter/color = Color(0.169669, 0.673276, 0.806723, 1)
+shader_parameter/specular = Color(0.3, 0.3, 0.3, 0.560784)
+shader_parameter/fresnel = Color(0.2, 0.2, 0.2, 0.662745)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ooc87"]
 _data = {
 &"Walking": ExtResource("2_frpx3")
@@ -257,8 +267,12 @@ mesh = SubResource("ArrayMesh_wt1qo")
 skeleton = NodePath("")
 
 [node name="Pointer" parent="Character/Player" instance=ExtResource("4_k2h1b")]
-transform = Transform3D(1.5, 0, 5.32907e-15, 0, 1.5, 0, -5.32907e-15, 0, 1.5, 2.54, 0, 0)
+transform = Transform3D(1.5, 0, 7.10543e-15, 0, 1.5, 0, -7.10543e-15, 0, 1.5, 2.54, 0.921658, 0)
 visible = false
+
+[node name="Pointer" parent="Character/Player/Pointer" index="0"]
+transform = Transform3D(0, 0.348295, 0, -0.348295, 0, 0, 0, 0, 0.348295, 0, -0.829236, 0)
+material_override = SubResource("ShaderMaterial_b4ycx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Character"]
 libraries = {
@@ -292,3 +306,5 @@ outline_size = 24
 
 [node name="CloseUp" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.341, -0.5)
+
+[editable path="Character/Player/Pointer"]
