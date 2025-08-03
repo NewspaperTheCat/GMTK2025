@@ -23,8 +23,6 @@ func change_scene(
 	transition_in: String = "Fade In",
 	transition_out: String = "Fade Out",
 ) -> void:
-	print("change")
-	
 	if transition:
 		transition_controller.transition(transition_out)
 		await transition_controller.animation_player.animation_finished

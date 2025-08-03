@@ -6,10 +6,10 @@ const AUDIO_STREAM_3D = preload("res://Audio/SFX/AudioStream3D.tscn")
 const AUDIO_STREAM = preload("res://Audio/SFX/AudioStream.tscn")
 
 var beep_speech_folder_path = "res://Audio/SFX/BeepSpeech/"
-var beep_speech_array : Array[AudioStream] = []
+var beep_speech_array : Array[AudioStream] = [preload("res://Audio/SFX/BeepSpeech/BeepSpeech-01.wav"), preload("res://Audio/SFX/BeepSpeech/BeepSpeech-02.wav"), preload("res://Audio/SFX/BeepSpeech/BeepSpeech-03.wav"), preload("res://Audio/SFX/BeepSpeech/BeepSpeech-04.wav"), preload("res://Audio/SFX/BeepSpeech/BeepSpeech-05.wav"), preload("res://Audio/SFX/BeepSpeech/BeepSpeech-06.wav"), preload("res://Audio/SFX/BeepSpeech/BeepSpeech-07.wav"), preload("res://Audio/SFX/BeepSpeech/BeepSpeech-08.wav")]
 
 var mouse_click_folder_path = "res://Audio/SFX/MouseClick/"
-var mouse_click_array : Array[AudioStream] = []
+var mouse_click_array : Array[AudioStream] = [preload("res://Audio/SFX/MouseClick/MouseClick-01.wav"), preload("res://Audio/SFX/MouseClick/MouseClick-02.wav")]
 
 const TRANSITION_WOOSH = preload("res://Audio/SFX/TransitionWoosh.wav")
 var woosh_array = [TRANSITION_WOOSH]
@@ -18,29 +18,29 @@ const TOM_TOM_HIT = preload("res://Audio/SFX/TomTomHit.wav")
 var tom_tom_hit_array = [TOM_TOM_HIT]
 
 var synth_pop_folder_path = "res://Audio/SFX/SynthPops/"
-var synth_pop_array = []
+var synth_pop_array = [preload("res://Audio/SFX/SynthPops/SynthPop-01.wav"), preload("res://Audio/SFX/SynthPops/SynthPop-02.wav"), preload("res://Audio/SFX/SynthPops/SynthPop-03.wav"), preload("res://Audio/SFX/SynthPops/SynthPop-04.wav"), preload("res://Audio/SFX/SynthPops/SynthPop-05.wav"), preload("res://Audio/SFX/SynthPops/SynthPop-06.wav"), preload("res://Audio/SFX/SynthPops/SynthPop-07.wav"), preload("res://Audio/SFX/SynthPops/SynthPop-08.wav"), preload("res://Audio/SFX/SynthPops/SynthPop-09.wav"), preload("res://Audio/SFX/SynthPops/SynthPop-10.wav"), preload("res://Audio/SFX/SynthPops/SynthPop-11.wav")]
 
 const DEFEAT_JINGLE = preload("res://Audio/DefeatJingle.wav")
 const VICTORY_JINGLE = preload("res://Audio/VictoryJingle.wav")
 var jingles = [DEFEAT_JINGLE, VICTORY_JINGLE]
 
 var door_burst_folder_path = "res://Audio/SFX/DoorBurst/"
-var door_burst_array = []
+var door_burst_array = [preload("res://Audio/SFX/DoorBurst/DoorBurst-01.wav"), preload("res://Audio/SFX/DoorBurst/DoorBurst-02.wav")]
 
 const ACTIVE_SWAPPED = preload("res://Audio/SFX/ActiveSwapped.wav")
 var active_swapped_array = [ACTIVE_SWAPPED]
 
 var door_thump_folder_path = "res://Audio/SFX/DoorThump/"
-var door_thump_array = []
+var door_thump_array = [preload("res://Audio/SFX/DoorThump/DoorThump-01.wav"), preload("res://Audio/SFX/DoorThump/DoorThump-02.wav")]
 
 func _ready() -> void:
 	Global.audio_controller = self
 	
-	read_folder_to_array(beep_speech_folder_path, beep_speech_array)
-	read_folder_to_array(mouse_click_folder_path, mouse_click_array)
-	read_folder_to_array(synth_pop_folder_path, synth_pop_array)
-	read_folder_to_array(door_burst_folder_path, door_burst_array)
-	read_folder_to_array(door_thump_folder_path, door_thump_array)
+	#read_folder_to_array(beep_speech_folder_path, beep_speech_array)
+	#read_folder_to_array(mouse_click_folder_path, mouse_click_array)
+	#read_folder_to_array(synth_pop_folder_path, synth_pop_array)
+	#read_folder_to_array(door_burst_folder_path, door_burst_array)
+	#read_folder_to_array(door_thump_folder_path, door_thump_array)
 
 func read_folder_to_array(folder: String, array: Array):
 	# Fill beep_speech_array
